@@ -1,0 +1,206 @@
+{
+    "meta": {
+        "version": "v3.1.4",
+        "updated": 1393372800,
+        "expires": 1395792000,
+        "canonical": "https://www.example.com/privacy.html",
+        "scopes": [
+            {
+                "type": "web",
+                "url": "https://www.example.com/"
+            },
+            {
+                "type": "android",
+                "packageName": "com.example.app"
+            },
+            {
+                "type": "ios",
+                "trackId": 54614917093
+            }
+        ]
+    },
+    "data": [
+        {
+            "purposes": [
+                "administration"
+            ],
+            "requirement": "always",
+            "elements": [
+                {
+                    "type": "access.http.method",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "access.http.status",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "access.ip.address",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "access.referer",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "access.size",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "access.datetime",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "access.url",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "access.useragent.string",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 336
+                    },
+                    "viewable": false,
+                    "deletable": false
+                }
+            ]
+        },
+        {
+            "purposes": [
+                "administration",
+                "fulfillment",
+                "personalization"
+            ],
+            "requirement": "opt_in",
+            "elements": [
+                {
+                    "type": "user.email",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 0
+                    },
+                    "viewable": true,
+                    "deletable": false
+                },
+                {
+                    "type": "user.password.hashed.strong",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 0
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "user.name.alias",
+                    "requirement": "opt_in",
+                    "retention": {
+                        "max": 0
+                    },
+                    "viewable": true,
+                    "deletable": false
+                },
+                {
+                    "type": "user.registration.datetime",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 0
+                    },
+                    "viewable": false,
+                    "deletable": false
+                },
+                {
+                    "type": "user.login.datetime",
+                    "requirement": "always",
+                    "retention": {
+                        "max": 0
+                    },
+                    "viewable": false,
+                    "deletable": false
+                }
+            ]
+        }
+    ],
+    "principles": {
+        "data": {
+            "trade": false,
+            "avoidance": true
+        }
+    },
+    "children": {
+        "age": {
+            "min": 13
+        }
+    },
+    "email": {
+        "marketing": {
+            "optOut": true
+        }
+    },
+    "cookies": {
+        "firstParty": true,
+        "thirdParty": true
+    },
+    "choices": {
+        "account": {
+            "deletion": true
+        },
+        "information": {
+            "request": true,
+            "update": true,
+            "delete": true
+        }
+    },
+    "backups": true,
+    "serviceProviders": {
+        "thirdParties": true
+    },
+    "mergersAndAcquisitions": {
+        "transfer": true
+    },
+    "security": {
+        "tls": true
+    },
+    "changes": {
+        "notificationPeriod": 30
+    },
+    "contact": {
+        "email": "privacy@example.com",
+        "url": "https://www.example.com/contact.html"
+    }
+}
