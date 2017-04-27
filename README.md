@@ -117,13 +117,13 @@ $policy->addScope(
     new \Delight\PrivacyPolicy\Scope\WebsiteScope('https://www.example.com/', 'example.com')
 );
 
-// or
+// and/or
 
 $policy->addScope(
     new \Delight\PrivacyPolicy\Scope\PlayStoreAndroidAppScope('com.example.app', 'Example for Android')
 );
 
-// or
+// and/or
 
 $policy->addScope(
     new \Delight\PrivacyPolicy\Scope\AppStoreIosAppScope('54614917093', 'Example for iOS')
