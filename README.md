@@ -368,6 +368,16 @@ If there's no such class yet, simply create a new file for your language:
 
     (except for that in the `default` case of the `switch` block) with a `return` statement specifying the translated string
 
+### Why is the HTML output not displayed correctly when using the “Bootstrap” framework?
+
+The “Bootstrap” front-end framework overwrites some of the default CSS properties for definition/description lists. In order to fix how the policy is displayed, you have to reset those properties to their default values. Usually, you may want to restrict these resets to the container element of your policy.
+
+```css
+dl { margin: 1.12em 0; }
+dl dl { margin: 0; }
+dd { margin-left: 40px; }
+```
+
 ## Disclaimer
 
 This project does not constitute legal advice and is not to be relied upon or acted on as such. Any material presented here is for general information purposes only and may be out of date, incomplete or not suitable for your jurisdiction. You should seek independent legal advice from a qualified professional to guide your decisions around a valid and complete privacy policy.
