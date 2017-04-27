@@ -315,9 +315,9 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 			case 'Resettable identifier of device':
 				return 'Zurücksetzbare Kennung des Geräts';
 			case 'Residential phone number':
-				return 'Telefonnummer (zu Hause)';
+				return 'Telefonnummer (Festnetz)';
 			case 'Residential phone number of contact':
-				return 'Telefonnummer (zu Hause) des Kontakts';
+				return 'Telefonnummer (Festnetz) des Kontakts';
 			case 'Retention and deletion of data':
 				return 'Aufbewahrung und Löschung von Daten';
 			case 'Right to information':
