@@ -10,7 +10,7 @@ Programmatically composable privacy policies for humans and machines
 
 ## Installation
 
- 1. Include the library via [Composer](https://getcomposer.org/):
+ 1. Include the library via Composer [[?]](https://github.com/delight-im/Knowledge/blob/master/Composer%20(PHP).md):
 
     ```
     $ composer require delight-im/privacy-policy
