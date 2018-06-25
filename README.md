@@ -86,8 +86,8 @@ $policy->toJson();
 
 ```php
 $policy->setPublishedAt(1393372800);
-$policy->setVersionName('v3.1.4');
 $policy->setExpiration(1395792000);
+$policy->setVersionName('v3.1.4');
 $policy->setCanonicalUrl('https://www.example.com/privacy.html');
 $policy->setContactEmail('privacy@example.com');
 $policy->setContactUrl('https://www.example.com/contact.html');

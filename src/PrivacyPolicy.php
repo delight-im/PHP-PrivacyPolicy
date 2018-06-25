@@ -32,10 +32,10 @@ abstract class PrivacyPolicy {
 
 	/** @var int|null the time when the policy has been published as a UNIX timestamp in seconds */
 	protected $publishedAt;
-	/** @var string|null the name of the current version in arbitrary format */
-	protected $versionName;
 	/** @var int|null the designated time of expiration as a UNIX timestamp in seconds */
 	protected $expiration;
+	/** @var string|null the name of the current version in arbitrary format */
+	protected $versionName;
 	/** @var string|null the URL of the official policy in its latest version */
 	protected $canonicalUrl;
 	/** @var Scope[] the scopes that describe which services the policy applies to */
@@ -83,24 +83,6 @@ abstract class PrivacyPolicy {
 	}
 
 	/**
-	 * Returns whether the name of the current version has been defined
-	 *
-	 * @return bool
-	 */
-	public function hasVersionName() {
-		return $this->versionName !== null;
-	}
-
-	/**
-	 * Sets the name of the current version
-	 *
-	 * @param string|null $versionName the name in arbitrary format or `null` to unset
-	 */
-	public function setVersionName($versionName) {
-		$this->versionName = $versionName !== null ? ((string) $versionName) : null;
-	}
-
-	/**
 	 * Returns whether the designated time of expiration has been defined
 	 *
 	 * @return bool
@@ -116,6 +98,24 @@ abstract class PrivacyPolicy {
 	 */
 	public function setExpiration($expiration) {
 		$this->expiration = $expiration !== null ? ((int) $expiration) : null;
+	}
+
+	/**
+	 * Returns whether the name of the current version has been defined
+	 *
+	 * @return bool
+	 */
+	public function hasVersionName() {
+		return $this->versionName !== null;
+	}
+
+	/**
+	 * Sets the name of the current version
+	 *
+	 * @param string|null $versionName the name in arbitrary format or `null` to unset
+	 */
+	public function setVersionName($versionName) {
+		$this->versionName = $versionName !== null ? ((string) $versionName) : null;
 	}
 
 	/**
@@ -482,8 +482,8 @@ abstract class PrivacyPolicy {
 
 	public function __construct() {
 		$this->publishedAt = null;
-		$this->versionName = null;
 		$this->expiration = null;
+		$this->versionName = null;
 		$this->canonicalUrl = null;
 		$this->scopes = [];
 		$this->dataGroups = [];

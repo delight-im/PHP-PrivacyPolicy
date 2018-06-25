@@ -107,15 +107,15 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 				});
 			}
 
-			if ($this->hasVersionName()) {
-				$list->addDefinitionGroup($this->lang('Version'), function (DefinitionGroup $group) {
-					$group->addDefinition($this->versionName);
-				});
-			}
-
 			if ($this->hasExpiration()) {
 				$list->addDefinitionGroup($this->lang('Expires'), function (DefinitionGroup $group) {
 					$group->addDefinition($this->formatDate($this->expiration));
+				});
+			}
+
+			if ($this->hasVersionName()) {
+				$list->addDefinitionGroup($this->lang('Version'), function (DefinitionGroup $group) {
+					$group->addDefinition($this->versionName);
 				});
 			}
 
