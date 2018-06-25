@@ -30,8 +30,8 @@ abstract class PrivacyPolicy {
 	 */
 	const NOTIFICATION_PERIOD_DEFAULT = 30;
 
-	/** @var int|null the time of the last update as a UNIX timestamp in seconds */
-	protected $lastUpdated;
+	/** @var int|null the time when the policy has been published as a UNIX timestamp in seconds */
+	protected $publishedAt;
 	/** @var string|null the name of the current version in arbitrary format */
 	protected $versionName;
 	/** @var int|null the designated time of expiration as a UNIX timestamp in seconds */
@@ -74,21 +74,12 @@ abstract class PrivacyPolicy {
 	protected $contactUrl;
 
 	/**
-	 * Returns whether the time of the last update has been defined
+	 * Sets the time when the policy has been published
 	 *
-	 * @return bool
+	 * @param int|null $publishedAt the time as a UNIX timestamp in seconds or `null` to unset
 	 */
-	public function hasLastUpdated() {
-		return $this->lastUpdated !== null;
-	}
-
-	/**
-	 * Sets the time of the last update
-	 *
-	 * @param int|null $lastUpdated the time as a UNIX timestamp in seconds or `null` to unset
-	 */
-	public function setLastUpdated($lastUpdated) {
-		$this->lastUpdated = $lastUpdated !== null ? ((int) $lastUpdated) : null;
+	public function setPublishedAt($publishedAt) {
+		$this->publishedAt = $publishedAt !== null ? ((int) $publishedAt) : null;
 	}
 
 	/**
@@ -490,7 +481,7 @@ abstract class PrivacyPolicy {
 	}
 
 	public function __construct() {
-		$this->lastUpdated = null;
+		$this->publishedAt = null;
 		$this->versionName = null;
 		$this->expiration = null;
 		$this->canonicalUrl = null;

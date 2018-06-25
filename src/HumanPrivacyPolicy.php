@@ -101,9 +101,9 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 	 */
 	private function toMarkup() {
 		return new DefinitionList(function (DefinitionList $list) {
-			if ($this->hasLastUpdated()) {
+			if ($this->publishedAt !== null) {
 				$list->addDefinitionGroup($this->lang('Last updated'), function (DefinitionGroup $group) {
-					$group->addDefinition($this->formatDate($this->lastUpdated));
+					$group->addDefinition($this->formatDate($this->publishedAt));
 				});
 			}
 

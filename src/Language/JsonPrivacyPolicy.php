@@ -41,8 +41,8 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 			$out['meta']['version'] = (string) $this->versionName;
 		}
 
-		if ($this->hasLastUpdated()) {
-			$out['meta']['updated'] = (int) $this->lastUpdated;
+		if ($this->publishedAt !== null) {
+			$out['meta']['updated'] = (int) $this->publishedAt;
 		}
 
 		if ($this->hasExpiration()) {

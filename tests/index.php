@@ -37,7 +37,7 @@ else {
 	$policy = new \Delight\PrivacyPolicy\Language\EnglishPrivacyPolicy();
 }
 
-$policy->setLastUpdated(1393372800);
+$policy->setPublishedAt(1393372800);
 $policy->setVersionName('v3.1.4');
 $policy->setExpiration(1395792000);
 $policy->setCanonicalUrl('https://www.example.com/privacy.html');
