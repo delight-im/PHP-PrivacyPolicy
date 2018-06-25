@@ -32,6 +32,8 @@ abstract class PrivacyPolicy {
 
 	/** @var int|null the time when the policy has been published as a UNIX timestamp in seconds */
 	protected $publishedAt;
+	/** @var int|null the time when the policy takes effect as a UNIX timestamp in seconds */
+	protected $takesEffectAt;
 	/** @var int|null the time when the policy will expire as a UNIX timestamp in seconds */
 	protected $expiresAt;
 	/** @var string|null the name of the current version in arbitrary format */
@@ -80,6 +82,15 @@ abstract class PrivacyPolicy {
 	 */
 	public function setPublishedAt($publishedAt) {
 		$this->publishedAt = $publishedAt !== null ? ((int) $publishedAt) : null;
+	}
+
+	/**
+	 * Sets the time when the policy takes effect
+	 *
+	 * @param int|null $takesEffectAt the time as a UNIX timestamp in seconds, or `null` to unset
+	 */
+	public function setTakesEffectAt($takesEffectAt) {
+		$this->takesEffectAt = $takesEffectAt !== null ? ((int) $takesEffectAt) : null;
 	}
 
 	/**
@@ -473,6 +484,7 @@ abstract class PrivacyPolicy {
 
 	public function __construct() {
 		$this->publishedAt = null;
+		$this->takesEffectAt = null;
 		$this->expiresAt = null;
 		$this->versionName = null;
 		$this->canonicalUrl = null;

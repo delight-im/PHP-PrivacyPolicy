@@ -138,6 +138,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Abteilung innerhalb des Unternehmens';
 			case 'Digitally drawn signature':
 				return 'Digital gezeichnete Unterschrift';
+			case 'Effective date':
+				return 'Datum des Inkrafttretens';
 			case 'Email address':
 				return 'E-Mail-Adresse';
 			case 'Email address of contact':
