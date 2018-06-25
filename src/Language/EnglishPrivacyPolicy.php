@@ -25,8 +25,8 @@ class EnglishPrivacyPolicy extends HumanPrivacyPolicy {
 		return $text;
 	}
 
-	protected function getDateFormat() {
-		return 'F d, Y';
+	protected function formatDate($unixTimestamp) {
+		return \IntlDateFormatter::create('en_US', \IntlDateFormatter::LONG, \IntlDateFormatter::NONE)->format($unixTimestamp);
 	}
 
 }

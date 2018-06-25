@@ -87,11 +87,12 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 	abstract protected function translateUnformatted($text);
 
 	/**
-	 * Returns the format string for dates as understood by the {@see \date} function
+	 * Formats the specified UNIX timestamp as a date
 	 *
-	 * @return string the format string
+	 * @param int $unixTimestamp the UNIX timestamp in seconds to format
+	 * @return string the formatted date
 	 */
-	abstract protected function getDateFormat();
+	abstract protected function formatDate($unixTimestamp);
 
 	/**
 	 * Returns the policy as generic markup
@@ -102,7 +103,7 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 		return new DefinitionList(function (DefinitionList $list) {
 			if ($this->hasLastUpdated()) {
 				$list->addDefinitionGroup($this->lang('Last updated'), function (DefinitionGroup $group) {
-					$group->addDefinition(\date($this->getDateFormat(), $this->lastUpdated));
+					$group->addDefinition($this->formatDate($this->lastUpdated));
 				});
 			}
 
@@ -114,7 +115,7 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 
 			if ($this->hasExpiration()) {
 				$list->addDefinitionGroup($this->lang('Expires'), function (DefinitionGroup $group) {
-					$group->addDefinition(\date($this->getDateFormat(), $this->expiration));
+					$group->addDefinition($this->formatDate($this->expiration));
 				});
 			}
 

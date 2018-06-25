@@ -433,8 +433,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 		}
 	}
 
-	protected function getDateFormat() {
-		return 'd.m.Y';
+	protected function formatDate($unixTimestamp) {
+		return \IntlDateFormatter::create('de_DE', \IntlDateFormatter::LONG, \IntlDateFormatter::NONE)->format($unixTimestamp);
 	}
 
 }
