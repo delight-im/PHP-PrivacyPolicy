@@ -222,8 +222,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'iOS-App (verfügbar über den „App Store“, eine digitale Vertriebsplattform, betrieben von Apple Inc.)';
 			case 'Language of device':
 				return 'Sprache des Geräts';
-			case 'Last updated':
-				return 'Zuletzt geändert';
+			case 'Date of publication':
+				return 'Datum der Veröffentlichung';
 			case 'Latest version':
 				return 'Aktuellste Version';
 			case 'Laws in the jurisdictions that we operate in may obligate us to disclose certain personal information or other information that we collect about our users to local law enforcement authorities.':
