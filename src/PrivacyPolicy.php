@@ -76,7 +76,7 @@ abstract class PrivacyPolicy {
 	/**
 	 * Sets the time when the policy has been published
 	 *
-	 * @param int|null $publishedAt the time as a UNIX timestamp in seconds or `null` to unset
+	 * @param int|null $publishedAt the time as a UNIX timestamp in seconds, or `null` to unset
 	 */
 	public function setPublishedAt($publishedAt) {
 		$this->publishedAt = $publishedAt !== null ? ((int) $publishedAt) : null;
@@ -85,7 +85,7 @@ abstract class PrivacyPolicy {
 	/**
 	 * Sets the time when the policy will expire
 	 *
-	 * @param int|null $expiresAt the time as a UNIX timestamp in seconds or `null` to unset
+	 * @param int|null $expiresAt the time as a UNIX timestamp in seconds, or `null` to unset
 	 */
 	public function setExpiresAt($expiresAt) {
 		$this->expiresAt = $expiresAt !== null ? ((int) $expiresAt) : null;
@@ -103,7 +103,7 @@ abstract class PrivacyPolicy {
 	/**
 	 * Sets the name of the current version
 	 *
-	 * @param string|null $versionName the name in arbitrary format or `null` to unset
+	 * @param string|null $versionName the name in arbitrary format, or `null` to unset
 	 */
 	public function setVersionName($versionName) {
 		$this->versionName = $versionName !== null ? ((string) $versionName) : null;
@@ -121,7 +121,7 @@ abstract class PrivacyPolicy {
 	/**
 	 * Sets the URL of the official policy in its latest version
 	 *
-	 * @param string|null $canonicalUrl the URL or `null` to unset
+	 * @param string|null $canonicalUrl the URL, or `null` to unset
 	 */
 	public function setCanonicalUrl($canonicalUrl) {
 		$this->canonicalUrl = $canonicalUrl !== null ? ((string) $canonicalUrl) : null;
@@ -225,7 +225,7 @@ abstract class PrivacyPolicy {
 	 *
 	 * See "COPPA" (USA), "GDPR" (EU), etc.
 	 *
-	 * @param int|null $childrenMinimumAge the minimum age in years or `null` to unset
+	 * @param int|null $childrenMinimumAge the minimum age in years, or `null` to unset
 	 */
 	public function setChildrenMinimumAge($childrenMinimumAge) {
 		$this->childrenMinimumAge = $childrenMinimumAge !== null ? ((int) $childrenMinimumAge) : null;
@@ -447,7 +447,7 @@ abstract class PrivacyPolicy {
 	/**
 	 * Sets the email address for contact
 	 *
-	 * @param string|null $contactEmail the email address or `null` to unset
+	 * @param string|null $contactEmail the email address, or `null` to unset
 	 */
 	public function setContactEmail($contactEmail) {
 		$this->contactEmail = $contactEmail !== null ? ((string) $contactEmail) : null;
@@ -465,7 +465,7 @@ abstract class PrivacyPolicy {
 	/**
 	 * Sets the URL of a page with (detailed) contact information
 	 *
-	 * @param string|null $contactUrl the URL or `null` to unset
+	 * @param string|null $contactUrl the URL, or `null` to unset
 	 */
 	public function setContactUrl($contactUrl) {
 		$this->contactUrl = $contactUrl !== null ? ((string) $contactUrl) : null;
