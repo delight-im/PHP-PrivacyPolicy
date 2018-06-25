@@ -42,7 +42,7 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 		}
 
 		if ($this->publishedAt !== null) {
-			$out['meta']['updated'] = (int) $this->publishedAt;
+			$out['meta']['published'] = (int) $this->publishedAt;
 		}
 
 		if ($this->hasExpiration()) {
