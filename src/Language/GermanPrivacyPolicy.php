@@ -160,8 +160,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Vertragsende';
 			case 'Expiration date of credit card':
 				return 'Ablaufdatum der Kreditkarte';
-			case 'Expires':
-				return 'Läuft ab';
+			case 'Date of expiration':
+				return 'Datum des Außerkrafttretens';
 			case 'Family name':
 				return 'Nachname';
 			case 'Family name of contact':
