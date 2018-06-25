@@ -32,8 +32,8 @@ abstract class PrivacyPolicy {
 
 	/** @var int|null the time when the policy has been published as a UNIX timestamp in seconds */
 	protected $publishedAt;
-	/** @var int|null the designated time of expiration as a UNIX timestamp in seconds */
-	protected $expiration;
+	/** @var int|null the time when the policy will expire as a UNIX timestamp in seconds */
+	protected $expiresAt;
 	/** @var string|null the name of the current version in arbitrary format */
 	protected $versionName;
 	/** @var string|null the URL of the official policy in its latest version */
@@ -83,21 +83,12 @@ abstract class PrivacyPolicy {
 	}
 
 	/**
-	 * Returns whether the designated time of expiration has been defined
+	 * Sets the time when the policy will expire
 	 *
-	 * @return bool
+	 * @param int|null $expiresAt the time as a UNIX timestamp in seconds or `null` to unset
 	 */
-	public function hasExpiration() {
-		return $this->expiration !== null;
-	}
-
-	/**
-	 * Sets the designated time of expiration
-	 *
-	 * @param int|null $expiration the time as a UNIX timestamp in seconds or `null` to unset
-	 */
-	public function setExpiration($expiration) {
-		$this->expiration = $expiration !== null ? ((int) $expiration) : null;
+	public function setExpiresAt($expiresAt) {
+		$this->expiresAt = $expiresAt !== null ? ((int) $expiresAt) : null;
 	}
 
 	/**
@@ -482,7 +473,7 @@ abstract class PrivacyPolicy {
 
 	public function __construct() {
 		$this->publishedAt = null;
-		$this->expiration = null;
+		$this->expiresAt = null;
 		$this->versionName = null;
 		$this->canonicalUrl = null;
 		$this->scopes = [];

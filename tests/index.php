@@ -38,7 +38,7 @@ else {
 }
 
 $policy->setPublishedAt(1393372800);
-$policy->setExpiration(1395792000);
+$policy->setExpiresAt(1395792000);
 $policy->setVersionName('v3.1.4');
 $policy->setCanonicalUrl('https://www.example.com/privacy.html');
 

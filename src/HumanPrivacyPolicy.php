@@ -107,9 +107,9 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 				});
 			}
 
-			if ($this->hasExpiration()) {
+			if ($this->expiresAt !== null) {
 				$list->addDefinitionGroup($this->lang('Expires'), function (DefinitionGroup $group) {
-					$group->addDefinition($this->formatDate($this->expiration));
+					$group->addDefinition($this->formatDate($this->expiresAt));
 				});
 			}
 

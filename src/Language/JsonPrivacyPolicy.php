@@ -45,8 +45,8 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 			$out['meta']['published'] = (int) $this->publishedAt;
 		}
 
-		if ($this->hasExpiration()) {
-			$out['meta']['expires'] = (int) $this->expiration;
+		if ($this->expiresAt !== null) {
+			$out['meta']['expires'] = (int) $this->expiresAt;
 		}
 
 		if ($this->hasCanonicalUrl()) {
