@@ -2,7 +2,8 @@
 	"name": "delight-im/privacy-policy",
 	"description": "Programmatically composable privacy policies for humans and machines",
 	"require": {
-		"php": ">=5.6.0"
+		"php": ">=5.6.0",
+		"ext-intl": "*"
 	},
 	"type": "library",
 	"keywords": [ "privacy-policy", "privacy", "policy", "legal", "data-protection", "user-data" ],

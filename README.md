@@ -7,6 +7,7 @@ Programmatically composable privacy policies for humans and machines
 ## Requirements
 
  * PHP 5.6.0+
+   * Internationalization extension (`intl`)
 
 ## Installation
 
