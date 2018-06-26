@@ -95,6 +95,38 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 	abstract protected function formatDate($unixTimestamp);
 
 	/**
+	 * Formats the specified number of hours
+	 *
+	 * @param int $n
+	 * @return string the formatted number as a string
+	 */
+	abstract protected function formatHours($n);
+
+	/**
+	 * Formats the specified number of days
+	 *
+	 * @param int $n
+	 * @return string the formatted number as a string
+	 */
+	abstract protected function formatDays($n);
+
+	/**
+	 * Formats the specified number of weeks
+	 *
+	 * @param int $n
+	 * @return string the formatted number as a string
+	 */
+	abstract protected function formatWeeks($n);
+
+	/**
+	 * Formats the specified number of months
+	 *
+	 * @param int $n
+	 * @return string the formatted number as a string
+	 */
+	abstract protected function formatMonths($n);
+
+	/**
 	 * Returns the policy as generic markup
 	 *
 	 * @return Markup

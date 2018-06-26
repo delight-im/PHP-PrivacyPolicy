@@ -439,4 +439,20 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 		return \IntlDateFormatter::create('de_DE', \IntlDateFormatter::LONG, \IntlDateFormatter::NONE)->format($unixTimestamp);
 	}
 
+	protected function formatHours($n) {
+		return \sprintf(($n === 1 ? '%d Stunde' : '%d Stunden'), $n);
+	}
+
+	protected function formatDays($n) {
+		return \sprintf(($n === 1 ? '%d Tag' : '%d Tage'), $n);
+	}
+
+	protected function formatWeeks($n) {
+		return \sprintf(($n === 1 ? '%d Woche' : '%d Wochen'), $n);
+	}
+
+	protected function formatMonths($n) {
+		return \sprintf(($n === 1 ? '%d Monat' : '%d Monate'), $n);
+	}
+
 }

@@ -29,4 +29,20 @@ class EnglishPrivacyPolicy extends HumanPrivacyPolicy {
 		return \IntlDateFormatter::create('en_US', \IntlDateFormatter::LONG, \IntlDateFormatter::NONE)->format($unixTimestamp);
 	}
 
+	protected function formatHours($n) {
+		return \sprintf(($n === 1 ? '%d hour' : '%d hours'), $n);
+	}
+
+	protected function formatDays($n) {
+		return \sprintf(($n === 1 ? '%d day' : '%d days'), $n);
+	}
+
+	protected function formatWeeks($n) {
+		return \sprintf(($n === 1 ? '%d week' : '%d weeks'), $n);
+	}
+
+	protected function formatMonths($n) {
+		return \sprintf(($n === 1 ? '%d month' : '%d months'), $n);
+	}
+
 }
