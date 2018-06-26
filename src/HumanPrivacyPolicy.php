@@ -381,27 +381,31 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 
 												if ($dataElement->hasMaxRetention()) {
 													if ($dataElement->getMaxRetention() <= 72) {
+														// format number of 0 to 72 hours
 														$group->addDefinition($this->lang(
-															'Maximum retention time in hours: %d',
-															$dataElement->getMaxRetention()
+															'Maximum retention time: %s',
+															$this->formatHours($dataElement->getMaxRetention())
 														));
 													}
 													elseif ($dataElement->getMaxRetention() <= 504) {
+														// format number of 4 to 21 days
 														$group->addDefinition($this->lang(
-															'Maximum retention time in days: %d',
-															\ceil($dataElement->getMaxRetention() / 24)
+															'Maximum retention time: %s',
+															$this->formatDays(\ceil($dataElement->getMaxRetention() / 24))
 														));
 													}
 													elseif ($dataElement->getMaxRetention() <= 1008) {
+														// format number of 4 to 6 weeks
 														$group->addDefinition($this->lang(
-															'Maximum retention time in weeks: %d',
-															\ceil($dataElement->getMaxRetention() / 24 / 7)
+															'Maximum retention time: %s',
+															$this->formatWeeks(\ceil($dataElement->getMaxRetention() / 24 / 7))
 														));
 													}
 													else {
+														// format number of 2 or more months
 														$group->addDefinition($this->lang(
-															'Maximum retention time in months: %d',
-															\ceil($dataElement->getMaxRetention() / 24 / 30.436875)
+															'Maximum retention time: %s',
+															$this->formatMonths(\ceil($dataElement->getMaxRetention() / 24 / 30.436875))
 														));
 													}
 												}

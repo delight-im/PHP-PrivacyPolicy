@@ -242,14 +242,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Offenlegungspflichten';
 			case 'Manufacturer of device':
 				return 'Hersteller des Geräts';
-			case 'Maximum retention time in days: %d':
-				return 'Maximale Aufbewahrungszeit in Tagen: %d';
-			case 'Maximum retention time in hours: %d':
-				return 'Maximale Aufbewahrungszeit in Stunden: %d';
-			case 'Maximum retention time in months: %d':
-				return 'Maximale Aufbewahrungszeit in Monaten: %d';
-			case 'Maximum retention time in weeks: %d':
-				return 'Maximale Aufbewahrungszeit in Wochen: %d';
+			case 'Maximum retention time: %s':
+				return 'Maximale Aufbewahrungszeit: %s';
 			case 'Mergers and acquisitions':
 				return 'Fusionen und Übernahmen';
 			case 'Message text of email':
