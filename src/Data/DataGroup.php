@@ -100,11 +100,9 @@ final class DataGroup {
 	 * @param string $type one of the constants from the {@see DataType} class
 	 * @param string|null $requirement (optional) one of the constants from the {@see DataRequirement} class
 	 * @param bool|null $maxRetention (optional) the maximum retention time of the information in hours
-	 * @param bool|null $viewable (optional) whether the information is directly viewable by the user somewhere via the user interface
-	 * @param bool|null $deletable (optional) whether the information is directly deletable by the user somewhere via the user interface
 	 */
-	public function addElement($type, $requirement = null, $maxRetention = null, $viewable = null, $deletable = null) {
-		$this->dataElements[] = new DataElement($type, $requirement, $maxRetention, $viewable, $deletable);
+	public function addElement($type, $requirement = null, $maxRetention = null) {
+		$this->dataElements[] = new DataElement($type, $requirement, $maxRetention);
 	}
 
 	/**

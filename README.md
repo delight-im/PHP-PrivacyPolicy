@@ -145,9 +145,7 @@ $policy->addDataGroup(
         $group->addElement(
             $dataType, // see "Data types" below
             $dataRequirement, // see "Data requirements" below
-            24 * 7, // maximum retention time in hours
-            true, // whether this piece of information can be viewed by the user
-            false // whether this piece of information can be deleted by the user
+            24 * 7 // maximum retention time in hours
         );
     }
 );

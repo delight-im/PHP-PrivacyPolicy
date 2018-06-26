@@ -17,10 +17,6 @@ final class DataElement {
 	private $requirement;
 	/** @var int|null the maximum retention time of the information in hours */
 	private $maxRetention;
-	/** @var bool whether the information is directly viewable by the user somewhere via the user interface */
-	private $viewable;
-	/** @var bool whether the information is directly deletable by the user somewhere via the user interface */
-	private $deletable;
 
 	/**
 	 * Returns one of the constants from the {@see DataType} class
@@ -59,38 +55,16 @@ final class DataElement {
 	}
 
 	/**
-	 * Returns whether the information is directly viewable by the user somewhere via the user interface
-	 *
-	 * @return bool
-	 */
-	public function isViewable() {
-		return $this->viewable;
-	}
-
-	/**
-	 * Returns whether the information is directly deletable by the user somewhere via the user interface
-	 *
-	 * @return bool
-	 */
-	public function isDeletable() {
-		return $this->deletable;
-	}
-
-	/**
 	 * Creates a new individual data element
 	 *
 	 * @param string $type one of the constants from the {@see DataType} class
 	 * @param string|null $requirement (optional) one of the constants from the {@see DataRequirement} class
 	 * @param bool|null $maxRetention (optional) the maximum retention time of the information in hours
-	 * @param bool|null $viewable (optional) whether the information is directly viewable by the user somewhere via the user interface
-	 * @param bool|null $deletable (optional) whether the information is directly deletable by the user somewhere via the user interface
 	 */
-	public function __construct($type, $requirement = null, $maxRetention = null, $viewable = null, $deletable = null) {
+	public function __construct($type, $requirement = null, $maxRetention = null) {
 		$this->type = (string) $type;
 		$this->requirement = $requirement !== null ? ((string) $requirement) : DataRequirement::ALWAYS;
 		$this->maxRetention = $maxRetention !== null ? ((int) $maxRetention) : null;
-		$this->viewable = (bool) $viewable;
-		$this->deletable = (bool) $deletable;
 	}
 
 }

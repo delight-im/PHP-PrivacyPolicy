@@ -123,14 +123,8 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Wir werden gewisse persönliche Informationen so lange aufbewahren, wie Sie unsere Dienste nutzen, wie Ihr Benutzerkonto besteht oder wie es nötig ist, um unsere Dienste für Sie bereitstellen zu können.';
 			case 'You are welcome to make use of these settings and features of your web browser or operating system, but that may prevent our services from working correctly for you.':
 				return 'Sie können gerne von diesen Einstellungen und Funktionen in Ihrem Webbrowser oder Betriebssystem Gebrauch machen, aber dies kann unsere Dienste daran hindern, korrekt für Sie zu funktionieren.';
-			case 'You can delete this information through the user interface of our services.':
-				return 'Sie können diese Information über die Benutzeroberfläche unserer Dienste löschen.';
 			case 'You can reach us via email at:':
 				return 'Sie erreichen uns per E-Mail unter:';
-			case 'You can view and delete this information through the user interface of our services.':
-				return 'Sie können diese Information über die Benutzeroberfläche unserer Dienste ansehen und löschen.';
-			case 'You can view this information through the user interface of our services.':
-				return 'Sie können diese Information über die Benutzeroberfläche unserer Dienste ansehen.';
 			case 'You have the right to request at any time, free of charge, information about your personal data stored by us.':
 				return 'Sie haben das Recht, jederzeit kostenlos Informationen darüber anzufordern, welche persönlichen Daten wir über Sie gespeichert haben.';
 			case 'You may opt out of receiving any newsletters or promotional messages from us at any time.':

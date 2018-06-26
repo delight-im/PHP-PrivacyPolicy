@@ -65,65 +65,49 @@ $policy->addDataGroup(
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_HTTP_METHOD,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_HTTP_STATUS,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_IP_ADDRESS,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_REFERER,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_SIZE,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_DATETIME,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_URL,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::ACCESS_USERAGENT_STRING,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			$retentionTimeHours,
-			false,
-			false
+			$retentionTimeHours
 		);
 	}
 );
@@ -142,41 +126,31 @@ $policy->addDataGroup(
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::USER_EMAIL,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			null,
-			true,
-			false
+			null
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::USER_PASSWORD_HASHED_STRONG,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			null,
-			false,
-			false
+			null
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::USER_NAME_ALIAS,
 			\Delight\PrivacyPolicy\Data\DataRequirement::OPT_IN,
-			null,
-			true,
-			false
+			null
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::USER_REGISTRATION_DATETIME,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			null,
-			false,
-			false
+			null
 		);
 
 		$group->addElement(
 			\Delight\PrivacyPolicy\Data\DataType::USER_LOGIN_DATETIME,
 			\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
-			null,
-			false,
-			false
+			null
 		);
 	}
 );

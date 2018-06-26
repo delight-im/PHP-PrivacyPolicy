@@ -367,18 +367,6 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 													));
 												}
 
-												if ($dataElement->isViewable()) {
-													if ($dataElement->isDeletable()) {
-														$group->addDefinition($this->lang('You can view and delete this information through the user interface of our services.'));
-													}
-													else {
-														$group->addDefinition($this->lang('You can view this information through the user interface of our services.'));
-													}
-												}
-												elseif ($dataElement->isDeletable()) {
-													$group->addDefinition($this->lang('You can delete this information through the user interface of our services.'));
-												}
-
 												if ($dataElement->hasMaxRetention()) {
 													if ($dataElement->getMaxRetention() <= 72) {
 														// format number of 0 to 72 hours

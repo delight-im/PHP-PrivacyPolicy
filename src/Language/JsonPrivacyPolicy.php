@@ -110,9 +110,7 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 							'requirement' => (string) $element->getRequirement(),
 							'retention' => [
 								'max' => (int) $element->getMaxRetention()
-							],
-							'viewable' => (bool) $element->isViewable(),
-							'deletable' => (bool) $element->isDeletable()
+							]
 						];
 					}
 				}
