@@ -108,7 +108,6 @@ $policy->setPreservationInBackups(true);
 $policy->setThirdPartyServiceProviders(true);
 $policy->setTransferUponMergerOrAcquisition(true);
 $policy->setTlsEverywhere(true);
-$policy->setRightToInformation(true);
 $policy->setNotificationPeriod(30);
 ```
 

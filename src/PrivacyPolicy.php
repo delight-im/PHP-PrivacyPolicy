@@ -66,8 +66,6 @@ abstract class PrivacyPolicy {
 	protected $transferUponMergerOrAcquisition;
 	/** @var bool whether all connections to the server are, without exceptions, secured using SSL/TLS */
 	protected $tlsEverywhere;
-	/** @var bool whether the user has the right to request information about or changes to their personal data */
-	protected $rightToInformation;
 	/** @var int the declared period for notifications to the user about major changes */
 	protected $notificationPeriod;
 	/** @var string|null the email address for contact */
@@ -402,24 +400,6 @@ abstract class PrivacyPolicy {
 	}
 
 	/**
-	 * Returns whether the user has the right to request information about or changes to their personal data
-	 *
-	 * @return bool
-	 */
-	public function hasRightToInformation() {
-		return $this->rightToInformation;
-	}
-
-	/**
-	 * Sets whether the user has the right to request information about or changes to their personal data
-	 *
-	 * @param bool $rightToInformation
-	 */
-	public function setRightToInformation($rightToInformation) {
-		$this->rightToInformation = (bool) $rightToInformation;
-	}
-
-	/**
 	 * Returns the declared period for notifications to the user about major changes
 	 *
 	 * @return int
@@ -501,7 +481,6 @@ abstract class PrivacyPolicy {
 		$this->thirdPartyServiceProviders = true;
 		$this->transferUponMergerOrAcquisition = true;
 		$this->tlsEverywhere = false;
-		$this->rightToInformation = true;
 		$this->notificationPeriod = self::NOTIFICATION_PERIOD_DEFAULT;
 		$this->contactEmail = null;
 		$this->contactUrl = null;

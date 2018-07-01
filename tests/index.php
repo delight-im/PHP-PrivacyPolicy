@@ -166,7 +166,6 @@ $policy->setPreservationInBackups(true);
 $policy->setThirdPartyServiceProviders(true);
 $policy->setTransferUponMergerOrAcquisition(true);
 $policy->setTlsEverywhere(true);
-$policy->setRightToInformation(true);
 $policy->setNotificationPeriod(30);
 $policy->setContactEmail('privacy@example.com');
 $policy->setContactUrl('https://www.example.com/contact.html');

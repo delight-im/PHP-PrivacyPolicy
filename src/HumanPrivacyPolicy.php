@@ -521,22 +521,6 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 				$group->addDefinition($this->lang('We encourage you not to provide any personal information to those third parties before assuring yourself of proper privacy practices on their part.'));
 			});
 
-			if ($this->hasRightToInformation()) {
-				$list->addDefinitionGroup($this->lang('Right to information'), function (DefinitionGroup $group) {
-					$group->addDefinition($this->lang('You have the right to request at any time, free of charge, information about your personal data stored by us.'));
-					$group->addDefinitionInteractively(function () {
-						$definition = $this->lang('In addition to that, where applicable, you are entitled to have this data corrected, blocked or deleted.');
-
-						if ($this->hasContactInformation()) {
-							$definition .= Markup::SPACE;
-							$definition .= $this->lang('For our contact information, please see further below.');
-						}
-
-						return $definition;
-					});
-				});
-			}
-
 			$list->addDefinitionGroup($this->lang('Changes to this privacy policy'), function (DefinitionGroup $group) {
 				$group->addDefinition(
 					$this->lang('We may change this privacy policy from time to time.')

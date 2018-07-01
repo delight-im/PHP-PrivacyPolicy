@@ -316,8 +316,6 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Telefonnummer (Festnetz) des Kontakts';
 			case 'Retention and deletion of data':
 				return 'Aufbewahrung und Löschung von Daten';
-			case 'Right to information':
-				return 'Auskunftsrecht';
 			case 'Service providers, contractors and agents':
 				return 'Dienstleister, Auftragnehmer und Vertreter';
 			case 'Signature':

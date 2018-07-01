@@ -144,11 +144,6 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 		$out['choices']['account'] = [];
 		$out['choices']['account']['deletion'] = (bool) $this->isAccountDeletable();
 
-		$out['choices']['information'] = [];
-		$out['choices']['information']['request'] = (bool) $this->hasRightToInformation();
-		$out['choices']['information']['update'] = (bool) $this->hasRightToInformation();
-		$out['choices']['information']['delete'] = (bool) $this->hasRightToInformation();
-
 		$out['backups'] = (bool) $this->hasPreservationInBackups();
 
 		$out['serviceProviders'] = [];
