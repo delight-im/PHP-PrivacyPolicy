@@ -361,11 +361,9 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 											$dataTypeName = DataType::toNaturalLanguage($dataElement->getType());
 
 											$list->addDefinitionGroup($this->lang($dataTypeName), function (DefinitionGroup $group) use ($dataElement) {
-												if ($dataElement->getRequirement() !== DataRequirement::ALWAYS) {
-													$group->addDefinition($this->lang(
-														DataRequirement::toNaturalLanguage($dataElement->getRequirement())
-													));
-												}
+												$group->addDefinition($this->lang(
+													DataRequirement::toNaturalLanguage($dataElement->getRequirement())
+												));
 
 												if ($dataElement->hasMaxRetention()) {
 													if ($dataElement->getMaxRetention() <= 72) {
