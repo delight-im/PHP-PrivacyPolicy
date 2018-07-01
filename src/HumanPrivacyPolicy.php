@@ -343,6 +343,10 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 							$list->addDefinitionGroup($dataGroup->getTitle(), function (DefinitionGroup $group) use ($dataGroup) {
 								$group->addDefinition($dataGroup->getDescription());
 
+								$group->addDefinition($this->lang(
+									DataRequirement::toNaturalLanguage($dataGroup->getRequirement())
+								));
+
 								if ($dataGroup->hasPurposes()) {
 									foreach ($dataGroup->getPurposes() as $purpose) {
 										$group->addDefinition($this->lang(
@@ -350,10 +354,6 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 										));
 									}
 								}
-
-								$group->addDefinition($this->lang(
-									DataRequirement::toNaturalLanguage($dataGroup->getRequirement())
-								));
 
 								if ($dataGroup->hasElements()) {
 									foreach ($dataGroup->getElements() as $dataElement) {
