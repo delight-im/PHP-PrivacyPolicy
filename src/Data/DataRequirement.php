@@ -39,6 +39,26 @@ final class DataRequirement {
 	const OPT_OUT = 'opt_out';
 
 	/**
+	 * Converts an identifier to a boolean value indicating whether there is a requirement
+	 *
+	 * @param string $identifier one of the constants from this class
+	 * @return bool
+	 * @throws UnexpectedDataRequirementError
+	 */
+	public static function toBool($identifier) {
+		switch ($identifier) {
+			case self::ALWAYS:
+				return true;
+			case self::OPT_IN:
+				return false;
+			case self::OPT_OUT:
+				return false;
+			default:
+				throw new UnexpectedDataRequirementError($identifier);
+		}
+	}
+
+	/**
 	 * Converts an identifier to a human-readable description in natural language
 	 *
 	 * @param string $identifier one of the constants from this class
