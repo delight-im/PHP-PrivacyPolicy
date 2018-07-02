@@ -49,8 +49,6 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Wenn Sie Hilfe benötigen, kontaktieren Sie uns bitte.';
 			case 'If you would like to cancel your use of our services, delete your account, or delete your personal information, you may do so in the respective sections of our services.':
 				return 'Wenn Sie Ihre Nutzung unserer Dienste beenden möchten, Ihr Benutzerkonto löschen möchten oder Ihre persönlichen Informationen entfernen möchten, können Sie dies in den jeweiligen Bereichen unserer Dienste tun.';
-			case 'In addition to that, where applicable, you are entitled to have this data corrected, blocked or deleted.':
-				return 'Zusätzlich haben Sie, wo zutreffend, Anspruch darauf, dass diese Daten korrigiert, blockiert oder gelöscht werden.';
 			case 'In general, the applicable version of this policy is the one that is current at the time of your access of our services.':
 				return 'Im Allgemeinen ist die gültige Version dieser Erklärung diejenige, die zum Zeitpunkt Ihres Zugriffs auf unsere Dienste aktuell ist.';
 			case 'In order to prevent loss of data due to human errors or system failures, we keep additional backup copies of data, as most companies and service providers do, which may include some of your personal information.':
@@ -125,8 +123,6 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Sie können gerne von diesen Einstellungen und Funktionen in Ihrem Webbrowser oder Betriebssystem Gebrauch machen, aber dies kann unsere Dienste daran hindern, korrekt für Sie zu funktionieren.';
 			case 'You can reach us via email at:':
 				return 'Sie erreichen uns per E-Mail unter:';
-			case 'You have the right to request at any time, free of charge, information about your personal data stored by us.':
-				return 'Sie haben das Recht, jederzeit kostenlos Informationen darüber anzufordern, welche persönlichen Daten wir über Sie gespeichert haben.';
 			case 'You may opt out of receiving any newsletters or promotional messages from us at any time.':
 				return 'Sie können dem Empfang jeglicher Newsletter oder Werbenachrichten von uns jederzeit widersprechen.';
 			case 'Your web browser or app then sends these small text files back to us whenever you access our services.':
