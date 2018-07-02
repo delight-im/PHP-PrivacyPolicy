@@ -226,7 +226,9 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 					$this->lang('If in doubt, rather do not share sensitive information.')
 				);
 
-				$group->addDefinition($this->lang('We offer you simple ways to view, update or delete the data we have collected about you.'));
+				if ($this->rightOfAccess && $this->rightToRectification && $this->rightToErasure) {
+					$group->addDefinition($this->lang('We offer you simple ways to view, update or delete the data we have collected about you.'));
+				}
 			});
 
 			if ($this->hasChildrenMinimumAge()) {
