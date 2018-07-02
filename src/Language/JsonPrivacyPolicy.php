@@ -159,6 +159,18 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 		$out['security'] = [];
 		$out['security']['tls'] = (bool) $this->hasTlsEverywhere();
 
+		if ($this->competentSupervisoryAuthorityName !== null || $this->competentSupervisoryAuthorityUrl !== null) {
+			$out['supervisoryAuthority'] = [];
+
+			if ($this->competentSupervisoryAuthorityName !== null) {
+				$out['supervisoryAuthority']['name'] = $this->competentSupervisoryAuthorityName;
+			}
+
+			if ($this->competentSupervisoryAuthorityUrl !== null) {
+				$out['supervisoryAuthority']['url'] = $this->competentSupervisoryAuthorityUrl;
+			}
+		}
+
 		$out['changes'] = [];
 		$out['changes']['notificationPeriod'] = (int) $this->getNotificationPeriod();
 
