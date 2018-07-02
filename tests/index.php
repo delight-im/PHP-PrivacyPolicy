@@ -166,6 +166,7 @@ $policy->setPreservationInBackups(true);
 $policy->setThirdPartyServiceProviders(true);
 $policy->setTransferUponMergerOrAcquisition(true);
 $policy->setTlsEverywhere(true);
+$policy->setCompetentSupervisoryAuthority('Estonian Data Protection Inspectorate', 'http://www.aki.ee/en');
 $policy->setNotificationPeriod(30);
 $policy->setContactEmail('privacy@example.com');
 $policy->setContactUrl('https://www.example.com/contact.html');

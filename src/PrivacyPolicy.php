@@ -66,6 +66,10 @@ abstract class PrivacyPolicy {
 	protected $transferUponMergerOrAcquisition;
 	/** @var bool whether all connections to the server are, without exceptions, secured using SSL/TLS */
 	protected $tlsEverywhere;
+	/** @var string|null the name of the data protection authority that is responsible */
+	protected $competentSupervisoryAuthorityName;
+	/** @var string|null the URL for more information on the data protection authority that is responsible */
+	protected $competentSupervisoryAuthorityUrl;
 	/** @var int the declared period for notifications to the user about major changes */
 	protected $notificationPeriod;
 	/** @var string|null the email address for contact */
@@ -400,6 +404,35 @@ abstract class PrivacyPolicy {
 	}
 
 	/**
+	 * Returns the name of the data protection authority that is responsible
+	 *
+	 * @return string|null
+	 */
+	public function getCompetentSupervisoryAuthorityName() {
+		return $this->competentSupervisoryAuthorityName;
+	}
+
+	/**
+	 * Returns the URL for more information on the data protection authority that is responsible
+	 *
+	 * @return string|null
+	 */
+	public function getCompetentSupervisoryAuthorityUrl() {
+		return $this->competentSupervisoryAuthorityUrl;
+	}
+
+	/**
+	 * Sets the data protection authority that is responsible
+	 *
+	 * @param string|null $name the name, or `null` to unset
+	 * @param string|null $url (optional) the URL for more information, or `null` to unset
+	 */
+	public function setCompetentSupervisoryAuthority($name = null, $url = null) {
+		$this->competentSupervisoryAuthorityName = ($name !== null) ? ((string) $name) : null;
+		$this->competentSupervisoryAuthorityUrl = ($url !== null) ? ((string) $url) : null;
+	}
+
+	/**
 	 * Returns the declared period for notifications to the user about major changes
 	 *
 	 * @return int
@@ -481,6 +514,8 @@ abstract class PrivacyPolicy {
 		$this->thirdPartyServiceProviders = true;
 		$this->transferUponMergerOrAcquisition = true;
 		$this->tlsEverywhere = false;
+		$this->competentSupervisoryAuthorityName = null;
+		$this->competentSupervisoryAuthorityUrl = null;
 		$this->notificationPeriod = self::NOTIFICATION_PERIOD_DEFAULT;
 		$this->contactEmail = null;
 		$this->contactUrl = null;

@@ -108,6 +108,7 @@ $policy->setPreservationInBackups(true);
 $policy->setThirdPartyServiceProviders(true);
 $policy->setTransferUponMergerOrAcquisition(true);
 $policy->setTlsEverywhere(true);
+$policy->setCompetentSupervisoryAuthority('Estonian Data Protection Inspectorate', 'http://www.aki.ee/en');
 $policy->setNotificationPeriod(30);
 ```
 
