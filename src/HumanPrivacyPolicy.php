@@ -521,6 +521,31 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 				$group->addDefinition($this->lang('We encourage you not to provide any personal information to those third parties before assuring yourself of proper privacy practices on their part.'));
 			});
 
+			if (false) {
+				$list->addDefinitionGroup($this->lang('Your rights'), function (DefinitionGroup $group) {
+					$group->addDefinition($this->lang('Except as limited under applicable law, you have the following rights with regard to your personal data:'));
+					$group->addDefinitionInteractively(function () {
+						$definition = $this->lang('If you have any questions regarding the protection of your data, your rights, or how to exercise them, please contact us.');
+
+						if ($this->hasContactInformation()) {
+							$definition .= Markup::SPACE;
+							$definition .= $this->lang('For our contact information, please see further below.');
+						}
+
+						$definition .= Markup::SPACE;
+						$definition .= $this->lang('Upon verification of your identity, we will respond to your request within a reasonable period of time.');
+
+						$definition .= Markup::SPACE;
+						$definition .= $this->lang('If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.');
+
+						$definition .= Markup::SPACE;
+						$definition .= $this->lang('Moreover, you are free to file a complaint with that authority.');
+
+						return $definition;
+					});
+				});
+			}
+
 			$list->addDefinitionGroup($this->lang('Changes to this privacy policy'), function (DefinitionGroup $group) {
 				$group->addDefinition(
 					$this->lang('We may change this privacy policy from time to time.')

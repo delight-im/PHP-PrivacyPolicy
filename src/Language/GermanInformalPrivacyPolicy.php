@@ -141,6 +141,18 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Du wirst durch eine auffällige Ankündigung innerhalb unserer Dienste oder per E-Mail an die primäre E-Mail-Adresse, die in deinem Benutzerkonto hinterlegt ist, mindestens %d Tage vor einer solchen Übertragung deiner persönlichen Informationen benachrichtigt.';
 			case 'You will continue to receive essential, non-promotional messages regarding your account, such as technical notices, order confirmations, or other service-related messages, which are required for us to be able to provide our services to you.':
 				return 'Du wirst weiterhin grundlegende Nachrichten bezüglich deines Benutzerkontos erhalten, die nicht der Werbung dienen, wie etwa technische Mitteilungen, Auftragsbestätigungen oder andere dienstbezogene Nachrichten, die nötig sind, damit wir dir unsere Dienste bereitstellen können.';
+			case 'Your rights':
+				return 'Deine Rechte';
+			case 'Except as limited under applicable law, you have the following rights with regard to your personal data:':
+				return 'Soweit nicht durch anwendbares Recht eingeschränkt, hast du im Hinblick auf deine persönlichen Daten die folgenden Rechte:';
+			case 'If you have any questions regarding the protection of your data, your rights, or how to exercise them, please contact us.':
+				return 'Wenn du irgendwelche Fragen im Hinblick auf den Schutz deiner Daten, deine Rechte oder deren Ausübung hast, kontaktiere uns bitte.';
+			case 'Upon verification of your identity, we will respond to your request within a reasonable period of time.':
+				return 'Nach Überprüfung deiner Identität werden wir innerhalb eines angemessenen Zeitraumes auf deine Anfrage antworten.';
+			case 'If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.':
+				return 'Falls du mit unserer Antwort oder mit der Art und Weise, wie wir deine persönlichen Daten verarbeiten, unzufrieden bist, kannst du deine örtliche Datenschutzbehörde kontaktieren.';
+			case 'Moreover, you are free to file a complaint with that authority.':
+				return 'Außerdem steht es dir frei, bei dieser Behörde eine Beschwerde einzulegen.';
 			default:
 				return parent::translateUnformatted($text);
 		}
