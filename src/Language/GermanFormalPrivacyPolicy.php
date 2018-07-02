@@ -151,6 +151,38 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Es steht Ihnen frei, bei der Datenschutzbehörde eine Beschwerde einzulegen.';
 			case 'You may also contact the data protection authority that is responsible for us:':
 				return 'Sie können auch die Datenschutzbehörde kontaktieren, die für uns zuständig ist:';
+			case 'Access your personal data':
+				return 'Erhalten Sie Zugriff auf Ihre persönlichen Daten';
+			case 'You have the right to be informed of and request access to the personal data we process about you.':
+				return 'Sie haben das Recht, über die persönlichen Daten, die wir von Ihnen erheben, informiert zu werden und Zugriff darauf zu erhalten.';
+			case 'Update your personal data':
+				return 'Aktualisieren Sie Ihre persönlichen Daten';
+			case 'You have the right to request that we amend or update your personal data where it is inaccurate or incomplete.':
+				return 'Sie haben das Recht, von uns die Änderung oder Aktualisierung Ihrer persönlichen Daten zu fordern, wo diese fehlerhaft oder unvollständig sind.';
+			case 'Erase your personal data':
+				return 'Löschen Sie Ihre persönlichen Daten';
+			case 'You have the right to request that we delete your personal data.':
+				return 'Sie haben das Recht, von uns die Löschung Ihrer persönlichen Daten zu verlangen.';
+			case 'Restrict the use of your personal data':
+				return 'Schränken Sie die Verwendung Ihrer persönlichen Daten ein';
+			case 'You have the right to request that we temporarily or permanently stop processing your personal data.':
+				return 'Sie haben das Recht, uns aufzufordern, die Verarbeitung Ihrer persönlichen Daten vorübergehend oder dauerhaft einzustellen.';
+			case 'Export your personal data':
+				return 'Exportieren Sie Ihre persönlichen Daten';
+			case 'You have the right to request a copy of your personal data in electronic and machine-readable form, and the right to transmit that personal data to another service provider.':
+				return 'Sie haben das Recht, eine Kopie Ihrer persönlichen Daten in elektronischer und maschinenlesbarer Form anzufordern, und das Recht, diese persönlichen Daten an einen anderen Diensteanbieter zu übertragen.';
+			case 'Object to direct marketing':
+				return 'Widersprechen Sie der Direktwerbung';
+			case 'You have the right to object to your personal data being processed for direct marketing purposes.':
+				return 'Sie haben das Recht, der Verarbeitung Ihrer persönlichen Daten für Zwecke der Direktwerbung zu widersprechen.';
+			case 'Object to the use of your personal data':
+				return 'Widersprechen Sie der Verwendung Ihrer persönlichen Daten';
+			case 'You have the right to object to us processing your personal data on grounds relating to your particular situation where we no longer have a legitimate reason or legal need to process it.':
+				return 'Sie haben das Recht, der Verarbeitung Ihrer persönlichen Daten durch uns aus Gründen zu widersprechen, die sich aus Ihrer speziellen Situation ergeben, wenn wir keinen legitimen Grund oder keine rechtliche Verpflichtung mehr zu deren Verarbeitung haben.';
+			case 'Object to automated decision-making':
+				return 'Widersprechen Sie automatisierten Entscheidungen';
+			case 'You have the right not to be subject to a decision based solely on automated decision-making, including profiling, where the decision would have a legal effect on you or produce a similarly significant effect.':
+				return 'Sie haben das Recht, keiner Entscheidung unterworfen zu sein, die allein auf einer automatisierten Entscheidungsfindung basiert, einschließlich der Profilerstellung, wenn eine solche Entscheidung Ihnen gegenüber rechtliche Auswirkungen hätte oder eine ähnlich erhebliche Beeinträchtigung hervorrufen würde.';
 			default:
 				return parent::translateUnformatted($text);
 		}

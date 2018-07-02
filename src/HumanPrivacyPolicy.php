@@ -11,6 +11,7 @@ namespace Delight\PrivacyPolicy;
 use Delight\PrivacyPolicy\Data\DataPurpose;
 use Delight\PrivacyPolicy\Data\DataRequirement;
 use Delight\PrivacyPolicy\Data\DataType;
+use Delight\PrivacyPolicy\Markup\AbbreviationMarkup;
 use Delight\PrivacyPolicy\Markup\DefinitionList\DefinitionGroup;
 use Delight\PrivacyPolicy\Markup\DefinitionList\DefinitionList;
 use Delight\PrivacyPolicy\Markup\LinkMarkup;
@@ -521,9 +522,135 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 				$group->addDefinition($this->lang('We encourage you not to provide any personal information to those third parties before assuring yourself of proper privacy practices on their part.'));
 			});
 
-			if (false) {
+			if ($this->rightOfAccess || $this->rightToRectification || $this->rightToErasure || $this->rightToRestrictProcessing || $this->rightToDataPortability || $this->rightToObject || $this->rightsRelatedToAutomatedDecisions) {
 				$list->addDefinitionGroup($this->lang('Your rights'), function (DefinitionGroup $group) {
 					$group->addDefinition($this->lang('Except as limited under applicable law, you have the following rights with regard to your personal data:'));
+
+					if ($this->rightOfAccess) {
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Access your personal data'),
+										$this->lang('Right of access (EU, General Data Protection Regulation (GDPR), Article 15)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right to be informed of and request access to the personal data we process about you.'));
+									}
+								);
+							})
+						);
+					}
+
+					if ($this->rightToRectification) {
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Update your personal data'),
+										$this->lang('Right to rectification (EU, General Data Protection Regulation (GDPR), Article 16)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right to request that we amend or update your personal data where it is inaccurate or incomplete.'));
+									}
+								);
+							})
+						);
+					}
+
+					if ($this->rightToErasure) {
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Erase your personal data'),
+										$this->lang('Right to erasure (EU, General Data Protection Regulation (GDPR), Article 17)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right to request that we delete your personal data.'));
+									}
+								);
+							})
+						);
+					}
+
+					if ($this->rightToRestrictProcessing) {
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Restrict the use of your personal data'),
+										$this->lang('Right to restriction of processing (EU, General Data Protection Regulation (GDPR), Article 18)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right to request that we temporarily or permanently stop processing your personal data.'));
+									}
+								);
+							})
+						);
+					}
+
+					if ($this->rightToDataPortability) {
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Export your personal data'),
+										$this->lang('Right to data portability (EU, General Data Protection Regulation (GDPR), Article 20)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right to request a copy of your personal data in electronic and machine-readable form, and the right to transmit that personal data to another service provider.'));
+									}
+								);
+							})
+						);
+					}
+
+					if ($this->rightToObject) {
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Object to direct marketing'),
+										$this->lang('Right to object (EU, General Data Protection Regulation (GDPR), Article 21)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right to object to your personal data being processed for direct marketing purposes.'));
+									}
+								);
+							})
+						);
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Object to the use of your personal data'),
+										$this->lang('Right to object (EU, General Data Protection Regulation (GDPR), Article 21)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right to object to us processing your personal data on grounds relating to your particular situation where we no longer have a legitimate reason or legal need to process it.'));
+									}
+								);
+							})
+						);
+					}
+
+					if ($this->rightsRelatedToAutomatedDecisions) {
+						$group->addDefinition(
+							new DefinitionList(function (DefinitionList $list) {
+								$list->addDefinitionGroup(
+									new AbbreviationMarkup(
+										$this->lang('Object to automated decision-making'),
+										$this->lang('Rights related to automated individual decision-making, including profiling (EU, General Data Protection Regulation (GDPR), Article 22)')
+									),
+									function (DefinitionGroup $group) {
+										$group->addDefinition($this->lang('You have the right not to be subject to a decision based solely on automated decision-making, including profiling, where the decision would have a legal effect on you or produce a similarly significant effect.'));
+									}
+								);
+							})
+						);
+					}
+
 					$group->addDefinitionInteractively(function () {
 						$definition = $this->lang('If you have any questions regarding the protection of your data, your rights, or how to exercise them, please contact us.');
 

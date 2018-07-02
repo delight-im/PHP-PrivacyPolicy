@@ -422,6 +422,20 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Geburtsjahr des Kontakts';
 			case 'Year of construction of vehicle':
 				return 'Baujahr des Fahrzeugs';
+			case 'Right of access (EU, General Data Protection Regulation (GDPR), Article 15)':
+				return 'Auskunftsrecht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 15)';
+			case 'Right to rectification (EU, General Data Protection Regulation (GDPR), Article 16)':
+				return 'Recht auf Berichtigung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 16)';
+			case 'Right to erasure (EU, General Data Protection Regulation (GDPR), Article 17)':
+				return 'Recht auf Löschung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 17)';
+			case 'Right to restriction of processing (EU, General Data Protection Regulation (GDPR), Article 18)':
+				return 'Recht auf Einschränkung der Verarbeitung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 18)';
+			case 'Right to data portability (EU, General Data Protection Regulation (GDPR), Article 20)':
+				return 'Recht auf Datenübertragbarkeit (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 20)';
+			case 'Right to object (EU, General Data Protection Regulation (GDPR), Article 21)':
+				return 'Widerspruchsrecht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 21)';
+			case 'Rights related to automated individual decision-making, including profiling (EU, General Data Protection Regulation (GDPR), Article 22)':
+				return 'Rechte bezüglich automatisierter Entscheidungen im Einzelfall, einschließlich Profiling (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 22)';
 			default:
 				throw new TranslationNotFoundError();
 		}
