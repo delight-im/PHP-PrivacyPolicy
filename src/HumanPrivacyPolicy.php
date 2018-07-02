@@ -539,7 +539,7 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 						$definition .= $this->lang('If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.');
 
 						$definition .= Markup::SPACE;
-						$definition .= $this->lang('Moreover, you are free to file a complaint with that authority.');
+						$definition .= $this->lang('You are free to file a complaint with the data protection authority.');
 
 						return $definition;
 					});

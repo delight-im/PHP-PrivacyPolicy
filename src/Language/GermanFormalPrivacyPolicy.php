@@ -147,8 +147,8 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Nach Überprüfung Ihrer Identität werden wir innerhalb eines angemessenen Zeitraumes auf Ihre Anfrage antworten.';
 			case 'If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.':
 				return 'Falls Sie mit unserer Antwort oder mit der Art und Weise, wie wir Ihre persönlichen Daten verarbeiten, unzufrieden sind, können Sie Ihre örtliche Datenschutzbehörde kontaktieren.';
-			case 'Moreover, you are free to file a complaint with that authority.':
-				return 'Außerdem steht es Ihnen frei, bei dieser Behörde eine Beschwerde einzulegen.';
+			case 'You are free to file a complaint with the data protection authority.':
+				return 'Es steht Ihnen frei, bei der Datenschutzbehörde eine Beschwerde einzulegen.';
 			default:
 				return parent::translateUnformatted($text);
 		}
