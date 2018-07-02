@@ -540,8 +540,24 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 					$group->addDefinitionInteractively(function () {
 						$definition = $this->lang('If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.');
 
+						if ($this->competentSupervisoryAuthorityName !== null || $this->competentSupervisoryAuthorityUrl !== null) {
+							$definition .= Markup::SPACE;
+							$definition .= $this->lang('You may also contact the data protection authority that is responsible for us:');
+						}
+
 						return $definition;
 					});
+
+					if ($this->competentSupervisoryAuthorityName !== null || $this->competentSupervisoryAuthorityUrl !== null) {
+						if ($this->competentSupervisoryAuthorityUrl !== null) {
+							$group->addDefinition(
+								new LinkMarkup($this->competentSupervisoryAuthorityUrl, $this->competentSupervisoryAuthorityName)
+							);
+						}
+						else {
+							$group->addDefinition($this->competentSupervisoryAuthorityName);
+						}
+					}
 
 					$group->addDefinition($this->lang('You are free to file a complaint with the data protection authority.'));
 				});

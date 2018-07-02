@@ -149,6 +149,8 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Falls du mit unserer Antwort oder mit der Art und Weise, wie wir deine persönlichen Daten verarbeiten, unzufrieden bist, kannst du deine örtliche Datenschutzbehörde kontaktieren.';
 			case 'You are free to file a complaint with the data protection authority.':
 				return 'Es steht dir frei, bei der Datenschutzbehörde eine Beschwerde einzulegen.';
+			case 'You may also contact the data protection authority that is responsible for us:':
+				return 'Du kannst auch die Datenschutzbehörde kontaktieren, die für uns zuständig ist:';
 			default:
 				return parent::translateUnformatted($text);
 		}
