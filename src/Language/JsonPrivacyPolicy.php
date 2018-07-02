@@ -141,8 +141,15 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 
 		$out['choices'] = [];
 
-		if (false) {
+		if ($this->rightOfAccess || $this->rightToRectification || $this->rightToErasure || $this->rightToRestrictProcessing || $this->rightToDataPortability || $this->rightToObject || $this->rightsRelatedToAutomatedDecisions) {
 			$out['choices']['data'] = [];
+			$out['choices']['data']['access'] = (bool) $this->rightOfAccess;
+			$out['choices']['data']['rectification'] = (bool) $this->rightToRectification;
+			$out['choices']['data']['erasure'] = (bool) $this->rightToErasure;
+			$out['choices']['data']['restrictProcessing'] = (bool) $this->rightToRestrictProcessing;
+			$out['choices']['data']['portability'] = (bool) $this->rightToDataPortability;
+			$out['choices']['data']['object'] = (bool) $this->rightToObject;
+			$out['choices']['data']['automatedDecisions'] = (bool) $this->rightsRelatedToAutomatedDecisions;
 		}
 
 		$out['choices']['account'] = [];
