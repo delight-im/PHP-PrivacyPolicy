@@ -72,6 +72,20 @@ abstract class PrivacyPolicy {
 	protected $competentSupervisoryAuthorityUrl;
 	/** @var int the declared period for notifications to the user about major changes */
 	protected $notificationPeriod;
+	/** @var bool whether the user has the right of access */
+	protected $rightOfAccess;
+	/** @var bool whether the user has the right to rectification */
+	protected $rightToRectification;
+	/** @var bool whether the user has the right to erasure */
+	protected $rightToErasure;
+	/** @var bool whether the user has the right to restriction of processing */
+	protected $rightToRestrictProcessing;
+	/** @var bool whether the user has the right to data portability */
+	protected $rightToDataPortability;
+	/** @var bool whether the user has the right to object */
+	protected $rightToObject;
+	/** @var bool whether the user has rights related to automated individual decision-making, including profiling */
+	protected $rightsRelatedToAutomatedDecisions;
 	/** @var string|null the email address for contact */
 	protected $contactEmail;
 	/** @var string|null the URL of a page with (detailed) contact information */
@@ -451,6 +465,132 @@ abstract class PrivacyPolicy {
 	}
 
 	/**
+	 * Returns whether the user has the right of access
+	 *
+	 * @return bool
+	 */
+	public function hasRightOfAccess() {
+		return $this->rightOfAccess;
+	}
+
+	/**
+	 * Sets whether the user has the right of access
+	 *
+	 * @param bool $rightOfAccess
+	 */
+	public function setRightOfAccess($rightOfAccess) {
+		$this->rightOfAccess = (bool) $rightOfAccess;
+	}
+
+	/**
+	 * Returns whether the user has the right to rectification
+	 *
+	 * @return bool
+	 */
+	public function hasRightToRectification() {
+		return $this->rightToRectification;
+	}
+
+	/**
+	 * Sets whether the user has the right to rectification
+	 *
+	 * @param bool $rightToRectification
+	 */
+	public function setRightToRectification($rightToRectification) {
+		$this->rightToRectification = (bool) $rightToRectification;
+	}
+
+	/**
+	 * Returns whether the user has the right to erasure
+	 *
+	 * @return bool
+	 */
+	public function hasRightToErasure() {
+		return $this->rightToErasure;
+	}
+
+	/**
+	 * Sets whether the user has the right to erasure
+	 *
+	 * @param bool $rightToErasure
+	 */
+	public function setRightToErasure($rightToErasure) {
+		$this->rightToErasure = (bool) $rightToErasure;
+	}
+
+	/**
+	 * Returns whether the user has the right to restriction of processing
+	 *
+	 * @return bool
+	 */
+	public function hasRightToRestrictProcessing() {
+		return $this->rightToRestrictProcessing;
+	}
+
+	/**
+	 * Sets whether the user has the right to restriction of processing
+	 *
+	 * @param bool $rightToRestrictProcessing
+	 */
+	public function setRightToRestrictProcessing($rightToRestrictProcessing) {
+		$this->rightToRestrictProcessing = (bool) $rightToRestrictProcessing;
+	}
+
+	/**
+	 * Returns whether the user has the right to data portability
+	 *
+	 * @return bool
+	 */
+	public function hasRightToDataPortability() {
+		return $this->rightToDataPortability;
+	}
+
+	/**
+	 * Sets whether the user has the right to data portability
+	 *
+	 * @param bool $rightToDataPortability
+	 */
+	public function setRightToDataPortability($rightToDataPortability) {
+		$this->rightToDataPortability = (bool) $rightToDataPortability;
+	}
+
+	/**
+	 * Returns whether the user has the right to object
+	 *
+	 * @return bool
+	 */
+	public function hasRightToObject() {
+		return $this->rightToObject;
+	}
+
+	/**
+	 * Sets whether the user has the right to object
+	 *
+	 * @param bool $rightToObject
+	 */
+	public function setRightToObject($rightToObject) {
+		$this->rightToObject = (bool) $rightToObject;
+	}
+
+	/**
+	 * Returns whether the user has rights related to automated individual decision-making, including profiling
+	 *
+	 * @return bool
+	 */
+	public function hasRightsRelatedToAutomatedDecisions() {
+		return $this->rightsRelatedToAutomatedDecisions;
+	}
+
+	/**
+	 * Sets whether the user has rights related to automated individual decision-making, including profiling
+	 *
+	 * @param bool $rightsRelatedToAutomatedDecisions
+	 */
+	public function setRightsRelatedToAutomatedDecisions($rightsRelatedToAutomatedDecisions) {
+		$this->rightsRelatedToAutomatedDecisions = (bool) $rightsRelatedToAutomatedDecisions;
+	}
+
+	/**
 	 * Returns whether any contact information has been set
 	 *
 	 * @return bool
@@ -517,6 +657,13 @@ abstract class PrivacyPolicy {
 		$this->competentSupervisoryAuthorityName = null;
 		$this->competentSupervisoryAuthorityUrl = null;
 		$this->notificationPeriod = self::NOTIFICATION_PERIOD_DEFAULT;
+		$this->rightOfAccess = true;
+		$this->rightToRectification = true;
+		$this->rightToErasure = true;
+		$this->rightToRestrictProcessing = true;
+		$this->rightToDataPortability = true;
+		$this->rightToObject = true;
+		$this->rightsRelatedToAutomatedDecisions = true;
 		$this->contactEmail = null;
 		$this->contactUrl = null;
 	}
