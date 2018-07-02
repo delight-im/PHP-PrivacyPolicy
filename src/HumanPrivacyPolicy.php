@@ -535,14 +535,15 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 						$definition .= Markup::SPACE;
 						$definition .= $this->lang('Upon verification of your identity, we will respond to your request within a reasonable period of time.');
 
-						$definition .= Markup::SPACE;
-						$definition .= $this->lang('If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.');
-
-						$definition .= Markup::SPACE;
-						$definition .= $this->lang('You are free to file a complaint with the data protection authority.');
+						return $definition;
+					});
+					$group->addDefinitionInteractively(function () {
+						$definition = $this->lang('If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.');
 
 						return $definition;
 					});
+
+					$group->addDefinition($this->lang('You are free to file a complaint with the data protection authority.'));
 				});
 			}
 
