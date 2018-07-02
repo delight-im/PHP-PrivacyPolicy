@@ -110,6 +110,13 @@ $policy->setTransferUponMergerOrAcquisition(true);
 $policy->setTlsEverywhere(true);
 $policy->setCompetentSupervisoryAuthority('Estonian Data Protection Inspectorate', 'http://www.aki.ee/en');
 $policy->setNotificationPeriod(30);
+$policy->setRightOfAccess(true);
+$policy->setRightToRectification(true);
+$policy->setRightToErasure(true);
+$policy->setRightToRestrictProcessing(true);
+$policy->setRightToDataPortability(true);
+$policy->setRightToObject(true);
+$policy->setRightsRelatedToAutomatedDecisions(true);
 ```
 
 ### Specifying the scope of your policy
