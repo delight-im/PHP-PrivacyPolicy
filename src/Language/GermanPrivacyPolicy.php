@@ -86,8 +86,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Name des Unternehmens';
 			case 'Company name of contact':
 				return 'Name des Unternehmens des Kontakts';
-			case 'Contact information':
-				return 'Kontaktdaten';
+			case 'Contact information of the controller':
+				return 'Kontaktdaten des Verantwortlichen';
 			case 'Contract duration after renewal':
 				return 'Vertragsdauer nach Verlängerung';
 			case 'Contractual partner':
@@ -436,6 +436,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Widerspruchsrecht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 21)';
 			case 'Rights related to automated individual decision-making, including profiling (EU, General Data Protection Regulation (GDPR), Article 22)':
 				return 'Rechte bezüglich automatisierter Entscheidungen im Einzelfall, einschließlich Profiling (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 22)';
+			case 'We are responsible for the processing of personal data under this policy.':
+				return 'Wir sind verantwortlich für die Verarbeitung persönlicher Daten gemäß dieser Erklärung.';
 			default:
 				throw new TranslationNotFoundError();
 		}

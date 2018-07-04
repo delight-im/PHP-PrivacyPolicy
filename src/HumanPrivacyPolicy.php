@@ -714,13 +714,17 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 			});
 
 			if ($this->hasContactInformation()) {
-				$list->addDefinitionGroup($this->lang('Contact information'), function (DefinitionGroup $group) {
+				$list->addDefinitionGroup($this->lang('Contact information of the controller'), function (DefinitionGroup $group) {
 					$group->addDefinition(
 						$this->lang('If you have any questions or concerns regarding this policy, our privacy practices or certain aspects of our services, please contact us at any time.')
 						.
 						Markup::SPACE
 						.
 						$this->lang('We want to help and will be happy to address your concerns.')
+						.
+						Markup::SPACE
+						.
+						$this->lang('We are responsible for the processing of personal data under this policy.')
 					);
 
 					if ($this->hasContactEmail()) {
