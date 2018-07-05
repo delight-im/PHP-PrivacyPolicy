@@ -55,6 +55,13 @@ abstract class Markup {
 	const SPACE = ' ';
 
 	/**
+	 * A single en dash character
+	 *
+	 * @var string
+	 */
+	const EN_DASH = '–';
+
+	/**
 	 * Converts the markup to HTML
 	 *
 	 * @param int|null $indentation (optional) the level of indentation
