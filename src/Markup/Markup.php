@@ -62,6 +62,13 @@ abstract class Markup {
 	const EN_DASH = '–';
 
 	/**
+	 * A single middle dot character
+	 *
+	 * @var string
+	 */
+	const MIDDLE_DOT = '·';
+
+	/**
 	 * Converts the markup to HTML
 	 *
 	 * @param int|null $indentation (optional) the level of indentation
