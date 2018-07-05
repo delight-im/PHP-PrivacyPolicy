@@ -735,7 +735,7 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 						);
 					}
 
-					if ($this->hasContactUrl()) {
+					if ($this->hasContactUrl() && !$this->hasContactImage()) {
 						$group->addDefinition($this->lang('Our full contact information can be found at:'));
 						$group->addDefinition(
 							new LinkMarkup($this->contactUrl)
@@ -750,7 +750,14 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 							$this->contactImage[3]
 						);
 
-						$group->addDefinition($imageMarkup);
+						if ($this->hasContactUrl()) {
+							$group->addDefinition(
+								new LinkMarkup($this->contactUrl, $imageMarkup, $this->contactImage[1])
+							);
+						}
+						else {
+							$group->addDefinition($imageMarkup);
+						}
 					}
 				});
 			}
