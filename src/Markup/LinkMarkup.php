@@ -13,12 +13,12 @@ final class LinkMarkup extends Markup {
 
 	/** @var string the target URI */
 	private $target;
-	/** @var string the label */
+	/** @var Markup the label */
 	private $label;
 
 	/**
 	 * @param string $target the target URI
-	 * @param string|null $label (optional) the label
+	 * @param string|Markup|null $label (optional) the label
 	 */
 	public function __construct($target, $label = null) {
 		$this->target = (string) $target;
@@ -27,7 +27,11 @@ final class LinkMarkup extends Markup {
 			$label = $target;
 		}
 
-		$this->label = (string) $label;
+		if (!($label instanceof Markup)) {
+			$label = new TextMarkup((string) $label);
+		}
+
+		$this->label = $label;
 	}
 
 	public function toHtmlWithIndentation($indentation) {
@@ -36,8 +40,11 @@ final class LinkMarkup extends Markup {
 		$out .= self::escapeForHtml($this->target);
 		$out .= '">';
 		$out .= "\n";
-		$out .= self::createHtmlIndentation($indentation + 1);
-		$out .= self::escapeForHtml($this->label);
+
+		if ($this->label !== null) {
+			$out .= $this->label->toHtmlWithIndentation($indentation + 1);
+		}
+
 		$out .= "\n";
 		$out .= self::createHtmlIndentation($indentation);
 		$out .= '</a>';
@@ -47,13 +54,15 @@ final class LinkMarkup extends Markup {
 
 	public function toPlainTextWithIndentation($indentation) {
 		$out = self::createPlainTextIndentation($indentation);
-		$out .= $this->label;
 
-		if (\str_replace('mailto:', '', $this->target) !== $this->label) {
-			$out .= ' (';
-			$out .= $this->target;
-			$out .= ')';
+		if ($this->label !== null) {
+			$out .= $this->label->toPlainTextWithIndentation(0);
+			$out .= Markup::SPACE;
 		}
+
+		$out .= '(';
+		$out .= $this->target;
+		$out .= ')';
 
 		return $out;
 	}
@@ -61,7 +70,11 @@ final class LinkMarkup extends Markup {
 	public function toMarkdownWithIndentation($indentation) {
 		$out = self::createMarkdownIndentation($indentation);
 		$out .= '[';
-		$out .= $this->label;
+
+		if ($this->label !== null) {
+			$out .= $this->label->toMarkdownWithIndentation(0);
+		}
+
 		$out .= '](';
 		$out .= $this->target;
 		$out .= ')';
