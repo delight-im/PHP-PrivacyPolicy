@@ -177,6 +177,7 @@ $policy->setRightToObject(true);
 $policy->setRightsRelatedToAutomatedDecisions(true);
 $policy->setContactEmail('privacy@example.com');
 $policy->setContactUrl('https://www.example.com/contact.html');
+// $policy->setContactImage('https://www.example.com/images/contact.png', 'Jane Doe, 123 Main Street, Anytown, USA', 420, 360);
 
 echo '<!DOCTYPE html>';
 echo '<html>';

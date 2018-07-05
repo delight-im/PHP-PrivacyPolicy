@@ -191,6 +191,26 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 			if ($this->hasContactUrl()) {
 				$out['contact']['url'] = (string) $this->contactUrl;
 			}
+
+			if ($this->hasContactImage()) {
+				$out['contact']['image'] = [];
+
+				if (!empty($this->contactImage[0])) {
+					$out['contact']['image']['source'] = (string) $this->contactImage[0];
+				}
+
+				if (!empty($this->contactImage[1])) {
+					$out['contact']['image']['alternativeText'] = (string) $this->contactImage[1];
+				}
+
+				if (!empty($this->contactImage[2])) {
+					$out['contact']['image']['width'] = (int) $this->contactImage[2];
+				}
+
+				if (!empty($this->contactImage[3])) {
+					$out['contact']['image']['height'] = (int) $this->contactImage[3];
+				}
+			}
 		}
 
 		return $this->encodeAsJson($out);

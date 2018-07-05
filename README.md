@@ -92,6 +92,7 @@ $policy->setVersionName('v3.1.4');
 $policy->setCanonicalUrl('https://www.example.com/privacy.html');
 $policy->setContactEmail('privacy@example.com');
 $policy->setContactUrl('https://www.example.com/contact.html');
+// $policy->setContactImage('https://www.example.com/images/contact.png', 'Jane Doe, 123 Main Street, Anytown, USA', 420, 360);
 ```
 
 ### Describing your privacy practices

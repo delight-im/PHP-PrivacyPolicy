@@ -90,6 +90,8 @@ abstract class PrivacyPolicy {
 	protected $contactEmail;
 	/** @var string|null the URL of a page with (detailed) contact information */
 	protected $contactUrl;
+	/** @var array|null an image showing (detailed) contact information */
+	protected $contactImage;
 
 	/**
 	 * Sets the time when the policy has been published
@@ -596,7 +598,7 @@ abstract class PrivacyPolicy {
 	 * @return bool
 	 */
 	public function hasContactInformation() {
-		return $this->hasContactEmail() || $this->hasContactUrl();
+		return $this->hasContactEmail() || $this->hasContactUrl() || $this->hasContactImage();
 	}
 
 	/**
@@ -635,6 +637,32 @@ abstract class PrivacyPolicy {
 		$this->contactUrl = $contactUrl !== null ? ((string) $contactUrl) : null;
 	}
 
+	/**
+	 * Returns whether an image showing (detailed) contact information has been defined
+	 *
+	 * @return bool
+	 */
+	public function hasContactImage() {
+		return !empty($this->contactImage) && !empty($this->contactImage[0]);
+	}
+
+	/**
+	 * Sets an image showing (detailed) contact information
+	 *
+	 * @param string $source the URL of the image to display
+	 * @param string|null $alternativeText (optional) the alternative text to show if the image cannot be displayed
+	 * @param int|null $width (optional) the suggested width of the image in pixels
+	 * @param int|null $height (optional) the suggested height of the image in pixels
+	 */
+	public function setContactImage($source, $alternativeText = null, $width = null, $height = null) {
+		$this->contactImage = [
+			($source !== null) ? ((string) $source) : null,
+			($source !== null && $alternativeText !== null) ? ((string) $alternativeText) : null,
+			($source !== null && $width !== null) ? ((int) $width) : null,
+			($source !== null && $height !== null) ? ((int) $height) : null,
+		];
+	}
+
 	public function __construct() {
 		$this->publishedAt = null;
 		$this->takesEffectAt = null;
@@ -666,6 +694,7 @@ abstract class PrivacyPolicy {
 		$this->rightsRelatedToAutomatedDecisions = true;
 		$this->contactEmail = null;
 		$this->contactUrl = null;
+		$this->contactImage = null;
 	}
 
 }

@@ -14,6 +14,7 @@ use Delight\PrivacyPolicy\Data\DataType;
 use Delight\PrivacyPolicy\Markup\AbbreviationMarkup;
 use Delight\PrivacyPolicy\Markup\DefinitionList\DefinitionGroup;
 use Delight\PrivacyPolicy\Markup\DefinitionList\DefinitionList;
+use Delight\PrivacyPolicy\Markup\ImageMarkup;
 use Delight\PrivacyPolicy\Markup\LinkMarkup;
 use Delight\PrivacyPolicy\Markup\Markup;
 use Delight\PrivacyPolicy\Scope\AppStoreIosAppScope;
@@ -739,6 +740,17 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 						$group->addDefinition(
 							new LinkMarkup($this->contactUrl)
 						);
+					}
+
+					if ($this->hasContactImage()) {
+						$imageMarkup = new ImageMarkup(
+							$this->contactImage[0],
+							$this->contactImage[1],
+							$this->contactImage[2],
+							$this->contactImage[3]
+						);
+
+						$group->addDefinition($imageMarkup);
 					}
 				});
 			}
