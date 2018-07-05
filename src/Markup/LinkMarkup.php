@@ -11,9 +11,9 @@ namespace Delight\PrivacyPolicy\Markup;
 /** Generic markup for hyperlinks */
 final class LinkMarkup extends Markup {
 
-	/** @var string the target URI of the instance */
+	/** @var string the target URI */
 	private $target;
-	/** @var string the label of the instance */
+	/** @var string the label */
 	private $label;
 
 	/**
