@@ -15,12 +15,15 @@ final class LinkMarkup extends Markup {
 	private $target;
 	/** @var Markup the label */
 	private $label;
+	/** @var string|null an extended description */
+	private $description;
 
 	/**
 	 * @param string $target the target URI
 	 * @param string|Markup|null $label (optional) the label
+	 * @param string|null $description (optional) an extended description
 	 */
-	public function __construct($target, $label = null) {
+	public function __construct($target, $label = null, $description = null) {
 		$this->target = (string) $target;
 
 		if ($label === null) {
@@ -32,13 +35,24 @@ final class LinkMarkup extends Markup {
 		}
 
 		$this->label = $label;
+		$this->description = ($description !== null) ? ((string) $description) : null;
 	}
 
 	public function toHtmlWithIndentation($indentation) {
 		$out = self::createHtmlIndentation($indentation);
-		$out .= '<a href="';
+
+		$out .= '<a';
+		$out .= ' href="';
 		$out .= self::escapeForHtml($this->target);
-		$out .= '">';
+		$out .= '"';
+
+		if ($this->description !== null) {
+			$out .= ' title="';
+			$out .= self::escapeForHtml($this->description);
+			$out .= '"';
+		}
+
+		$out .= '>';
 		$out .= "\n";
 
 		if ($this->label !== null) {
@@ -60,6 +74,13 @@ final class LinkMarkup extends Markup {
 			$out .= Markup::SPACE;
 		}
 
+		if ($this->description !== null) {
+			$out .= Markup::EN_DASH;
+			$out .= Markup::SPACE;
+			$out .= $this->description;
+			$out .= Markup::SPACE;
+		}
+
 		$out .= '(';
 		$out .= $this->target;
 		$out .= ')';
@@ -73,6 +94,13 @@ final class LinkMarkup extends Markup {
 
 		if ($this->label !== null) {
 			$out .= $this->label->toMarkdownWithIndentation(0);
+
+			if ($this->description !== null) {
+				$out .= Markup::SPACE;
+				$out .= Markup::EN_DASH;
+				$out .= Markup::SPACE;
+				$out .= $this->description;
+			}
 		}
 
 		$out .= '](';
