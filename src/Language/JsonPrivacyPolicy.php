@@ -105,13 +105,17 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 					$groupRecord['elements'] = [];
 
 					foreach ($dataGroup->getElements() as $element) {
-						$groupRecord['elements'][] = [
+						$record = [
 							'type' => (string) $element->getType(),
-							'requirement' => (string) $element->getRequirement(),
-							'retention' => [
-								'max' => (int) $element->getMaxRetention()
-							]
+							'requirement' => (string) $element->getRequirement()
 						];
+
+						if ($element->hasMaxRetention()) {
+							$record['retention'] = [];
+							$record['retention']['max'] = (int) $element->getMaxRetention();
+						}
+
+						$groupRecord['elements'][] = $record;
 					}
 				}
 
