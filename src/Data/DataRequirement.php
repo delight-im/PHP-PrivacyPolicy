@@ -27,7 +27,7 @@ final class DataRequirement {
 	 *
 	 * @var string
 	 */
-	const OPT_IN = 'opt_in';
+	const OPT_IN = 'optIn';
 
 	/**
 	 * Specifies that a service may be used without the collection of certain information
@@ -36,7 +36,7 @@ final class DataRequirement {
 	 *
 	 * @var string
 	 */
-	const OPT_OUT = 'opt_out';
+	const OPT_OUT = 'optOut';
 
 	/**
 	 * Converts an identifier to a boolean value indicating whether there is a requirement
