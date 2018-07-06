@@ -183,6 +183,12 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Widersprechen Sie automatisierten Entscheidungen';
 			case 'You have the right not to be subject to a decision based solely on automated decision-making, including profiling, where the decision would have a legal effect on you or produce a similarly significant effect.':
 				return 'Sie haben das Recht, keiner Entscheidung unterworfen zu sein, die allein auf einer automatisierten Entscheidungsfindung basiert, einschließlich der Profilerstellung, wenn eine solche Entscheidung Ihnen gegenüber rechtliche Auswirkungen hätte oder eine ähnlich erhebliche Beeinträchtigung hervorrufen würde.';
+			case 'You have given consent to the processing of your personal data for one or more specific purposes (EU, General Data Protection Regulation (GDPR), Article 6(1)(a)).':
+				return 'Sie haben Ihre Einwilligung zur Verarbeitung der Sie betreffenden persönlichen Daten für einen oder mehrere bestimmte Zwecke gegeben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(a)).';
+			case 'Processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract (EU, General Data Protection Regulation (GDPR), Article 6(1)(b)).':
+				return 'Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei Sie sind, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Ihre Anfrage erfolgen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(b)).';
+			case 'Processing is necessary in order to protect your vital interests or those of another natural person (EU, General Data Protection Regulation (GDPR), Article 6(1)(d)).':
+				return 'Die Verarbeitung ist erforderlich, um Ihre lebenswichtigen Interessen oder die einer anderen natürlichen Person zu schützen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(d)).';
 			default:
 				return parent::translateUnformatted($text);
 		}

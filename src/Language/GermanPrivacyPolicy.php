@@ -444,6 +444,24 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Rechte bezüglich automatisierter Entscheidungen im Einzelfall, einschließlich Profiling (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 22)';
 			case 'We are responsible for the processing of personal data under this policy.':
 				return 'Wir sind verantwortlich für die Verarbeitung persönlicher Daten gemäß dieser Erklärung.';
+			case 'consent':
+				return 'Einwilligung';
+			case 'contract':
+				return 'Vertrag';
+			case 'legal obligation':
+				return 'rechtliche Verpflichtung';
+			case 'vital interests':
+				return 'lebenswichtige Interessen';
+			case 'public interest':
+				return 'öffentliches Interesse';
+			case 'legitimate interests':
+				return 'berechtigte Interessen';
+			case 'Processing is necessary for compliance with a legal obligation to which we are subject (EU, General Data Protection Regulation (GDPR), Article 6(1)(c)).':
+				return 'Die Verarbeitung ist zur Erfüllung einer rechtlichen Verpflichtung erforderlich, der wir unterliegen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(c)).';
+			case 'Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in us (EU, General Data Protection Regulation (GDPR), Article 6(1)(e)).':
+				return 'Die Verarbeitung ist für die Wahrnehmung einer Aufgabe erforderlich, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die uns übertragen wurde (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(e)).';
+			case 'Processing is necessary for the purposes of legitimate interests pursued by us or by a third party (EU, General Data Protection Regulation (GDPR), Article 6(1)(f)).':
+				return 'Die Verarbeitung ist zur Wahrung unserer berechtigten Interessen oder derer eines Dritten erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(f)).';
 			default:
 				throw new TranslationNotFoundError();
 		}
