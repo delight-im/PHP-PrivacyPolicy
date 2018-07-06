@@ -12,11 +12,13 @@ use Delight\PrivacyPolicy\Data\DataPurpose;
 use Delight\PrivacyPolicy\Data\DataRequirement;
 use Delight\PrivacyPolicy\Data\DataType;
 use Delight\PrivacyPolicy\Markup\AbbreviationMarkup;
+use Delight\PrivacyPolicy\Markup\ConcatenationMarkup;
 use Delight\PrivacyPolicy\Markup\DefinitionList\DefinitionGroup;
 use Delight\PrivacyPolicy\Markup\DefinitionList\DefinitionList;
 use Delight\PrivacyPolicy\Markup\ImageMarkup;
 use Delight\PrivacyPolicy\Markup\LinkMarkup;
 use Delight\PrivacyPolicy\Markup\Markup;
+use Delight\PrivacyPolicy\Markup\TextMarkup;
 use Delight\PrivacyPolicy\Scope\AppStoreIosAppScope;
 use Delight\PrivacyPolicy\Scope\PlayStoreAndroidAppScope;
 use Delight\PrivacyPolicy\Scope\WebsiteScope;
@@ -347,9 +349,19 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 							$list->addDefinitionGroup($dataGroup->getTitle(), function (DefinitionGroup $group) use ($dataGroup) {
 								$group->addDefinition($dataGroup->getDescription());
 
-								$group->addDefinition($this->lang(
-									DataRequirement::toNaturalLanguage($dataGroup->getRequirement())
-								));
+								$group->addDefinition(
+									new ConcatenationMarkup(
+										new TextMarkup(
+											$this->lang('Required:')
+										),
+										new AbbreviationMarkup(
+											DataRequirement::toBool($dataGroup->getRequirement()) ? $this->lang('yes') : $this->lang('no'),
+											$this->lang(
+												DataRequirement::toNaturalLanguage($dataGroup->getRequirement())
+											)
+										)
+									)
+								);
 
 								if ($dataGroup->hasPurposes()) {
 									foreach ($dataGroup->getPurposes() as $purpose) {
@@ -365,9 +377,19 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 											$dataTypeName = DataType::toNaturalLanguage($dataElement->getType());
 
 											$list->addDefinitionGroup($this->lang($dataTypeName), function (DefinitionGroup $group) use ($dataElement) {
-												$group->addDefinition($this->lang(
-													DataRequirement::toNaturalLanguage($dataElement->getRequirement())
-												));
+												$group->addDefinition(
+													new ConcatenationMarkup(
+														new TextMarkup(
+															$this->lang('Required:')
+														),
+														new AbbreviationMarkup(
+															DataRequirement::toBool($dataElement->getRequirement()) ? $this->lang('yes') : $this->lang('no'),
+															$this->lang(
+																DataRequirement::toNaturalLanguage($dataElement->getRequirement())
+															)
+														)
+													)
+												);
 
 												if ($dataElement->hasMaxRetention()) {
 													if ($dataElement->getMaxRetention() <= 72) {

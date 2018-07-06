@@ -266,6 +266,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Name des Kontakts';
 			case 'Name':
 				return 'Name';
+			case 'no':
+				return 'nein';
 			case 'None of our services are designed for, intended to attract, or directed towards children under the age of %d.':
 				return 'Keine unserer Dienste sind für Kinder im Alter unter %d konzipiert, beabsichtigen deren Aufmerksamkeit zu gewinnen oder sind auf sie ausgerichtet.';
 			case 'Notes on additional recipients of letter':
@@ -308,6 +310,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Kennzeichen des Fahrzeugs';
 			case 'Requested page (URL) for each access':
 				return 'Angeforderte Seite (URL) für jeden Zugriff';
+			case 'Required:':
+				return 'Erforderlich:';
 			case 'Resettable identifier of device':
 				return 'Zurücksetzbare Kennung des Geräts';
 			case 'Residential phone number':
@@ -420,6 +424,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Geburtsjahr';
 			case 'Year of birth of contact':
 				return 'Geburtsjahr des Kontakts';
+			case 'yes':
+				return 'ja';
 			case 'Year of construction of vehicle':
 				return 'Baujahr des Fahrzeugs';
 			case 'Right of access (EU, General Data Protection Regulation (GDPR), Article 15)':
