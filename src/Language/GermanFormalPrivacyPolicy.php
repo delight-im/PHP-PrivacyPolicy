@@ -189,6 +189,12 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei Sie sind, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Ihre Anfrage erfolgen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(b)).';
 			case 'Processing is necessary in order to protect your vital interests or those of another natural person (EU, General Data Protection Regulation (GDPR), Article 6(1)(d)).':
 				return 'Die Verarbeitung ist erforderlich, um Ihre lebenswichtigen Interessen oder die einer anderen natürlichen Person zu schützen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(d)).';
+			case 'You have given explicit consent to the processing of your personal data for one or more specified purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(a)).':
+				return 'Sie haben in die Verarbeitung der genannten persönlichen Daten für einen oder mehrere festgelegte Zwecke ausdrücklich eingewilligt (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(a)).';
+			case 'Processing is necessary to protect your vital interests or those of another natural person where you are physically or legally incapable of giving consent (EU, General Data Protection Regulation (GDPR), Article 9(2)(c)).':
+				return 'Die Verarbeitung ist zum Schutz Ihrer lebenswichtigen Interessen oder derer einer anderen natürlichen Person erforderlich und Sie sind aus körperlichen oder rechtlichen Gründen außerstande, Ihre Einwilligung zu geben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(c)).';
+			case 'Processing relates to personal data that you manifestly make public (EU, General Data Protection Regulation (GDPR), Article 9(2)(e)).':
+				return 'Die Verarbeitung bezieht sich auf persönliche Daten, die Sie offensichtlich öffentlich gemacht haben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(e)).';
 			default:
 				return parent::translateUnformatted($text);
 		}

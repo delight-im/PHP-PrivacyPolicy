@@ -462,6 +462,38 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Die Verarbeitung ist für die Wahrnehmung einer Aufgabe erforderlich, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die uns übertragen wurde (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(e)).';
 			case 'Processing is necessary for the purposes of legitimate interests pursued by us or by a third party (EU, General Data Protection Regulation (GDPR), Article 6(1)(f)).':
 				return 'Die Verarbeitung ist zur Wahrung unserer berechtigten Interessen oder derer eines Dritten erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(f)).';
+			case 'explicit consent':
+				return 'ausdrückliche Einwilligung';
+			case 'employment and social security':
+				return 'Arbeit und soziale Sicherheit';
+			case 'foundation, association or non-profit':
+				return 'Stiftung, Vereinigung oder Organisation ohne Gewinnerzielungsabsicht';
+			case 'public data':
+				return 'öffentliche Daten';
+			case 'legal claims or judicial capacity':
+				return 'Rechtsansprüche oder justizielle Tätigkeit';
+			case 'substantial public interest':
+				return 'erhebliches öffentliches Interesse';
+			case 'health and social care':
+				return 'Gesundheit und Soziales';
+			case 'public health':
+				return 'öffentliche Gesundheit';
+			case 'archiving or research':
+				return 'Archivierung oder Forschung';
+			case 'Processing is necessary for the purposes of carrying out obligations and exercising specific rights in the field of employment and social security and social protection law (EU, General Data Protection Regulation (GDPR), Article 9(2)(b)).':
+				return 'Die Verarbeitung ist erforderlich, damit aus dem Arbeitsrecht und dem Recht der sozialen Sicherheit und des Sozialschutzes erwachsende Rechte ausgeübt und diesbezüglichen Pflichten nachgekommen werden kann (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(b)).';
+			case 'Processing is carried out by a foundation, association or any other not-for-profit body with a political, philosophical, religious or trade union aim and on condition that the processing relates solely to the members or to former members of the body or to persons who have regular contact with it (EU, General Data Protection Regulation (GDPR), Article 9(2)(d)).':
+				return 'Die Verarbeitung erfolgt durch eine politisch, weltanschaulich, religiös oder gewerkschaftlich ausgerichtete Stiftung, Vereinigung oder sonstige Organisation ohne Gewinnerzielungsabsicht und unter der Voraussetzung, dass sich die Verarbeitung ausschließlich auf die Mitglieder oder ehemalige Mitglieder der Organisation oder auf Personen, die regelmäßige Kontakte mit ihr unterhalten, bezieht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(d)).';
+			case 'Processing is necessary for the establishment, exercise or defence of legal claims or for a court acting in its judicial capacity (EU, General Data Protection Regulation (GDPR), Article 9(2)(f)).':
+				return 'Die Verarbeitung ist zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder bei Handlungen der Gerichte im Rahmen ihrer justiziellen Tätigkeit erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(f)).';
+			case 'Processing is necessary for reasons of substantial public interest (EU, General Data Protection Regulation (GDPR), Article 9(2)(g)).':
+				return 'Die Verarbeitung ist aus Gründen eines erheblichen öffentlichen Interesses erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(g)).';
+			case 'Processing is necessary for the purposes of preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services (EU, General Data Protection Regulation (GDPR), Article 9(2)(h)).':
+				return 'Die Verarbeitung ist für Zwecke der Gesundheitsvorsorge oder der Arbeitsmedizin, für die Beurteilung der Arbeitsfähigkeit des Beschäftigten, für die medizinische Diagnostik, die Versorgung oder Behandlung im Gesundheits- oder Sozialbereich oder für die Verwaltung von Systemen und Diensten im Gesundheits- oder Sozialbereich erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(h)).';
+			case 'Processing is necessary for reasons of public interest in the area of public health, such as protecting against serious cross-border threats to health or ensuring high standards of quality and safety of health care and of medicinal products or medical devices (EU, General Data Protection Regulation (GDPR), Article 9(2)(i)).':
+				return 'Die Verarbeitung ist aus Gründen des öffentlichen Interesses im Bereich der öffentlichen Gesundheit, wie dem Schutz vor schwerwiegenden grenzüberschreitenden Gesundheitsgefahren oder zur Gewährleistung hoher Qualitäts- und Sicherheitsstandards bei der Gesundheitsversorgung und bei Arzneimitteln und Medizinprodukten erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(i)).';
+			case 'Processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(j)).':
+				return 'Die Verarbeitung ist für im öffentlichen Interesse liegende Archivzwecke, für wissenschaftliche oder historische Forschungszwecke oder für statistische Zwecke erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(j)).';
 			default:
 				throw new TranslationNotFoundError();
 		}
