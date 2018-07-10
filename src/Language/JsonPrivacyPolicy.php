@@ -91,6 +91,14 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 			foreach ($this->dataGroups as $dataGroup) {
 				$groupRecord = [];
 
+				if ($dataGroup->hasBases()) {
+					$groupRecord['bases'] = [];
+
+					foreach ($dataGroup->getBases() as $base) {
+						$groupRecord['bases'][] = (string) $base;
+					}
+				}
+
 				if ($dataGroup->hasPurposes()) {
 					$groupRecord['purposes'] = [];
 
