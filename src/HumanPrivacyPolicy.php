@@ -8,6 +8,7 @@
 
 namespace Delight\PrivacyPolicy;
 
+use Delight\PrivacyPolicy\Data\DataBasis;
 use Delight\PrivacyPolicy\Data\DataPurpose;
 use Delight\PrivacyPolicy\Data\DataRequirement;
 use Delight\PrivacyPolicy\Data\DataType;
@@ -362,6 +363,32 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 										)
 									)
 								);
+
+								if ($dataGroup->hasBases()) {
+									$basesMarkup = [];
+
+									$basesMarkup[] = new TextMarkup(
+										$this->lang('Lawful basis:')
+									);
+
+									foreach ($dataGroup->getBases() as $base) {
+										$basesMarkup[] = new AbbreviationMarkup(
+											$this->lang(
+												DataBasis::toNaturalLanguage($base)
+											),
+											$this->lang(
+												DataBasis::toLegalReference($base)
+											)
+										);
+										$basesMarkup[] = new TextMarkup(Markup::MIDDLE_DOT);
+									}
+
+									\array_pop($basesMarkup);
+
+									$group->addDefinition(
+										new ConcatenationMarkup(...$basesMarkup)
+									);
+								}
 
 								if ($dataGroup->hasPurposes()) {
 									foreach ($dataGroup->getPurposes() as $purpose) {

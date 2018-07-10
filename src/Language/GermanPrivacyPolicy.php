@@ -444,6 +444,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Rechte bezüglich automatisierter Entscheidungen im Einzelfall, einschließlich Profiling (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 22)';
 			case 'We are responsible for the processing of personal data under this policy.':
 				return 'Wir sind verantwortlich für die Verarbeitung persönlicher Daten gemäß dieser Erklärung.';
+			case 'Lawful basis:':
+				return 'Rechtsgrundlage:';
 			case 'consent':
 				return 'Einwilligung';
 			case 'contract':
