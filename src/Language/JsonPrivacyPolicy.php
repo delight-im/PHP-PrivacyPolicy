@@ -99,6 +99,14 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 					}
 				}
 
+				if ($dataGroup->hasSpecialConditions()) {
+					$groupRecord['specialConditions'] = [];
+
+					foreach ($dataGroup->getSpecialConditions() as $specialCondition) {
+						$groupRecord['specialConditions'][] = (string) $specialCondition;
+					}
+				}
+
 				if ($dataGroup->hasPurposes()) {
 					$groupRecord['purposes'] = [];
 
