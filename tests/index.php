@@ -56,6 +56,7 @@ $policy->addScope(
 $policy->addDataGroup(
 	'Server logs',
 	'Whenever you access our services, including your access of any individual part or section of our services, we record certain information about the nature of your access. That information is never combined with information from other data sources and will not be associated with the identity of any account. However, we reserve the right to review the data retrospectively if there is specific evidence supporting the suspicion of a case of fraud or any other illegal activity or illegal use of our services.',
+	[ \Delight\PrivacyPolicy\Data\DataBasis::LEGITIMATE_INTERESTS ],
 	[ \Delight\PrivacyPolicy\Data\DataPurpose::ADMINISTRATION ],
 	\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
 
@@ -115,6 +116,7 @@ $policy->addDataGroup(
 $policy->addDataGroup(
 	'Account information',
 	'When you create an account by signing up, and whenever you use that account by signing in afterwards, we collect the data that you provide to us voluntarily in the course of that process.',
+	[ \Delight\PrivacyPolicy\Data\DataBasis::CONTRACT, \Delight\PrivacyPolicy\Data\DataBasis::CONSENT ],
 	[
 		\Delight\PrivacyPolicy\Data\DataPurpose::ADMINISTRATION,
 		\Delight\PrivacyPolicy\Data\DataPurpose::FULFILLMENT,
