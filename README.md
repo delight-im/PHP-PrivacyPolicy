@@ -36,6 +36,7 @@ Programmatically composable privacy policies for humans and machines
 * [Specifying the scope of your policy](#specifying-the-scope-of-your-policy)
 * [Explaining the amount, type and purpose of the data you collect](#explaining-the-amount-type-and-purpose-of-the-data-you-collect)
   * [Lawful bases](#lawful-bases)
+  * [Special conditions](#special-conditions)
   * [Data purposes](#data-purposes)
   * [Data requirements](#data-requirements)
   * [Data types](#data-types)
@@ -148,6 +149,7 @@ $policy->addDataGroup(
     'My group title', // e.g. `Server logs`
     'My group description', // e.g. `Whenever you access ...`
     [ $dataBasis ], // see "Lawful bases" below (multiple entries possible)
+    [ $dataSpecialCondition ], // see "Special conditions" below (multiple entries possible)
     [ $dataPurpose ], // see "Data purposes" below (multiple entries possible)
     $dataRequirement, // see "Data requirements" below
 
@@ -170,6 +172,21 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataBasis::VITAL_INTERESTS;
 \Delight\PrivacyPolicy\Data\DataBasis::PUBLIC_INTEREST;
 \Delight\PrivacyPolicy\Data\DataBasis::LEGITIMATE_INTERESTS;
+```
+
+#### Special conditions
+
+```php
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::EXPLICIT_CONSENT;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::EMPLOYMENT_AND_SOCIAL_SECURITY;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::VITAL_INTERESTS;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::FOUNDATION_ASSOCIATION_OR_NON_PROFIT;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::PUBLIC_DATA;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::LEGAL_CLAIMS_OR_JUDICIAL_CAPACITY;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::SUBSTANTIAL_PUBLIC_INTEREST;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::HEALTH_AND_SOCIAL_CARE;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::PUBLIC_HEALTH;
+\Delight\PrivacyPolicy\Data\DataSpecialCondition::ARCHIVING_OR_RESEARCH;
 ```
 
 #### Data purposes
