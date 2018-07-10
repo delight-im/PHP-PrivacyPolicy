@@ -158,11 +158,11 @@ final class DataGroup {
 	 */
 	public function __construct($title, $description = null, array $bases = null, array $specialConditions = null, array $purposes = null, $requirement = null, callable $init = null) {
 		$this->title = (string) $title;
-		$this->description = $description !== null ? ((string) $description) : null;
-		$this->bases = $bases !== null ? $bases : [];
-		$this->specialConditions = $specialConditions !== null ? $specialConditions : [];
-		$this->purposes = $purposes !== null ? $purposes : [];
-		$this->requirement = $requirement !== null ? ((string) $requirement) : DataRequirement::ALWAYS;
+		$this->description = ($description !== null) ? ((string) $description) : null;
+		$this->bases = ($bases !== null) ? ((array) $bases) : [];
+		$this->specialConditions = ($specialConditions !== null) ? ((array) $specialConditions) : [];
+		$this->purposes = ($purposes !== null) ? ((array) $purposes) : [];
+		$this->requirement = ($requirement !== null) ? ((string) $requirement) : DataRequirement::ALWAYS;
 		$this->dataElements = [];
 
 		if (\is_callable($init)) {
