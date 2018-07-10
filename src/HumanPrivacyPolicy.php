@@ -11,6 +11,7 @@ namespace Delight\PrivacyPolicy;
 use Delight\PrivacyPolicy\Data\DataBasis;
 use Delight\PrivacyPolicy\Data\DataPurpose;
 use Delight\PrivacyPolicy\Data\DataRequirement;
+use Delight\PrivacyPolicy\Data\DataSpecialCondition;
 use Delight\PrivacyPolicy\Data\DataType;
 use Delight\PrivacyPolicy\Markup\AbbreviationMarkup;
 use Delight\PrivacyPolicy\Markup\ConcatenationMarkup;
@@ -387,6 +388,32 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 
 									$group->addDefinition(
 										new ConcatenationMarkup(...$basesMarkup)
+									);
+								}
+
+								if ($dataGroup->hasSpecialConditions()) {
+									$specialConditionsMarkup = [];
+
+									$specialConditionsMarkup[] = new TextMarkup(
+										$this->lang('Condition for the processing of special categories of personal data:')
+									);
+
+									foreach ($dataGroup->getSpecialConditions() as $specialCondition) {
+										$specialConditionsMarkup[] = new AbbreviationMarkup(
+											$this->lang(
+												DataSpecialCondition::toNaturalLanguage($specialCondition)
+											),
+											$this->lang(
+												DataSpecialCondition::toLegalReference($specialCondition)
+											)
+										);
+										$specialConditionsMarkup[] = new TextMarkup(Markup::MIDDLE_DOT);
+									}
+
+									\array_pop($specialConditionsMarkup);
+
+									$group->addDefinition(
+										new ConcatenationMarkup(...$specialConditionsMarkup)
 									);
 								}
 

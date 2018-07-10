@@ -464,6 +464,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Die Verarbeitung ist für die Wahrnehmung einer Aufgabe erforderlich, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die uns übertragen wurde (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(e)).';
 			case 'Processing is necessary for the purposes of legitimate interests pursued by us or by a third party (EU, General Data Protection Regulation (GDPR), Article 6(1)(f)).':
 				return 'Die Verarbeitung ist zur Wahrung unserer berechtigten Interessen oder derer eines Dritten erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(f)).';
+			case 'Condition for the processing of special categories of personal data:':
+				return 'Bedingung zur Verarbeitung besonderer Kategorien persönlicher Daten:';
 			case 'explicit consent':
 				return 'ausdrückliche Einwilligung';
 			case 'employment and social security':
