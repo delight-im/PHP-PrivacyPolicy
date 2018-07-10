@@ -62,6 +62,8 @@ abstract class PrivacyPolicy {
 	protected $preservationInBackups;
 	/** @var bool whether user data may be shared with third-party service providers, vendors, contractors or agents */
 	protected $thirdPartyServiceProviders;
+	/** @var bool whether user data may be transferred internationally to third countries with safeguards for proper protection */
+	protected $internationalTransfers;
 	/** @var bool whether user data may be part of the assets transferred during mergers, acquisitions or other changes of ownership */
 	protected $transferUponMergerOrAcquisition;
 	/** @var bool whether all connections to the server are, without exceptions, secured using SSL/TLS */
@@ -384,6 +386,24 @@ abstract class PrivacyPolicy {
 	}
 
 	/**
+	 * Returns whether user data may be transferred internationally to third countries with proper safeguards for protection
+	 *
+	 * @return bool
+	 */
+	public function hasInternationalTransfers() {
+		return $this->internationalTransfers;
+	}
+
+	/**
+	 * Sets whether user data may be transferred internationally to third countries with proper safeguards for protection
+	 *
+	 * @param bool $internationalTransfers
+	 */
+	public function setInternationalTransfers($internationalTransfers) {
+		$this->internationalTransfers = (bool) $internationalTransfers;
+	}
+
+	/**
 	 * Returns whether user data may be part of the assets transferred during mergers, acquisitions or
 	 * other changes of ownership
 	 *
@@ -682,6 +702,7 @@ abstract class PrivacyPolicy {
 		$this->accountDeletable = true;
 		$this->preservationInBackups = true;
 		$this->thirdPartyServiceProviders = true;
+		$this->internationalTransfers = true;
 		$this->transferUponMergerOrAcquisition = true;
 		$this->tlsEverywhere = false;
 		$this->competentSupervisoryAuthorityName = null;
