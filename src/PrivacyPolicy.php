@@ -189,12 +189,13 @@ abstract class PrivacyPolicy {
 	 * @param string $title the title of the group in natural language, e.g. `Registration data` or `Access logs`
 	 * @param string|null $description (optional) the description of the group and of the circumstances of collection in natural language
 	 * @param string[]|null $bases (optional) any number of constants from the {@see DataBasis} class
+	 * @param string[]|null $specialConditions (optional) any number of constants from the {@see DataSpecialCondition} class
 	 * @param string[]|null $purposes (optional) any number of constants from the {@see DataPurpose} class
 	 * @param string|null $requirement (optional) one of the constants from the {@see DataRequirement} class
 	 * @param callable|null $init (optional) a callback that receives the new instance and may initialize it
 	 */
-	public function addDataGroup($title, $description = null, array $bases = null, array $purposes = null, $requirement = null, callable $init = null) {
-		$this->dataGroups[] = new DataGroup($title, $description, $bases, $purposes, $requirement, $init);
+	public function addDataGroup($title, $description = null, array $bases = null, array $specialConditions = null, array $purposes = null, $requirement = null, callable $init = null) {
+		$this->dataGroups[] = new DataGroup($title, $description, $bases, $specialConditions, $purposes, $requirement, $init);
 	}
 
 	/**

@@ -17,6 +17,8 @@ final class DataGroup {
 	private $description;
 	/** @var string[] any number of constants from the {@see DataBasis} class */
 	private $bases;
+	/** @var string[] any number of constants from the {@see DataSpecialCondition} class */
+	private $specialConditions;
 	/** @var string[] any number of constants from the {@see DataPurpose} class */
 	private $purposes;
 	/** @var string one of the constants from the {@see DataRequirement} class */
@@ -67,6 +69,24 @@ final class DataGroup {
 	 */
 	public function getBases() {
 		return $this->bases;
+	}
+
+	/**
+	 * Returns whether any constants from the {@see DataSpecialCondition} class have been added
+	 *
+	 * @return bool
+	 */
+	public function hasSpecialConditions() {
+		return !empty($this->specialConditions);
+	}
+
+	/**
+	 * Returns any number of constants from the {@see DataSpecialCondition} class
+	 *
+	 * @return string[]
+	 */
+	public function getSpecialConditions() {
+		return $this->specialConditions;
 	}
 
 	/**
@@ -131,14 +151,16 @@ final class DataGroup {
 	 * @param string $title the title of the group in natural language, e.g. `Registration data` or `Access logs`
 	 * @param string|null $description (optional) the description of the group and of the circumstances of collection in natural language
 	 * @param string[]|null $bases (optional) any number of constants from the {@see DataBasis} class
+	 * @param string[]|null $specialConditions (optional) any number of constants from the {@see DataSpecialCondition} class
 	 * @param string[]|null $purposes (optional) any number of constants from the {@see DataPurpose} class
 	 * @param string|null $requirement (optional) one of the constants from the {@see DataRequirement} class
 	 * @param callable|null $init (optional) a callback that receives the new instance and may initialize it
 	 */
-	public function __construct($title, $description = null, array $bases = null, array $purposes = null, $requirement = null, callable $init = null) {
+	public function __construct($title, $description = null, array $bases = null, array $specialConditions = null, array $purposes = null, $requirement = null, callable $init = null) {
 		$this->title = (string) $title;
 		$this->description = $description !== null ? ((string) $description) : null;
 		$this->bases = $bases !== null ? $bases : [];
+		$this->specialConditions = $specialConditions !== null ? $specialConditions : [];
 		$this->purposes = $purposes !== null ? $purposes : [];
 		$this->requirement = $requirement !== null ? ((string) $requirement) : DataRequirement::ALWAYS;
 		$this->dataElements = [];
