@@ -35,6 +35,7 @@ Programmatically composable privacy policies for humans and machines
 * [Describing your privacy practices](#describing-your-privacy-practices)
 * [Specifying the scope of your policy](#specifying-the-scope-of-your-policy)
 * [Explaining the amount, type and purpose of the data you collect](#explaining-the-amount-type-and-purpose-of-the-data-you-collect)
+  * [Lawful bases](#lawful-bases)
   * [Data purposes](#data-purposes)
   * [Data requirements](#data-requirements)
   * [Data types](#data-types)
@@ -146,6 +147,7 @@ $policy->addScope(
 $policy->addDataGroup(
     'My group title', // e.g. `Server logs`
     'My group description', // e.g. `Whenever you access ...`
+    [ $dataBasis ], // see "Lawful bases" below (multiple entries possible)
     [ $dataPurpose ], // see "Data purposes" below (multiple entries possible)
     $dataRequirement, // see "Data requirements" below
 
@@ -157,6 +159,17 @@ $policy->addDataGroup(
         );
     }
 );
+```
+
+#### Lawful bases
+
+```php
+\Delight\PrivacyPolicy\Data\DataBasis::CONSENT;
+\Delight\PrivacyPolicy\Data\DataBasis::CONTRACT;
+\Delight\PrivacyPolicy\Data\DataBasis::LEGAL_OBLIGATION;
+\Delight\PrivacyPolicy\Data\DataBasis::VITAL_INTERESTS;
+\Delight\PrivacyPolicy\Data\DataBasis::PUBLIC_INTEREST;
+\Delight\PrivacyPolicy\Data\DataBasis::LEGITIMATE_INTERESTS;
 ```
 
 #### Data purposes
