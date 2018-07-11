@@ -31,7 +31,6 @@ Programmatically composable privacy policies for [humans](../../tree/examples/Hu
   * [Privacy policies for machines in formal language](#privacy-policies-for-machines-in-formal-language-1)
 * [Defining metadata](#defining-metadata)
 * [Describing your privacy practices](#describing-your-privacy-practices)
-* [Specifying the scope of your policy](#specifying-the-scope-of-your-policy)
 * [Explaining the amount, type and purpose of the data you collect](#explaining-the-amount-type-and-purpose-of-the-data-you-collect)
   * [Lawful bases](#lawful-bases)
   * [Special conditions](#special-conditions)
@@ -41,6 +40,7 @@ Programmatically composable privacy policies for [humans](../../tree/examples/Hu
     * [Primary](#primary)
     * [Secondary](#secondary)
     * [Tertiary](#tertiary)
+* [Specifying the scope of your policy](#specifying-the-scope-of-your-policy)
 * [Configuring an instance](#configuring-an-instance)
   * [Privacy policies for machines in formal language](#privacy-policies-for-machines-in-formal-language-2)
 
@@ -119,26 +119,6 @@ $policy->setRightToRestrictProcessing(true);
 $policy->setRightToDataPortability(true);
 $policy->setRightToObject(true);
 $policy->setRightsRelatedToAutomatedDecisions(true);
-```
-
-### Specifying the scope of your policy
-
-```php
-$policy->addScope(
-    new \Delight\PrivacyPolicy\Scope\WebsiteScope('https://www.example.com/', 'example.com')
-);
-
-// and/or
-
-$policy->addScope(
-    new \Delight\PrivacyPolicy\Scope\PlayStoreAndroidAppScope('com.example.app', 'Example for Android')
-);
-
-// and/or
-
-$policy->addScope(
-    new \Delight\PrivacyPolicy\Scope\AppStoreIosAppScope('54614917093', 'Example for iOS')
-);
 ```
 
 ### Explaining the amount, type and purpose of the data you collect
@@ -376,6 +356,26 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::VEHICLE_MODEL;
 \Delight\PrivacyPolicy\Data\DataType::VEHICLE_NOTES;
 \Delight\PrivacyPolicy\Data\DataType::VEHICLE_REGISTRATION_PLATE_NUMBER;
+```
+
+### Specifying the scope of your policy
+
+```php
+$policy->addScope(
+    new \Delight\PrivacyPolicy\Scope\WebsiteScope('https://www.example.com/', 'example.com')
+);
+
+// and/or
+
+$policy->addScope(
+    new \Delight\PrivacyPolicy\Scope\PlayStoreAndroidAppScope('com.example.app', 'Example for Android')
+);
+
+// and/or
+
+$policy->addScope(
+    new \Delight\PrivacyPolicy\Scope\AppStoreIosAppScope('54614917093', 'Example for iOS')
+);
 ```
 
 ### Configuring an instance
