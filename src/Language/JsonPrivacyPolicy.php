@@ -180,6 +180,9 @@ final class JsonPrivacyPolicy extends MachinePrivacyPolicy {
 		$out['serviceProviders'] = [];
 		$out['serviceProviders']['thirdParties'] = (bool) $this->hasThirdPartyServiceProviders();
 
+		$out['transfers'] = [];
+		$out['transfers']['international'] = (bool) $this->hasInternationalTransfers();
+
 		$out['mergersAndAcquisitions'] = [];
 		$out['mergersAndAcquisitions']['transfer'] = (bool) $this->hasTransferUponMergerOrAcquisition();
 
