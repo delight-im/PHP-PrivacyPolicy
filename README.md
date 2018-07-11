@@ -147,18 +147,18 @@ $policy->addScope(
 
 ```php
 $policy->addDataGroup(
-    'My group title', // e.g. `Server logs`
-    'My group description', // e.g. `Whenever you access ...`
-    [ $dataBasis ], // see "Lawful bases" below (multiple entries possible)
-    [ $dataSpecialCondition ], // see "Special conditions" below (multiple entries possible)
-    [ $dataPurpose ], // see "Data purposes" below (multiple entries possible)
-    $dataRequirement, // see "Data requirements" below
+    'Server logs',
+    'Whenever you access our services, ...',
+    [ \Delight\PrivacyPolicy\Data\DataBasis::LEGITIMATE_INTERESTS ],
+    null,
+    [ \Delight\PrivacyPolicy\Data\DataPurpose::ADMINISTRATION ],
+    \Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
 
     function (\Delight\PrivacyPolicy\Data\DataGroup $group) {
         $group->addElement(
-            $dataType, // see "Data types" below
-            $dataRequirement, // see "Data requirements" below
-            24 * 7 // maximum retention time in hours
+            \Delight\PrivacyPolicy\Data\DataType::ACCESS_IP_ADDRESS,
+            \Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
+            24 * 7
         );
     }
 );
