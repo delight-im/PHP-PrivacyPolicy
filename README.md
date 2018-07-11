@@ -1,8 +1,6 @@
 # PHP-PrivacyPolicy
 
-Programmatically composable privacy policies for humans and machines
-
-**Preview:** [Exemplary output](../../tree/examples)
+Programmatically composable privacy policies for [humans](../../tree/examples/Humans) and [machines](../../tree/examples/Machines)
 
 ## Requirements
 
