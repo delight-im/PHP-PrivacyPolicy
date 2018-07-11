@@ -174,6 +174,7 @@ $policy->setThirdPartyCookies(true);
 $policy->setAccountDeletable(true);
 $policy->setPreservationInBackups(true);
 $policy->setThirdPartyServiceProviders(true);
+$policy->setInternationalTransfers(true);
 $policy->setTransferUponMergerOrAcquisition(true);
 $policy->setTlsEverywhere(true);
 $policy->setCompetentSupervisoryAuthority('Estonian Data Protection Inspectorate', 'http://www.aki.ee/en');
