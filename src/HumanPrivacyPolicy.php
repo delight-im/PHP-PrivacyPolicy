@@ -538,6 +538,32 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 				});
 			}
 
+			if ($this->hasInternationalTransfers()) {
+				$list->addDefinitionGroup($this->lang('International data transfers'), function (DefinitionGroup $group) {
+					$group->addDefinition(
+						$this->lang('Some of our external service providers and recipients of personal data are based outside your country and outside our country.')
+						.
+						Markup::SPACE
+						.
+						$this->lang('This means that the processing of your personal data by those third parties involves an international transfer of your data to a third country.')
+						.
+						Markup::SPACE
+						.
+						$this->lang('Such third countries may have data protection rules that are different from those in your or our country.')
+					);
+					$group->addDefinition($this->lang('Thus, for any international transfer of data, we ensure that appropriate technical, organizational and contractual measures are in place to guarantee that a similar degree of protection is afforded to your data internationally and that your personal data remains protected to the standards described in this policy.'));
+					$group->addDefinition(new DefinitionList(function (DefinitionList $list) {
+						$list->addDefinitionGroup($this->lang('We verify that at least one of the following safeguards is implemented:'), function (DefinitionGroup $group) {
+							$group->addDefinition($this->lang('The country of the recipient has been deemed to provide an adequate level of protection for personal data by the European Commission.'));
+							$group->addDefinition($this->lang('The recipient is certified as part of the EU-US and Swiss-US Privacy Shield Frameworks.'));
+							$group->addDefinition($this->lang('Standard Contractual Clauses, as adopted by or approved by the European Commission, are in place.'));
+							$group->addDefinition($this->lang('The recipient has Binding Corporate Rules that guarantee the protection of personal data.'));
+						});
+					}));
+					$group->addDefinition($this->lang('Please contact us if you want further information on the specific mechanisms used by us when transferring your personal data internationally.'));
+				});
+			}
+
 			if ($this->hasTransferUponMergerOrAcquisition()) {
 				$list->addDefinitionGroup($this->lang('Mergers and acquisitions'), function (DefinitionGroup $group) {
 					$group->addDefinition($this->lang('If we are involved in a merger, an acquisition by another company, or a sale of all or a portion of our business or assets, your information will likely be among the assets transferred.'));

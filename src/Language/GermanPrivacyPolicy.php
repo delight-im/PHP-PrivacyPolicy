@@ -498,6 +498,18 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Die Verarbeitung ist aus Gründen des öffentlichen Interesses im Bereich der öffentlichen Gesundheit, wie dem Schutz vor schwerwiegenden grenzüberschreitenden Gesundheitsgefahren oder zur Gewährleistung hoher Qualitäts- und Sicherheitsstandards bei der Gesundheitsversorgung und bei Arzneimitteln und Medizinprodukten erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(i)).';
 			case 'Processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(j)).':
 				return 'Die Verarbeitung ist für im öffentlichen Interesse liegende Archivzwecke, für wissenschaftliche oder historische Forschungszwecke oder für statistische Zwecke erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(j)).';
+			case 'International data transfers':
+				return 'Internationale Datenübermittlungen';
+			case 'We verify that at least one of the following safeguards is implemented:':
+				return 'Wir stellen sicher, dass mindestens eine der folgenden Schutzmaßnahmen umgesetzt ist:';
+			case 'The country of the recipient has been deemed to provide an adequate level of protection for personal data by the European Commission.':
+				return 'Das Land des Empfängers bietet nach Einschätzung der Europäischen Kommission ein angemessenes Datenschutzniveau.';
+			case 'The recipient is certified as part of the EU-US and Swiss-US Privacy Shield Frameworks.':
+				return 'Der Empfänger ist im Rahmen des EU-US- und Schweiz-US-Privacy-Shields zertifiziert.';
+			case 'Standard Contractual Clauses, as adopted by or approved by the European Commission, are in place.':
+				return 'Standardvertragsklauseln, eingeführt oder genehmigt durch die Europäische Kommission, sind vorhanden.';
+			case 'The recipient has Binding Corporate Rules that guarantee the protection of personal data.':
+				return 'Der Empfänger hat verbindliche interne Datenschutzvorschriften, die den Schutz persönlicher Daten garantieren.';
 			default:
 				throw new TranslationNotFoundError();
 		}
