@@ -200,7 +200,7 @@ class GermanFormalPrivacyPolicy extends GermanPrivacyPolicy {
 			case 'This means that the processing of your personal data by those third parties involves an international transfer of your data to a third country.':
 				return 'Dies bedeutet, dass die Verarbeitung Ihrer persönlichen Daten durch diese Drittanbieter eine internationale Übermittlung Ihrer Daten an ein Drittland umfasst.';
 			case 'Such third countries may have data protection rules that are different from those in your or our country.':
-				return 'Diese Drittländer können Datenschutzregeln haben, die sich von denen in Ihrem oder unserem Land unterscheiden.';
+				return 'Solche Drittländer können Datenschutzregeln haben, die sich von denen in Ihrem oder unserem Land unterscheiden.';
 			case 'Thus, for any international transfer of data, we ensure that appropriate technical, organizational and contractual measures are in place to guarantee that a similar degree of protection is afforded to your data internationally and that your personal data remains protected to the standards described in this policy.':
 				return 'Deshalb stellen wir für jede internationale Übermittlung von Daten sicher, dass angemessene technische, organisatorische und vertragliche Maßnahmen getroffen werden, um zu gewährleisten, dass Ihren Daten international ein ähnlicher Schutz geboten wird und dass Ihre persönlichen Daten gemäß den Standards geschützt bleiben, die in dieser Erklärung beschrieben sind.';
 			case 'Please contact us if you want further information on the specific mechanisms used by us when transferring your personal data internationally.':
