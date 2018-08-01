@@ -588,8 +588,6 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Einstufung des Briefes als ersten Brief';
 			case 'Time of first access':
 				return 'Zeitpunkt des ersten Zugriffs';
-			case 'Country':
-				return 'Land';
 			case 'Version of application used for access':
 				return 'Version der für den Zugriff genutzten Anwendung';
 			case 'Availability of file uploads':
