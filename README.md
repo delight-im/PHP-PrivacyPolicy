@@ -128,7 +128,7 @@ $policy->addDataGroup(
     'Server logs',
     'Whenever you access our services, ...',
     [ \Delight\PrivacyPolicy\Data\DataBasis::LEGITIMATE_INTERESTS ],
-    null,
+    null, // [ \Delight\PrivacyPolicy\Data\DataSpecialCondition::EXPLICIT_CONSENT ]
     [ \Delight\PrivacyPolicy\Data\DataPurpose::ADMINISTRATION ],
     \Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
 
