@@ -59,7 +59,7 @@ final class DataElement {
 	 *
 	 * @param string $type one of the constants from the {@see DataType} class
 	 * @param string|null $requirement (optional) one of the constants from the {@see DataRequirement} class
-	 * @param bool|null $maxRetention (optional) the maximum retention time of the information in hours
+	 * @param int|null $maxRetention (optional) the maximum retention time of the information in hours
 	 */
 	public function __construct($type, $requirement = null, $maxRetention = null) {
 		$this->type = (string) $type;

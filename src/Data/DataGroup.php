@@ -139,7 +139,7 @@ final class DataGroup {
 	 *
 	 * @param string $type one of the constants from the {@see DataType} class
 	 * @param string|null $requirement (optional) one of the constants from the {@see DataRequirement} class
-	 * @param bool|null $maxRetention (optional) the maximum retention time of the information in hours
+	 * @param int|null $maxRetention (optional) the maximum retention time of the information in hours
 	 */
 	public function addElement($type, $requirement = null, $maxRetention = null) {
 		$this->dataElements[] = new DataElement($type, $requirement, $maxRetention);
