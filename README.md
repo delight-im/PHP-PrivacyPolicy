@@ -281,6 +281,20 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_HANDWRITTEN;
 \Delight\PrivacyPolicy\Data\DataType::USER_WEBSITE_URL;
 \Delight\PrivacyPolicy\Data\DataType::USER_WEIGHT;
+
+\Delight\PrivacyPolicy\Data\DataType::USER_ACCESS_PRIVILEGES;
+\Delight\PrivacyPolicy\Data\DataType::USER_EMAIL_VERIFIED;
+\Delight\PrivacyPolicy\Data\DataType::USER_PASSWORD_RESETTABLE;
+\Delight\PrivacyPolicy\Data\DataType::CUSTOMER_NUMBER;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_PLAN;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_FREE_TRIAL;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_PAST_DUE;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_NEXT_PAYMENT_TIME;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_START_TIME;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_MODIFICATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_CANCELLATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_END_TIME;
+\Delight\PrivacyPolicy\Data\DataType::USER_COUNTRY;
 ```
 
 ##### Secondary
@@ -325,6 +339,16 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::EMAIL_RETURN_PATH;
 \Delight\PrivacyPolicy\Data\DataType::EMAIL_SUBJECT;
 \Delight\PrivacyPolicy\Data\DataType::EMAIL_TO;
+
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_NUMBER;
+\Delight\PrivacyPolicy\Data\DataType::CONTACT_REFERENCE;
+\Delight\PrivacyPolicy\Data\DataType::USER_REFERENCE;
+\Delight\PrivacyPolicy\Data\DataType::CONTACT_ORIGINAL_MESSAGE_TIME;
+\Delight\PrivacyPolicy\Data\DataType::CONTACT_CREATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::CONTACT_MODIFICATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::BILLING_ID_PAYMENT_SERVICE_PROVIDER;
+\Delight\PrivacyPolicy\Data\DataType::ACCESS_FIRST_TIME;
+\Delight\PrivacyPolicy\Data\DataType::ACCESS_APP_VERSION;
 ```
 
 ##### Tertiary
@@ -356,6 +380,27 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::VEHICLE_MODEL;
 \Delight\PrivacyPolicy\Data\DataType::VEHICLE_NOTES;
 \Delight\PrivacyPolicy\Data\DataType::VEHICLE_REGISTRATION_PLATE_NUMBER;
+
+\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_MANAGEMENT_MEMBERS;
+\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_EXECUTIVE_BOARD_MEMBERS;
+\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_SUPERVISORY_BOARD_MEMBERS;
+\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_COMMERCIAL_REGISTER_ENTRY;
+\Delight\PrivacyPolicy\Data\DataType::LETTER_SALUTATION;
+\Delight\PrivacyPolicy\Data\DataType::LETTER_VALEDICTION;
+\Delight\PrivacyPolicy\Data\DataType::LETTER_MATTER_PERSONAL_OR_BUSINESS;
+\Delight\PrivacyPolicy\Data\DataType::LETTER_CREATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::LETTER_MODIFICATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::CONTRACT_CREATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::CONTRACT_MODIFICATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::CONTRACT_CANCELLATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO_LABEL;
+\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO_CREATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO_MODIFICATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_LABEL;
+\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_CREATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_MODIFICATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::LETTER_IS_FIRST;
+\Delight\PrivacyPolicy\Data\DataType::ACCESS_DEVICE_FEATURES_FILE_UPLOAD;
 ```
 
 ### Specifying the scope of your policy
