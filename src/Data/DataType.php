@@ -309,6 +309,90 @@ final class DataType {
 	const VEHICLE_NOTES = 'vehicle.notes';
 	/** @var string the registration plate number of one of the user's vehicles */
 	const VEHICLE_REGISTRATION_PLATE_NUMBER = 'vehicle.registration.plate.number';
+	/** @var string the access privileges granted to the user */
+	const USER_ACCESS_PRIVILEGES = 'user.access.privileges';
+	/** @var string whether the user's email address has been verified */
+	const USER_EMAIL_VERIFIED = 'user.email.verified';
+	/** @var string whether password resets are permitted for the user */
+	const USER_PASSWORD_RESETTABLE = 'user.password.resettable';
+	/** @var string the members of the management of the user's company */
+	const USER_COMPANY_MANAGEMENT_MEMBERS = 'user.company.management.members';
+	/** @var string the members of the executive board of the user's company */
+	const USER_COMPANY_EXECUTIVE_BOARD_MEMBERS = 'user.company.executive_board.members';
+	/** @var string the members of the supervisory board of the user's company */
+	const USER_COMPANY_SUPERVISORY_BOARD_MEMBERS = 'user.company.supervisory_board.members';
+	/** @var string the entry of the user's company in the commercial register */
+	const USER_COMPANY_COMMERCIAL_REGISTER_ENTRY = 'user.company.commercial_register.entry';
+	/** @var string the customer number */
+	const CUSTOMER_NUMBER = 'customer.number';
+	/** @var string the number of the invoice */
+	const INVOICE_NUMBER = 'invoice.number';
+	/** @var string the contact's reference as a number or as text */
+	const CONTACT_REFERENCE = 'contact.reference';
+	/** @var string the user's reference as a number or as text */
+	const USER_REFERENCE = 'user.reference';
+	/** @var string the date and/or time of the contact's original message */
+	const CONTACT_ORIGINAL_MESSAGE_TIME = 'contact.original_message.time';
+	/** @var string the salutation of the letter */
+	const LETTER_SALUTATION = 'letter.salutation';
+	/** @var string the valediction of the letter */
+	const LETTER_VALEDICTION = 'letter.valediction';
+	/** @var string the date and/or time the contact has been created */
+	const CONTACT_CREATION_TIME = 'contact.creation.time';
+	/** @var string the date and/or time the contact has most recently been modified */
+	const CONTACT_MODIFICATION_TIME = 'contact.modification.time';
+	/** @var string whether the letter is for personal matters or for business matters */
+	const LETTER_MATTER_PERSONAL_OR_BUSINESS = 'letter.matter.personal_or_business';
+	/** @var string the date and/or time the letter has been created */
+	const LETTER_CREATION_TIME = 'letter.creation.time';
+	/** @var string the date and/or time the letter has most recently been modified */
+	const LETTER_MODIFICATION_TIME = 'letter.modification.time';
+	/** @var string the date and/or time the contract has been created */
+	const CONTRACT_CREATION_TIME = 'contract.creation.time';
+	/** @var string the date and/or time the contract has most recently been modified */
+	const CONTRACT_MODIFICATION_TIME = 'contract.modification.time';
+	/** @var string the date and/or time the contract has been cancelled */
+	const CONTRACT_CANCELLATION_TIME = 'contract.cancellation.time';
+	/** @var string the label for the logo of the user's company */
+	const USER_COMPANY_LOGO_LABEL = 'user.company.logo.label';
+	/** @var string the date and/or time the logo of the user's company has been created */
+	const USER_COMPANY_LOGO_CREATION_TIME = 'user.company.logo.creation.time';
+	/** @var string the date and/or time the logo of the user's company has most recently been modified */
+	const USER_COMPANY_LOGO_MODIFICATION_TIME = 'user.company.logo.modification.time';
+	/** @var string the label for the user's signature */
+	const USER_SIGNATURE_LABEL = 'user.signature.label';
+	/** @var string the date and/or time the user's signature has been created */
+	const USER_SIGNATURE_CREATION_TIME = 'user.signature.creation.time';
+	/** @var string the date and/or time the user's signature has most recently been modified */
+	const USER_SIGNATURE_MODIFICATION_TIME = 'user.signature.modification.time';
+	/** @var string an identification number with an external payment service provider */
+	const BILLING_ID_PAYMENT_SERVICE_PROVIDER = 'billing.id.payment_service_provider';
+	/** @var string the plan or package that has been chosen and is used for billing */
+	const BILLING_PLAN = 'billing.plan';
+	/** @var string whether a free trial is currently active */
+	const BILLING_FREE_TRIAL = 'billing.free_trial';
+	/** @var string whether there are payments past due at the moment */
+	const BILLING_PAST_DUE = 'billing.past_due';
+	/** @var string the date and/or time of the next (scheduled) payment */
+	const BILLING_NEXT_PAYMENT_TIME = 'billing.next_payment.time';
+	/** @var string the date and/or time when billing has started */
+	const BILLING_START_TIME = 'billing.start.time';
+	/** @var string the date and/or time when billing options have most recently been modified */
+	const BILLING_MODIFICATION_TIME = 'billing.modification.time';
+	/** @var string the date and/or time when billing has been cancelled */
+	const BILLING_CANCELLATION_TIME = 'billing.cancellation.time';
+	/** @var string the date and/or time when billing has ended or will end */
+	const BILLING_END_TIME = 'billing.end.time';
+	/** @var string whether the letter has been the first one */
+	const LETTER_IS_FIRST = 'letter.is_first';
+	/** @var string the date and/or time of the first individual access by the user */
+	const ACCESS_FIRST_TIME = 'access.first.time';
+	/** @var string the user's country */
+	const USER_COUNTRY = 'user.country';
+	/** @var string the version of the application that has been used by the user for their access */
+	const ACCESS_APP_VERSION = 'access.app.version';
+	/** @var string whether the device used for the access supports file uploads */
+	const ACCESS_DEVICE_FEATURES_FILE_UPLOAD = 'access.device.features.file_upload';
 
 	/**
 	 * Converts an identifier to a human-readable title in natural language
@@ -467,6 +551,48 @@ final class DataType {
 			case self::VEHICLE_MODEL: return 'Model name of vehicle';
 			case self::VEHICLE_NOTES: return 'Custom notes on vehicle';
 			case self::VEHICLE_REGISTRATION_PLATE_NUMBER: return 'Registration plate number of vehicle';
+			case self::USER_ACCESS_PRIVILEGES: return 'Access privileges';
+			case self::USER_EMAIL_VERIFIED: return 'Verification status of email address';
+			case self::USER_PASSWORD_RESETTABLE: return 'Availability of password reset';
+			case self::USER_COMPANY_MANAGEMENT_MEMBERS: return 'Members of management of company';
+			case self::USER_COMPANY_EXECUTIVE_BOARD_MEMBERS: return 'Members of executive board of company';
+			case self::USER_COMPANY_SUPERVISORY_BOARD_MEMBERS: return 'Members of supervisory board of company';
+			case self::USER_COMPANY_COMMERCIAL_REGISTER_ENTRY: return 'Entry of company in commercial register';
+			case self::CUSTOMER_NUMBER: return 'Customer number';
+			case self::INVOICE_NUMBER: return 'Invoice number';
+			case self::CONTACT_REFERENCE: return 'Reference of contact';
+			case self::USER_REFERENCE: return 'Reference';
+			case self::CONTACT_ORIGINAL_MESSAGE_TIME: return 'Time of original message of contact';
+			case self::LETTER_SALUTATION: return 'Salutation of letter';
+			case self::LETTER_VALEDICTION: return 'Valediction of letter';
+			case self::CONTACT_CREATION_TIME: return 'Time of creation of contact';
+			case self::CONTACT_MODIFICATION_TIME: return 'Time of last modification to contact';
+			case self::LETTER_MATTER_PERSONAL_OR_BUSINESS: return 'Classification of letter as personal or as relating to business';
+			case self::LETTER_CREATION_TIME: return 'Time of creation of letter';
+			case self::LETTER_MODIFICATION_TIME: return 'Time of last modification to letter';
+			case self::CONTRACT_CREATION_TIME: return 'Time of creation of contract';
+			case self::CONTRACT_MODIFICATION_TIME: return 'Time of last modification to contract';
+			case self::CONTRACT_CANCELLATION_TIME: return 'Time of cancellation of contract';
+			case self::USER_COMPANY_LOGO_LABEL: return 'Label for logo of company';
+			case self::USER_COMPANY_LOGO_CREATION_TIME: return 'Time of creation of logo of company';
+			case self::USER_COMPANY_LOGO_MODIFICATION_TIME: return 'Time of last modification to logo of company';
+			case self::USER_SIGNATURE_LABEL: return 'Label for signature';
+			case self::USER_SIGNATURE_CREATION_TIME: return 'Time of creation of signature';
+			case self::USER_SIGNATURE_MODIFICATION_TIME: return 'Time of last modification to signature';
+			case self::BILLING_ID_PAYMENT_SERVICE_PROVIDER: return 'Identification number with external payment service provider';
+			case self::BILLING_PLAN: return 'Plan or package for billing';
+			case self::BILLING_FREE_TRIAL: return 'Usage of free trial';
+			case self::BILLING_PAST_DUE: return 'Payments past due';
+			case self::BILLING_NEXT_PAYMENT_TIME: return 'Time of next payment';
+			case self::BILLING_START_TIME: return 'Start of billing';
+			case self::BILLING_MODIFICATION_TIME: return 'Time of last modification to billing options';
+			case self::BILLING_CANCELLATION_TIME: return 'Time of cancellation';
+			case self::BILLING_END_TIME: return 'End of billing';
+			case self::LETTER_IS_FIRST: return 'Classification of letter as first letter';
+			case self::ACCESS_FIRST_TIME: return 'Time of first access';
+			case self::USER_COUNTRY: return 'Country';
+			case self::ACCESS_APP_VERSION: return 'Version of application used for access';
+			case self::ACCESS_DEVICE_FEATURES_FILE_UPLOAD: return 'Availability of file uploads';
 			default: throw new UnexpectedDataTypeError($identifier);
 		}
 	}

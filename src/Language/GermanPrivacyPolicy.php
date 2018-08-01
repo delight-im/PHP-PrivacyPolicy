@@ -510,6 +510,90 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Standardvertragsklauseln, eingeführt oder genehmigt durch die Europäische Kommission, sind vorhanden.';
 			case 'The recipient has Binding Corporate Rules that guarantee the protection of personal data.':
 				return 'Der Empfänger hat verbindliche interne Datenschutzvorschriften, die den Schutz persönlicher Daten garantieren.';
+			case 'Access privileges':
+				return 'Zugriffsrechte';
+			case 'Verification status of email address':
+				return 'Bestätigungsstatus der E-Mail-Adresse';
+			case 'Availability of password reset':
+				return 'Verfügbarkeit des Passwort-Zurücksetzens';
+			case 'Members of management of company':
+				return 'Mitglieder der Geschäftsführung des Unternehmens';
+			case 'Members of executive board of company':
+				return 'Mitglieder des Vorstands des Unternehmens';
+			case 'Members of supervisory board of company':
+				return 'Mitglieder des Aufsichtsrats des Unternehmens';
+			case 'Entry of company in commercial register':
+				return 'Eintrag des Unternehmens im Handelsregister';
+			case 'Customer number':
+				return 'Kundennummer';
+			case 'Invoice number':
+				return 'Rechnungsnummer';
+			case 'Reference of contact':
+				return 'Referenz des Kontakts';
+			case 'Reference':
+				return 'Referenz';
+			case 'Time of original message of contact':
+				return 'Datum der ursprünglichen Nachricht des Kontakts';
+			case 'Salutation of letter':
+				return 'Anrede des Briefes';
+			case 'Valediction of letter':
+				return 'Grußformel des Briefes';
+			case 'Time of creation of contact':
+				return 'Zeitpunkt der Erstellung des Kontakts';
+			case 'Time of last modification to contact':
+				return 'Zeitpunkt der letzten Änderung am Kontakt';
+			case 'Classification of letter as personal or as relating to business':
+				return 'Einstufung des Briefes als persönlich oder als geschäftlich';
+			case 'Time of creation of letter':
+				return 'Zeitpunkt der Erstellung des Briefes';
+			case 'Time of last modification to letter':
+				return 'Zeitpunkt der letzten Änderung am Brief';
+			case 'Time of creation of contract':
+				return 'Zeitpunkt der Erstellung des Vertrages';
+			case 'Time of last modification to contract':
+				return 'Zeitpunkt der letzten Änderung am Vertrag';
+			case 'Time of cancellation of contract':
+				return 'Zeitpunkt der Kündigung des Vertrages';
+			case 'Label for logo of company':
+				return 'Bezeichnung für Logo des Unternehmens';
+			case 'Time of creation of logo of company':
+				return 'Zeitpunkt der Erstellung des Logos des Unternehmens';
+			case 'Time of last modification to logo of company':
+				return 'Zeitpunkt der letzten Änderung am Logo des Unternehmens';
+			case 'Label for signature':
+				return 'Bezeichnung für Unterschrift';
+			case 'Time of creation of signature':
+				return 'Zeitpunkt der Erstellung der Unterschrift';
+			case 'Time of last modification to signature':
+				return 'Zeitpunkt der letzten Änderung an der Unterschrift';
+			case 'Identification number with external payment service provider':
+				return 'Kennnummer bei externem Zahlungsdienstleister';
+			case 'Plan or package for billing':
+				return 'Tarif oder Paket für Abrechnung';
+			case 'Usage of free trial':
+				return 'Nutzung eines kostenlosen Probezeitraums';
+			case 'Payments past due':
+				return 'Überfälligkeit von Zahlungen';
+			case 'Time of next payment':
+				return 'Zeitpunkt der nächsten Zahlung';
+			case 'Start of billing':
+				return 'Beginn der Abrechnung';
+			case 'Time of last modification to billing options':
+				return 'Zeitpunkt der letzten Änderung an den Zahlungsoptionen';
+			case 'Time of cancellation':
+				return 'Zeitpunkt der Kündigung';
+			case 'End of billing':
+				return 'Ende der Abrechnung';
+			case 'Classification of letter as first letter':
+				return 'Einstufung des Briefes als ersten Brief';
+			case 'Time of first access':
+				return 'Zeitpunkt des ersten Zugriffs';
+			case 'Country':
+				return 'Land';
+			case 'Version of application used for access':
+				return 'Version der für den Zugriff genutzten Anwendung';
+			case 'Availability of file uploads':
+				return 'Verfügbarkeit von Dateiuploads';
 			default:
 				throw new TranslationNotFoundError();
 		}
