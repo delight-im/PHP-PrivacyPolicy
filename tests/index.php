@@ -117,7 +117,10 @@ $policy->addDataGroup(
 $policy->addDataGroup(
 	'Account information',
 	'When you create an account by signing up, and whenever you use that account by signing in afterwards, we collect the data that you provide to us voluntarily in the course of that process.',
-	[ \Delight\PrivacyPolicy\Data\DataBasis::CONTRACT, \Delight\PrivacyPolicy\Data\DataBasis::CONSENT ],
+	[
+		\Delight\PrivacyPolicy\Data\DataBasis::CONTRACT,
+		\Delight\PrivacyPolicy\Data\DataBasis::CONSENT
+	],
 	[ \Delight\PrivacyPolicy\Data\DataSpecialCondition::EXPLICIT_CONSENT ],
 	[
 		\Delight\PrivacyPolicy\Data\DataPurpose::ADMINISTRATION,
