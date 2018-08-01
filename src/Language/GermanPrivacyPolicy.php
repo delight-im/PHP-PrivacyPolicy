@@ -619,4 +619,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 		return \sprintf(($n === 1 ? '%d Monat' : '%d Monate'), $n);
 	}
 
+	protected function formatYears($n) {
+		return \sprintf(($n === 1 ? '%d Jahr' : '%d Jahre'), $n);
+	}
+
 }

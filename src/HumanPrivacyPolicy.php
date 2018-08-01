@@ -133,6 +133,14 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 	abstract protected function formatMonths($n);
 
 	/**
+	 * Formats the specified number of years
+	 *
+	 * @param int $n
+	 * @return string the formatted number as a string
+	 */
+	abstract protected function formatYears($n);
+
+	/**
 	 * Returns the policy as generic markup
 	 *
 	 * @return Markup
@@ -467,11 +475,18 @@ abstract class HumanPrivacyPolicy extends PrivacyPolicy {
 															$this->formatWeeks(\ceil($dataElement->getMaxRetention() / 24 / 7))
 														));
 													}
-													else {
-														// format number of 2 or more months
+													elseif ($dataElement->getMaxRetention() <= 13148) {
+														// format number of 2 to 18 months
 														$group->addDefinition($this->lang(
 															'Maximum retention time: %s',
 															$this->formatMonths(\ceil($dataElement->getMaxRetention() / 24 / 30.436875))
+														));
+													}
+													else {
+														// format number of 2 or more years
+														$group->addDefinition($this->lang(
+															'Maximum retention time: %s',
+															$this->formatYears(\ceil($dataElement->getMaxRetention() / 24 / 365.2425))
 														));
 													}
 												}

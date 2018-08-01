@@ -45,4 +45,8 @@ class EnglishPrivacyPolicy extends HumanPrivacyPolicy {
 		return \sprintf(($n === 1 ? '%d month' : '%d months'), $n);
 	}
 
+	protected function formatYears($n) {
+		return \sprintf(($n === 1 ? '%d year' : '%d years'), $n);
+	}
+
 }
