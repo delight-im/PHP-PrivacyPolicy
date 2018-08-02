@@ -21,6 +21,10 @@ Programmatically composable privacy policies for [humans](../../tree/examples/Hu
     require __DIR__ . '/vendor/autoload.php';
     ```
 
+## Upgrading
+
+Migrating from an earlier version of this project? See our [upgrade guide](Migration.md) for help.
+
 ## Usage
 
 * [Creating an instance](#creating-an-instance)
