@@ -13,12 +13,20 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 
 	protected function translateUnformatted($text) {
 		switch ($text) {
+			case 'Access your personal data':
+				return 'Erhalte Zugriff auf deine persönlichen Daten';
 			case 'Apart from that, please recognize that protecting your personal information is, in other parts, also your own responsibility.':
 				return 'Bitte denke im Übrigen daran, dass der Schutz deiner persönlichen Informationen in anderen Teilen ebenso deiner eigenen Verantwortung unterliegt.';
 			case 'As a condition for your use of our services as a customer, user or visitor (collectively referred to as a “user” or as your “use”), you consent to the terms of this policy and you agree that your personal information will be handled as outlined below.':
 				return 'Als Bedingung für deine Nutzung unserer Dienste als Kunde, Nutzer oder Besucher (zusammen als „Nutzer“ oder als deine „Nutzung“ bezeichnet) stimmst du den Bedingungen dieser Erklärung zu und du erklärst dich damit einverstanden, dass deine persönlichen Informationen wie im Folgenden beschrieben verarbeitet werden.';
+			case 'Erase your personal data':
+				return 'Lösche deine persönlichen Daten';
 			case 'Especially, you are responsible for safeguarding any passwords and other authentication information that you use to access our services, as well as limiting physical access to the devices used.':
 				return 'Insbesondere bist du dafür verantwortlich, jegliche Passwörter und andere Informationen zur Authentifizierung zu schützen, die du nutzt, um auf unsere Dienste zuzugreifen, sowie dafür, den Zugang zu den genutzten Geräten einzuschränken.';
+			case 'Except as limited under applicable law, you have the following rights with regard to your personal data:':
+				return 'Soweit nicht durch anwendbares Recht eingeschränkt, hast du im Hinblick auf deine persönlichen Daten die folgenden Rechte:';
+			case 'Export your personal data':
+				return 'Exportiere deine persönlichen Daten';
 			case 'For any less significant changes to this privacy policy that do not affect your rights or choices in a material way, we encourage all users to check this policy for updated versions periodically.':
 				return 'Für jegliche Änderungen an dieser Datenschutzerklärung, die von geringerer Bedeutung sind und deine Rechte oder Wahlmöglichkeiten nicht in wichtiger Weise betreffen, empfehlen wir allen Nutzern, diese Erklärung regelmäßig hinsichtlich aktualisierter Versionen zu überprüfen.';
 			case 'For example, we may use these technologies to keep you signed in and to remember your preferences with regard to our services.':
@@ -43,8 +51,12 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Wenn wir einen glaubwürdigen Grund haben, anzunehmen, dass du ein Nutzer im Alter unter %d bist, müssen wir dir die weitere Nutzung unserer Dienste untersagen.';
 			case 'If you are a child below that age, you may not use any of our services.':
 				return 'Wenn du ein Kind unterhalb dieses Alters bist, darfst du keinen unserer Dienste nutzen.';
+			case 'If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.':
+				return 'Falls du mit unserer Antwort oder mit der Art und Weise, wie wir deine persönlichen Daten verarbeiten, unzufrieden bist, kannst du deine örtliche Datenschutzbehörde kontaktieren.';
 			case 'If you have any questions or concerns regarding this policy, our privacy practices or certain aspects of our services, please contact us at any time.':
 				return 'Solltest du irgendwelche Fragen oder Bedenken bezüglich dieser Erklärung, unserer Datenschutzpraktiken oder bestimmter Aspekte unserer Dienste haben, nimm bitte jederzeit Kontakt mit uns auf.';
+			case 'If you have any questions regarding the protection of your data, your rights, or how to exercise them, please contact us.':
+				return 'Wenn du irgendwelche Fragen im Hinblick auf den Schutz deiner Daten, deine Rechte oder deren Ausübung hast, kontaktiere uns bitte.';
 			case 'If you need help, please contact us.':
 				return 'Wenn du Hilfe benötigst, kontaktiere uns bitte.';
 			case 'If you would like to cancel your use of our services, delete your account, or delete your personal information, you may do so in the respective sections of our services.':
@@ -55,14 +67,36 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Um Datenverlust durch menschliche Fehler oder durch Systemfehler zu verhindern, bewahren wir, wie es die meisten Unternehmen und Dienstleister tun, zusätzliche Sicherheitskopien auf, die Teile deiner persönlichen Informationen enthalten können.';
 			case 'Most changes will presumably be minor only and will therefore not affect your rights.':
 				return 'Die meisten Änderungen werden in Umfang und Bedeutung wahrscheinlich nur gering sein und deshalb deine Rechte nicht betreffen.';
+			case 'Object to automated decision-making':
+				return 'Widerspreche automatisierten Entscheidungen';
+			case 'Object to direct marketing':
+				return 'Widerspreche der Direktwerbung';
+			case 'Object to the use of your personal data':
+				return 'Widerspreche der Verwendung deiner persönlichen Daten';
+			case 'Please contact us if you want further information on the specific mechanisms used by us when transferring your personal data internationally.':
+				return 'Bitte kontaktiere uns, wenn du weitere Informationen zu den jeweiligen Maßnahmen erhalten möchtest, die wir bei der internationalen Übermittlung deiner persönlichen Daten verwenden.';
+			case 'Processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract (EU, General Data Protection Regulation (GDPR), Article 6(1)(b)).':
+				return 'Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei du bist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf deine Anfrage erfolgen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(b)).';
+			case 'Processing is necessary in order to protect your vital interests or those of another natural person (EU, General Data Protection Regulation (GDPR), Article 6(1)(d)).':
+				return 'Die Verarbeitung ist erforderlich, um deine lebenswichtigen Interessen oder die einer anderen natürlichen Person zu schützen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(d)).';
+			case 'Processing is necessary to protect your vital interests or those of another natural person where you are physically or legally incapable of giving consent (EU, General Data Protection Regulation (GDPR), Article 9(2)(c)).':
+				return 'Die Verarbeitung ist zum Schutz deiner lebenswichtigen Interessen oder derer einer anderen natürlichen Person erforderlich und du bist aus körperlichen oder rechtlichen Gründen außerstande, deine Einwilligung zu geben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(c)).';
+			case 'Processing relates to personal data that you manifestly make public (EU, General Data Protection Regulation (GDPR), Article 9(2)(e)).':
+				return 'Die Verarbeitung bezieht sich auf persönliche Daten, die du offensichtlich öffentlich gemacht hast (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(e)).';
 			case 'Protecting your privacy and keeping your personal information safe is our highest priority.':
 				return 'Die Sicherung deiner Privatsphäre und der Schutz deiner persönlichen Informationen haben für uns höchste Priorität.';
+			case 'Restrict the use of your personal data':
+				return 'Schränke die Verwendung deiner persönlichen Daten ein';
 			case 'See further below for our contact information.':
 				return 'Unsere Kontaktdaten findest du weiter unten.';
 			case 'Should there be any substantial changes to this policy with material effects on any of your rights or choices, you will be notified via a prominent notice within our services or by email to the primary email address specified in your account at least %d days prior to such changes taking effect.':
 				return 'Sollte es wesentliche Änderungen an dieser Erklärung mit wichtigen Auswirkungen auf deine Rechte oder Wahlmöglichkeiten geben, wirst du durch eine auffällige Ankündigung innerhalb unserer Dienste oder per E-Mail an die primäre E-Mail-Adresse, die in deinem Benutzerkonto hinterlegt ist, mindestens %d Tage vor dem Inkrafttreten solcher Änderungen benachrichtigt.';
 			case 'Should you believe that we might have any personal information of a child under the age of %d, in particular a child of your own, please contact us so that the data in question can be deleted, if appropriate.':
 				return 'Solltest du glauben, dass wir persönliche Informationen von einem Kind unter %d gespeichert haben könnten, insbesondere von einem deiner Kinder, kontaktiere uns bitte umgehend, sodass die betroffenen Daten, falls zutreffend, gelöscht werden können.';
+			case 'Some of our external service providers and recipients of personal data are based outside your country and outside our country.':
+				return 'Manche unserer externen Dienstleister und Empfänger von persönlichen Daten haben ihren Sitz außerhalb deines Landes und außerhalb unseres Landes.';
+			case 'Such third countries may have data protection rules that are different from those in your or our country.':
+				return 'Solche Drittländer können Datenschutzregeln haben, die sich von denen in deinem oder unserem Land unterscheiden.';
 			case 'These third parties do not have any right to use the information that we share about you beyond what is necessary to assist us with the specific task at hand.':
 				return 'Diese Drittunternehmen sind nicht berechtigt, die Informationen, die wir über dich weitergeben, über das Maß hinaus zu nutzen, das notwendig ist, um uns bei der konkreten Aufgabenstellung zu unterstützen.';
 			case 'The settings and features of your web browser or operating system may allow you to control how third parties can store cookies on your device.':
@@ -83,6 +117,8 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Dies ist möglich, indem du entweder die „Abmelden“-Funktion am unteren Ende von solchen E-Mails benutzt, die wir senden könnten, oder durch das Ändern der Einstellungen in deinem Benutzerkonto innerhalb unserer Dienste, wo zutreffend.';
 			case 'This means that parts of your personal information may temporarily remain on our servers even after deletion or termination of your use of our services.':
 				return 'Dies bedeutet, dass Teile deiner persönlichen Informationen selbst nach Löschung oder nach Beendigung deiner Nutzung unserer Dienste vorübergehend auf unseren Servern bestehen bleiben können.';
+			case 'This means that the processing of your personal data by those third parties involves an international transfer of your data to a third country.':
+				return 'Dies bedeutet, dass die Verarbeitung deiner persönlichen Daten durch diese Drittanbieter eine internationale Übermittlung deiner Daten an ein Drittland umfasst.';
 			case 'This notification will include help on choices you may have regarding the transfer and treatment of your personal information.':
 				return 'Diese Benachrichtigung wird Hilfe zu den Wahlmöglichkeiten beinhalten, die du möglicherweise im Hinblick auf die Übertragung und Behandlung deiner persönlichen Informationen hast.';
 			case 'This notification will include help on choices you may have regarding the treatment of your personal information.':
@@ -91,6 +127,12 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Diese Datenschutzerklärung regelt deine Nutzung unserer Dienste, unabhängig von den Domain-Namen, Betriebssystemen, Plattformen oder Geräten, die für den Zugriff auf die Dienste genutzt werden, und unabhängig davon, ob solcher Zugriff in Verbindung mit einem Benutzerkonto geschieht oder nicht.';
 			case 'This privacy statement (“privacy policy” or “policy”) is designed to help you better understand how and to what extent we collect, use, disclose, transfer and store your information.':
 				return 'Diese Datenschutzrichtlinie („Datenschutzerklärung“ oder „Erklärung“) soll dir helfen, besser zu verstehen, wie und in welchem Umfang wir deine Informationen erfassen, verwenden, offenlegen, übertragen und speichern.';
+			case 'Thus, for any international transfer of data, we ensure that appropriate technical, organizational and contractual measures are in place to guarantee that a similar degree of protection is afforded to your data internationally and that your personal data remains protected to the standards described in this policy.':
+				return 'Deshalb stellen wir für jede internationale Übermittlung von Daten sicher, dass angemessene technische, organisatorische und vertragliche Maßnahmen getroffen werden, um zu gewährleisten, dass deinen Daten international ein ähnlicher Schutz geboten wird und dass deine persönlichen Daten gemäß den Standards geschützt bleiben, die in dieser Erklärung beschrieben sind.';
+			case 'Update your personal data':
+				return 'Aktualisiere deine persönlichen Daten';
+			case 'Upon verification of your identity, we will respond to your request within a reasonable period of time.':
+				return 'Nach Überprüfung deiner Identität werden wir innerhalb eines angemessenen Zeitraumes auf deine Anfrage antworten.';
 			case 'We advise you to verify the privacy practices of those third parties individually.':
 				return 'Wir raten dir, die Datenschutzpraktiken dieser Drittunternehmen individuell zu überprüfen.';
 			case 'We always collect only the minimum amount of personal information necessary to provide our services to you, unless you choose to provide more such information voluntarily.':
@@ -119,12 +161,38 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Wir möchten helfen und kümmern uns gerne um dein Anliegen.';
 			case 'We will retain certain pieces of personal information for as long as you use our services, as long as your account exists, or as long as needed for us to be able to provide our services to you.':
 				return 'Wir werden gewisse persönliche Informationen so lange aufbewahren, wie du unsere Dienste nutzt, wie dein Benutzerkonto besteht oder wie es nötig ist, um unsere Dienste für dich bereitstellen zu können.';
+			case 'You are free to file a complaint with the data protection authority.':
+				return 'Es steht dir frei, bei der Datenschutzbehörde eine Beschwerde einzulegen.';
 			case 'You are welcome to make use of these settings and features of your web browser or operating system, but that may prevent our services from working correctly for you.':
 				return 'Du kannst gerne von diesen Einstellungen und Funktionen in deinem Webbrowser oder Betriebssystem Gebrauch machen, aber dies kann unsere Dienste daran hindern, korrekt für dich zu funktionieren.';
 			case 'You can reach us via email at:':
 				return 'Du erreichst uns per E-Mail unter:';
+			case 'You have given consent to the processing of your personal data for one or more specific purposes (EU, General Data Protection Regulation (GDPR), Article 6(1)(a)).':
+				return 'Du hast deine Einwilligung zur Verarbeitung der dich betreffenden persönlichen Daten für einen oder mehrere bestimmte Zwecke gegeben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(a)).';
+			case 'You have given explicit consent to the processing of your personal data for one or more specified purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(a)).':
+				return 'Du hast in die Verarbeitung der genannten persönlichen Daten für einen oder mehrere festgelegte Zwecke ausdrücklich eingewilligt (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(a)).';
+			case 'You have the right not to be subject to a decision based solely on automated decision-making, including profiling, where the decision would have a legal effect on you or produce a similarly significant effect.':
+				return 'Du hast das Recht, keiner Entscheidung unterworfen zu sein, die allein auf einer automatisierten Entscheidungsfindung basiert, einschließlich der Profilerstellung, wenn eine solche Entscheidung dir gegenüber rechtliche Auswirkungen hätte oder eine ähnlich erhebliche Beeinträchtigung hervorrufen würde.';
+			case 'You have the right to be informed of and request access to the personal data we process about you.':
+				return 'Du hast das Recht, über die persönlichen Daten, die wir von dir erheben, informiert zu werden und Zugriff darauf zu erhalten.';
+			case 'You have the right to object to us processing your personal data on grounds relating to your particular situation where we no longer have a legitimate reason or legal need to process it.':
+				return 'Du hast das Recht, der Verarbeitung deiner persönlichen Daten durch uns aus Gründen zu widersprechen, die sich aus deiner speziellen Situation ergeben, wenn wir keinen legitimen Grund oder keine rechtliche Verpflichtung mehr zu deren Verarbeitung haben.';
+			case 'You have the right to object to your personal data being processed for direct marketing purposes.':
+				return 'Du hast das Recht, der Verarbeitung deiner persönlichen Daten für Zwecke der Direktwerbung zu widersprechen.';
+			case 'You have the right to request a copy of your personal data in electronic and machine-readable form, and the right to transmit that personal data to another service provider.':
+				return 'Du hast das Recht, eine Kopie deiner persönlichen Daten in elektronischer und maschinenlesbarer Form anzufordern, und das Recht, diese persönlichen Daten an einen anderen Diensteanbieter zu übertragen.';
+			case 'You have the right to request that we amend or update your personal data where it is inaccurate or incomplete.':
+				return 'Du hast das Recht, von uns die Änderung oder Aktualisierung deiner persönlichen Daten zu fordern, wo diese fehlerhaft oder unvollständig sind.';
+			case 'You have the right to request that we delete your personal data.':
+				return 'Du hast das Recht, von uns die Löschung deiner persönlichen Daten zu verlangen.';
+			case 'You have the right to request that we temporarily or permanently stop processing your personal data.':
+				return 'Du hast das Recht, uns aufzufordern, die Verarbeitung deiner persönlichen Daten vorübergehend oder dauerhaft einzustellen.';
+			case 'You may also contact the data protection authority that is responsible for us:':
+				return 'Du kannst auch die Datenschutzbehörde kontaktieren, die für uns zuständig ist:';
 			case 'You may opt out of receiving any newsletters or promotional messages from us at any time.':
 				return 'Du kannst dem Empfang jeglicher Newsletter oder Werbenachrichten von uns jederzeit widersprechen.';
+			case 'Your rights':
+				return 'Deine Rechte';
 			case 'Your web browser or app then sends these small text files back to us whenever you access our services.':
 				return 'Dein Webbrowser oder deine App sendet diese kleinen Textdateien dann jedes Mal an uns zurück, wenn du auf unsere Dienste zugreifst.';
 			case 'Your web browser or operating system usually provides means to delete such data currently stored on your device.':
@@ -137,74 +205,6 @@ class GermanInformalPrivacyPolicy extends GermanPrivacyPolicy {
 				return 'Du wirst durch eine auffällige Ankündigung innerhalb unserer Dienste oder per E-Mail an die primäre E-Mail-Adresse, die in deinem Benutzerkonto hinterlegt ist, mindestens %d Tage vor einer solchen Übertragung deiner persönlichen Informationen benachrichtigt.';
 			case 'You will continue to receive essential, non-promotional messages regarding your account, such as technical notices, order confirmations, or other service-related messages, which are required for us to be able to provide our services to you.':
 				return 'Du wirst weiterhin grundlegende Nachrichten bezüglich deines Benutzerkontos erhalten, die nicht der Werbung dienen, wie etwa technische Mitteilungen, Auftragsbestätigungen oder andere dienstbezogene Nachrichten, die nötig sind, damit wir dir unsere Dienste bereitstellen können.';
-			case 'Your rights':
-				return 'Deine Rechte';
-			case 'Except as limited under applicable law, you have the following rights with regard to your personal data:':
-				return 'Soweit nicht durch anwendbares Recht eingeschränkt, hast du im Hinblick auf deine persönlichen Daten die folgenden Rechte:';
-			case 'If you have any questions regarding the protection of your data, your rights, or how to exercise them, please contact us.':
-				return 'Wenn du irgendwelche Fragen im Hinblick auf den Schutz deiner Daten, deine Rechte oder deren Ausübung hast, kontaktiere uns bitte.';
-			case 'Upon verification of your identity, we will respond to your request within a reasonable period of time.':
-				return 'Nach Überprüfung deiner Identität werden wir innerhalb eines angemessenen Zeitraumes auf deine Anfrage antworten.';
-			case 'If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.':
-				return 'Falls du mit unserer Antwort oder mit der Art und Weise, wie wir deine persönlichen Daten verarbeiten, unzufrieden bist, kannst du deine örtliche Datenschutzbehörde kontaktieren.';
-			case 'You are free to file a complaint with the data protection authority.':
-				return 'Es steht dir frei, bei der Datenschutzbehörde eine Beschwerde einzulegen.';
-			case 'You may also contact the data protection authority that is responsible for us:':
-				return 'Du kannst auch die Datenschutzbehörde kontaktieren, die für uns zuständig ist:';
-			case 'Access your personal data':
-				return 'Erhalte Zugriff auf deine persönlichen Daten';
-			case 'You have the right to be informed of and request access to the personal data we process about you.':
-				return 'Du hast das Recht, über die persönlichen Daten, die wir von dir erheben, informiert zu werden und Zugriff darauf zu erhalten.';
-			case 'Update your personal data':
-				return 'Aktualisiere deine persönlichen Daten';
-			case 'You have the right to request that we amend or update your personal data where it is inaccurate or incomplete.':
-				return 'Du hast das Recht, von uns die Änderung oder Aktualisierung deiner persönlichen Daten zu fordern, wo diese fehlerhaft oder unvollständig sind.';
-			case 'Erase your personal data':
-				return 'Lösche deine persönlichen Daten';
-			case 'You have the right to request that we delete your personal data.':
-				return 'Du hast das Recht, von uns die Löschung deiner persönlichen Daten zu verlangen.';
-			case 'Restrict the use of your personal data':
-				return 'Schränke die Verwendung deiner persönlichen Daten ein';
-			case 'You have the right to request that we temporarily or permanently stop processing your personal data.':
-				return 'Du hast das Recht, uns aufzufordern, die Verarbeitung deiner persönlichen Daten vorübergehend oder dauerhaft einzustellen.';
-			case 'Export your personal data':
-				return 'Exportiere deine persönlichen Daten';
-			case 'You have the right to request a copy of your personal data in electronic and machine-readable form, and the right to transmit that personal data to another service provider.':
-				return 'Du hast das Recht, eine Kopie deiner persönlichen Daten in elektronischer und maschinenlesbarer Form anzufordern, und das Recht, diese persönlichen Daten an einen anderen Diensteanbieter zu übertragen.';
-			case 'Object to direct marketing':
-				return 'Widerspreche der Direktwerbung';
-			case 'You have the right to object to your personal data being processed for direct marketing purposes.':
-				return 'Du hast das Recht, der Verarbeitung deiner persönlichen Daten für Zwecke der Direktwerbung zu widersprechen.';
-			case 'Object to the use of your personal data':
-				return 'Widerspreche der Verwendung deiner persönlichen Daten';
-			case 'You have the right to object to us processing your personal data on grounds relating to your particular situation where we no longer have a legitimate reason or legal need to process it.':
-				return 'Du hast das Recht, der Verarbeitung deiner persönlichen Daten durch uns aus Gründen zu widersprechen, die sich aus deiner speziellen Situation ergeben, wenn wir keinen legitimen Grund oder keine rechtliche Verpflichtung mehr zu deren Verarbeitung haben.';
-			case 'Object to automated decision-making':
-				return 'Widerspreche automatisierten Entscheidungen';
-			case 'You have the right not to be subject to a decision based solely on automated decision-making, including profiling, where the decision would have a legal effect on you or produce a similarly significant effect.':
-				return 'Du hast das Recht, keiner Entscheidung unterworfen zu sein, die allein auf einer automatisierten Entscheidungsfindung basiert, einschließlich der Profilerstellung, wenn eine solche Entscheidung dir gegenüber rechtliche Auswirkungen hätte oder eine ähnlich erhebliche Beeinträchtigung hervorrufen würde.';
-			case 'You have given consent to the processing of your personal data for one or more specific purposes (EU, General Data Protection Regulation (GDPR), Article 6(1)(a)).':
-				return 'Du hast deine Einwilligung zur Verarbeitung der dich betreffenden persönlichen Daten für einen oder mehrere bestimmte Zwecke gegeben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(a)).';
-			case 'Processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract (EU, General Data Protection Regulation (GDPR), Article 6(1)(b)).':
-				return 'Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei du bist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf deine Anfrage erfolgen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(b)).';
-			case 'Processing is necessary in order to protect your vital interests or those of another natural person (EU, General Data Protection Regulation (GDPR), Article 6(1)(d)).':
-				return 'Die Verarbeitung ist erforderlich, um deine lebenswichtigen Interessen oder die einer anderen natürlichen Person zu schützen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(d)).';
-			case 'You have given explicit consent to the processing of your personal data for one or more specified purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(a)).':
-				return 'Du hast in die Verarbeitung der genannten persönlichen Daten für einen oder mehrere festgelegte Zwecke ausdrücklich eingewilligt (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(a)).';
-			case 'Processing is necessary to protect your vital interests or those of another natural person where you are physically or legally incapable of giving consent (EU, General Data Protection Regulation (GDPR), Article 9(2)(c)).':
-				return 'Die Verarbeitung ist zum Schutz deiner lebenswichtigen Interessen oder derer einer anderen natürlichen Person erforderlich und du bist aus körperlichen oder rechtlichen Gründen außerstande, deine Einwilligung zu geben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(c)).';
-			case 'Processing relates to personal data that you manifestly make public (EU, General Data Protection Regulation (GDPR), Article 9(2)(e)).':
-				return 'Die Verarbeitung bezieht sich auf persönliche Daten, die du offensichtlich öffentlich gemacht hast (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(e)).';
-			case 'Some of our external service providers and recipients of personal data are based outside your country and outside our country.':
-				return 'Manche unserer externen Dienstleister und Empfänger von persönlichen Daten haben ihren Sitz außerhalb deines Landes und außerhalb unseres Landes.';
-			case 'This means that the processing of your personal data by those third parties involves an international transfer of your data to a third country.':
-				return 'Dies bedeutet, dass die Verarbeitung deiner persönlichen Daten durch diese Drittanbieter eine internationale Übermittlung deiner Daten an ein Drittland umfasst.';
-			case 'Such third countries may have data protection rules that are different from those in your or our country.':
-				return 'Solche Drittländer können Datenschutzregeln haben, die sich von denen in deinem oder unserem Land unterscheiden.';
-			case 'Thus, for any international transfer of data, we ensure that appropriate technical, organizational and contractual measures are in place to guarantee that a similar degree of protection is afforded to your data internationally and that your personal data remains protected to the standards described in this policy.':
-				return 'Deshalb stellen wir für jede internationale Übermittlung von Daten sicher, dass angemessene technische, organisatorische und vertragliche Maßnahmen getroffen werden, um zu gewährleisten, dass deinen Daten international ein ähnlicher Schutz geboten wird und dass deine persönlichen Daten gemäß den Standards geschützt bleiben, die in dieser Erklärung beschrieben sind.';
-			case 'Please contact us if you want further information on the specific mechanisms used by us when transferring your personal data internationally.':
-				return 'Bitte kontaktiere uns, wenn du weitere Informationen zu den jeweiligen Maßnahmen erhalten möchtest, die wir bei der internationalen Übermittlung deiner persönlichen Daten verwenden.';
 			default:
 				return parent::translateUnformatted($text);
 		}

@@ -12,6 +12,22 @@ namespace Delight\PrivacyPolicy\Markup;
 abstract class Markup {
 
 	/**
+	 * The default charset or character encoding
+	 *
+	 * @internal
+	 *
+	 * @var mixed
+	 */
+	const CHARSET_DEFAULT = 'UTF-8';
+
+	/**
+	 * A single en dash character
+	 *
+	 * @var string
+	 */
+	const EN_DASH = '–';
+
+	/**
 	 * The sequence of characters that is used for a single level of indentation in HTML
 	 *
 	 * @internal
@@ -19,15 +35,6 @@ abstract class Markup {
 	 * @var string
 	 */
 	const INDENTATION_UNIT_HTML = "\t";
-
-	/**
-	 * The sequence of characters that is used for a single level of indentation in plain text
-	 *
-	 * @internal
-	 *
-	 * @var string
-	 */
-	const INDENTATION_UNIT_PLAIN_TEXT = "\t";
 
 	/**
 	 * The sequence of characters that is used for a single level of indentation in Markdown
@@ -39,27 +46,13 @@ abstract class Markup {
 	const INDENTATION_UNIT_MARKDOWN = '  ';
 
 	/**
-	 * The default charset or character encoding
+	 * The sequence of characters that is used for a single level of indentation in plain text
 	 *
 	 * @internal
 	 *
-	 * @var mixed
-	 */
-	const CHARSET_DEFAULT = 'UTF-8';
-
-	/**
-	 * A single space character
-	 *
 	 * @var string
 	 */
-	const SPACE = ' ';
-
-	/**
-	 * A single en dash character
-	 *
-	 * @var string
-	 */
-	const EN_DASH = '–';
+	const INDENTATION_UNIT_PLAIN_TEXT = "\t";
 
 	/**
 	 * A single middle dot character
@@ -67,6 +60,13 @@ abstract class Markup {
 	 * @var string
 	 */
 	const MIDDLE_DOT = '·';
+
+	/**
+	 * A single space character
+	 *
+	 * @var string
+	 */
+	const SPACE = ' ';
 
 	/**
 	 * Converts the markup to HTML
