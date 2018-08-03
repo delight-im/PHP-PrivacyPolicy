@@ -1,7 +1,8 @@
 {
     "meta": {
         "version": "v3.1.4",
-        "updated": 1393372800,
+        "published": 1393372800,
+        "effective": 1394582400,
         "expires": 1395792000,
         "canonical": "https://www.example.com/privacy.html",
         "scopes": [
@@ -21,6 +22,9 @@
     },
     "data": [
         {
+            "bases": [
+                "legitimateInterests"
+            ],
             "purposes": [
                 "administration"
             ],
@@ -31,127 +35,97 @@
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 },
                 {
                     "type": "access.http.status",
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 },
                 {
                     "type": "access.ip.address",
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 },
                 {
                     "type": "access.referer",
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 },
                 {
                     "type": "access.size",
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 },
                 {
                     "type": "access.datetime",
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 },
                 {
                     "type": "access.url",
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 },
                 {
                     "type": "access.useragent.string",
                     "requirement": "always",
                     "retention": {
                         "max": 336
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    }
                 }
             ]
         },
         {
+            "bases": [
+                "contract",
+                "consent"
+            ],
+            "specialConditions": [
+                "explicitConsent"
+            ],
             "purposes": [
                 "administration",
                 "fulfillment",
                 "personalization"
             ],
-            "requirement": "opt_in",
+            "requirement": "optIn",
             "elements": [
                 {
                     "type": "user.email",
-                    "requirement": "always",
-                    "retention": {
-                        "max": 0
-                    },
-                    "viewable": true,
-                    "deletable": false
+                    "requirement": "always"
                 },
                 {
                     "type": "user.password.hashed.strong",
-                    "requirement": "always",
-                    "retention": {
-                        "max": 0
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    "requirement": "always"
                 },
                 {
                     "type": "user.name.alias",
-                    "requirement": "opt_in",
-                    "retention": {
-                        "max": 0
-                    },
-                    "viewable": true,
-                    "deletable": false
+                    "requirement": "optIn"
                 },
                 {
                     "type": "user.registration.datetime",
-                    "requirement": "always",
-                    "retention": {
-                        "max": 0
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    "requirement": "always"
                 },
                 {
                     "type": "user.login.datetime",
-                    "requirement": "always",
-                    "retention": {
-                        "max": 0
-                    },
-                    "viewable": false,
-                    "deletable": false
+                    "requirement": "always"
+                },
+                {
+                    "type": "user.signature",
+                    "requirement": "always"
                 }
             ]
         }
@@ -177,24 +151,35 @@
         "thirdParty": true
     },
     "choices": {
+        "data": {
+            "access": true,
+            "rectification": true,
+            "erasure": true,
+            "restrictProcessing": true,
+            "portability": true,
+            "object": true,
+            "automatedDecisions": true
+        },
         "account": {
             "deletion": true
-        },
-        "information": {
-            "request": true,
-            "update": true,
-            "delete": true
         }
     },
     "backups": true,
     "serviceProviders": {
         "thirdParties": true
     },
+    "transfers": {
+        "international": true
+    },
     "mergersAndAcquisitions": {
         "transfer": true
     },
     "security": {
         "tls": true
+    },
+    "supervisoryAuthority": {
+        "name": "Estonian Data Protection Inspectorate",
+        "url": "http://www.aki.ee/en"
     },
     "changes": {
         "notificationPeriod": 30

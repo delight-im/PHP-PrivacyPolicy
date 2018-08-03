@@ -1,9 +1,11 @@
- * **Zuletzt geändert**
-   * 26.02.2014
+ * **Datum der Veröffentlichung**
+   * 26. Februar 2014
+ * **Datum des Inkrafttretens**
+   * 12. März 2014
+ * **Datum des Außerkrafttretens**
+   * 26. März 2014
  * **Version**
    * v3.1.4
- * **Läuft ab**
-   * 26.03.2014
  * **Aktuellste Version**
    * [https://www.example.com/privacy.html](https://www.example.com/privacy.html)
  * **Allgemein**
@@ -45,38 +47,53 @@
  * **Informationen, die wir erfassen, und warum wir sie erfassen**
    * **Server logs**
      * Whenever you access our services, including your access of any individual part or section of our services, we record certain information about the nature of your access. That information is never combined with information from other data sources and will not be associated with the identity of any account. However, we reserve the right to review the data retrospectively if there is specific evidence supporting the suspicion of a case of fraud or any other illegal activity or illegal use of our services.
+     * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+     * Rechtsgrundlage: berechtigte Interessen (Die Verarbeitung ist zur Wahrung unserer berechtigten Interessen oder derer eines Dritten erforderlich (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(f)).)
      * Wir nutzen diese Informationen für die Bereitstellung, Wartung und Verwaltung unserer Dienste und zum Überwachen und Schützen der Sicherheit unserer Dienste.
-     * Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.
      * **HTTP-Anfragemethode für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
      * **HTTP-Statuscode für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
      * **Internetprotokoll-Adresse (IP-Adresse) für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
      * **Verweisende Webseite (URL) für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
      * **Übertragene Datenmenge für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
      * **Datum und Uhrzeit für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
      * **Angeforderte Seite (URL) für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
      * **User-Agent-String für jeden Zugriff**
-       * Maximale Aufbewahrungszeit in Tagen: 14
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+       * Maximale Aufbewahrungszeit: 14 Tage
    * **Account information**
      * When you create an account by signing up, and whenever you use that account by signing in afterwards, we collect the data that you provide to us voluntarily in the course of that process.
+     * Erforderlich: nein (Diese Information wird nicht zwingend benötigt und du kannst Teile unserer Dienste ohne diese Angabe nutzen. Du musst deine Genehmigung erteilen, bevor wir diese Daten erfassen, aber manche Funktionen sind ohne diese Daten möglicherweise nicht verfügbar.)
+     * Rechtsgrundlage: Vertrag (Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei du bist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf deine Anfrage erfolgen (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(b)).) · Einwilligung (Du hast deine Einwilligung zur Verarbeitung der dich betreffenden persönlichen Daten für einen oder mehrere bestimmte Zwecke gegeben (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 6(1)(a)).)
+     * Bedingung zur Verarbeitung besonderer Kategorien persönlicher Daten: ausdrückliche Einwilligung (Du hast in die Verarbeitung der genannten persönlichen Daten für einen oder mehrere festgelegte Zwecke ausdrücklich eingewilligt (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(a)).)
      * Wir nutzen diese Informationen für die Bereitstellung, Wartung und Verwaltung unserer Dienste und zum Überwachen und Schützen der Sicherheit unserer Dienste.
      * Wir nutzen diese Informationen, um die konkreten Dienstleistungen, die du ausdrücklich anforderst, bereitstellen und erfüllen zu können.
      * Wir nutzen diese Informationen, um unsere Dienste für dich zu personalisieren und sie an deine Präferenzen anzupassen.
-     * Diese Information wird nicht zwingend benötigt und du kannst Teile unserer Dienste ohne diese Angabe nutzen. Du musst deine Genehmigung erteilen, bevor wir diese Daten erfassen, aber manche Funktionen sind ohne diese Daten möglicherweise nicht verfügbar.
      * **E-Mail-Adresse**
-       * Du kannst diese Information über die Benutzeroberfläche unserer Dienste ansehen.
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
      * **Passwort (starker Hash)**
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
      * **Pseudonym oder Benutzername**
-       * Diese Information wird nicht zwingend benötigt und du kannst Teile unserer Dienste ohne diese Angabe nutzen. Du musst deine Genehmigung erteilen, bevor wir diese Daten erfassen, aber manche Funktionen sind ohne diese Daten möglicherweise nicht verfügbar.
-       * Du kannst diese Information über die Benutzeroberfläche unserer Dienste ansehen.
+       * Erforderlich: nein (Diese Information wird nicht zwingend benötigt und du kannst Teile unserer Dienste ohne diese Angabe nutzen. Du musst deine Genehmigung erteilen, bevor wir diese Daten erfassen, aber manche Funktionen sind ohne diese Daten möglicherweise nicht verfügbar.)
      * **Datum und Uhrzeit der Registrierung**
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
      * **Datum und Uhrzeit des Logins**
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
+     * **Unterschrift**
+       * Erforderlich: ja (Diese Information wird für den Betrieb unserer Dienste benötigt und ihre Erhebung ist deshalb eine Bedingung für deine Nutzung unserer Dienste.)
  * **Offenlegungspflichten**
    * Gesetze in den Rechtssystemen und Zuständigkeitsbereichen, in denen wir unsere Dienste betreiben, können uns dazu verpflichten, bestimmte persönliche Informationen oder andere Informationen, die wir über unsere Nutzer erfassen, gegenüber lokalen Strafverfolgungsbehörden offenzulegen.
    * Wir können zu solch einer Offenlegung durch eine gerichtliche Anordnung, einen Haftbefehl, einen Durchsuchungsbeschluss oder eine ähnliche Aufforderung einer Justizbehörde oder einer Regierungsstelle gezwungen sein, oder wenn wir in gutem Glauben davon ausgehen, dass diese Offenlegung erforderlich ist, um Rechte oder Eigentum von uns oder Dritten oder die Sicherheit der Allgemeinheit zu schützen.
@@ -90,6 +107,15 @@
    * Gelegentlich geben wir möglicherweise einen Teil der Informationen, die wir über dich erfasst haben, einschließlich persönlicher Informationen, an eine begrenzte Zahl von Drittunternehmen weiter, darunter Lieferanten, Dienstleister, Auftragnehmer, Vertriebspartner und Vertreter. Dies geschieht ausschließlich zur Ausführung bestimmter Funktionen für uns und in unserem Auftrag.
    * Solche Drittunternehmen helfen uns, unsere Dienste bereitzustellen und zu verbessern. Funktionen, die diese Parteien für uns und in unserem Auftrag ausführen, können die Zahlungsabwicklung, Datenübertragung im Netzwerk, Betrugsprävention, Verwaltung der Kundenbetreuung und ähnliche Dienstleistungen umfassen.
    * Diese Drittunternehmen sind nicht berechtigt, die Informationen, die wir über dich weitergeben, über das Maß hinaus zu nutzen, das notwendig ist, um uns bei der konkreten Aufgabenstellung zu unterstützen.
+ * **Internationale Datenübermittlungen**
+   * Manche unserer externen Dienstleister und Empfänger von persönlichen Daten haben ihren Sitz außerhalb deines Landes und außerhalb unseres Landes. Dies bedeutet, dass die Verarbeitung deiner persönlichen Daten durch diese Drittanbieter eine internationale Übermittlung deiner Daten an ein Drittland umfasst. Solche Drittländer können Datenschutzregeln haben, die sich von denen in deinem oder unserem Land unterscheiden.
+   * Deshalb stellen wir für jede internationale Übermittlung von Daten sicher, dass angemessene technische, organisatorische und vertragliche Maßnahmen getroffen werden, um zu gewährleisten, dass deinen Daten international ein ähnlicher Schutz geboten wird und dass deine persönlichen Daten gemäß den Standards geschützt bleiben, die in dieser Erklärung beschrieben sind.
+   * **Wir stellen sicher, dass mindestens eine der folgenden Schutzmaßnahmen umgesetzt ist:**
+     * Das Land des Empfängers bietet nach Einschätzung der Europäischen Kommission ein angemessenes Datenschutzniveau.
+     * Der Empfänger ist im Rahmen des EU-US- und Schweiz-US-Privacy-Shields zertifiziert.
+     * Standardvertragsklauseln, eingeführt oder genehmigt durch die Europäische Kommission, sind vorhanden.
+     * Der Empfänger hat verbindliche interne Datenschutzvorschriften, die den Schutz persönlicher Daten garantieren.
+   * Bitte kontaktiere uns, wenn du weitere Informationen zu den jeweiligen Maßnahmen erhalten möchtest, die wir bei der internationalen Übermittlung deiner persönlichen Daten verwenden.
  * **Fusionen und Übernahmen**
    * Wenn wir in eine Fusion, eine Übernahme durch ein anderes Unternehmen oder einen Verkauf unseres gesamten Unternehmens, unserer gesamten Vermögenswerte oder Teilen davon involviert sind, werden deine Informationen wahrscheinlich Bestandteil der zu übertragenden Vermögensgüter sein.
    * Falls ein solcher Wechsel des Eigentümers stattfinden sollte, wird die Gesellschaft, die deine persönlichen Informationen erhält, die Zusagen, die wir in einer zuvor existierenden Datenschutzerklärung wie dieser gemacht haben, anerkennen und achten müssen.
@@ -105,16 +131,35 @@
    * Einige Teile und Bereiche unserer Dienste können externe Links zu Webseiten, Anwendungen oder Produkten enthalten, die im Besitz von Dritten sind und von Dritten betrieben werden.
    * Wir raten dir, die Datenschutzpraktiken dieser Drittunternehmen individuell zu überprüfen. Wir haben keine Kenntnis von und sind nicht verantwortlich für die Art und Weise, wie diese Drittunternehmen persönliche Informationen behandeln, die du ihnen selbst bereitstellst.
    * Wir empfehlen dir, diesen Drittunternehmen keine persönlichen Informationen bereitzustellen, bevor du dich von angemessenen Datenschutzpraktiken seitens dieser Unternehmen überzeugt hast.
- * **Auskunftsrecht**
-   * Du hast das Recht, jederzeit kostenlos Informationen darüber anzufordern, welche persönlichen Daten wir über dich gespeichert haben.
-   * Zusätzlich hast du, wo zutreffend, Anspruch darauf, dass diese Daten korrigiert, blockiert oder gelöscht werden. Unsere Kontaktdaten findest du weiter unten.
+ * **Deine Rechte**
+   * Soweit nicht durch anwendbares Recht eingeschränkt, hast du im Hinblick auf deine persönlichen Daten die folgenden Rechte:
+   * **Erhalte Zugriff auf deine persönlichen Daten (Auskunftsrecht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 15))**
+     * Du hast das Recht, über die persönlichen Daten, die wir von dir erheben, informiert zu werden und Zugriff darauf zu erhalten.
+   * **Aktualisiere deine persönlichen Daten (Recht auf Berichtigung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 16))**
+     * Du hast das Recht, von uns die Änderung oder Aktualisierung deiner persönlichen Daten zu fordern, wo diese fehlerhaft oder unvollständig sind.
+   * **Lösche deine persönlichen Daten (Recht auf Löschung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 17))**
+     * Du hast das Recht, von uns die Löschung deiner persönlichen Daten zu verlangen.
+   * **Schränke die Verwendung deiner persönlichen Daten ein (Recht auf Einschränkung der Verarbeitung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 18))**
+     * Du hast das Recht, uns aufzufordern, die Verarbeitung deiner persönlichen Daten vorübergehend oder dauerhaft einzustellen.
+   * **Exportiere deine persönlichen Daten (Recht auf Datenübertragbarkeit (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 20))**
+     * Du hast das Recht, eine Kopie deiner persönlichen Daten in elektronischer und maschinenlesbarer Form anzufordern, und das Recht, diese persönlichen Daten an einen anderen Diensteanbieter zu übertragen.
+   * **Widerspreche der Direktwerbung (Widerspruchsrecht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 21))**
+     * Du hast das Recht, der Verarbeitung deiner persönlichen Daten für Zwecke der Direktwerbung zu widersprechen.
+   * **Widerspreche der Verwendung deiner persönlichen Daten (Widerspruchsrecht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 21))**
+     * Du hast das Recht, der Verarbeitung deiner persönlichen Daten durch uns aus Gründen zu widersprechen, die sich aus deiner speziellen Situation ergeben, wenn wir keinen legitimen Grund oder keine rechtliche Verpflichtung mehr zu deren Verarbeitung haben.
+   * **Widerspreche automatisierten Entscheidungen (Rechte bezüglich automatisierter Entscheidungen im Einzelfall, einschließlich Profiling (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 22))**
+     * Du hast das Recht, keiner Entscheidung unterworfen zu sein, die allein auf einer automatisierten Entscheidungsfindung basiert, einschließlich der Profilerstellung, wenn eine solche Entscheidung dir gegenüber rechtliche Auswirkungen hätte oder eine ähnlich erhebliche Beeinträchtigung hervorrufen würde.
+   * Wenn du irgendwelche Fragen im Hinblick auf den Schutz deiner Daten, deine Rechte oder deren Ausübung hast, kontaktiere uns bitte. Unsere Kontaktdaten findest du weiter unten. Nach Überprüfung deiner Identität werden wir innerhalb eines angemessenen Zeitraumes auf deine Anfrage antworten.
+   * Falls du mit unserer Antwort oder mit der Art und Weise, wie wir deine persönlichen Daten verarbeiten, unzufrieden bist, kannst du deine örtliche Datenschutzbehörde kontaktieren. Du kannst auch die Datenschutzbehörde kontaktieren, die für uns zuständig ist:
+   * [Estonian Data Protection Inspectorate](http://www.aki.ee/en)
+   * Es steht dir frei, bei der Datenschutzbehörde eine Beschwerde einzulegen.
  * **Änderungen an dieser Datenschutzerklärung**
    * Gelegentlich können wir diese Datenschutzerklärung anpassen. Die meisten Änderungen werden in Umfang und Bedeutung wahrscheinlich nur gering sein und deshalb deine Rechte nicht betreffen.
    * Sollte es wesentliche Änderungen an dieser Erklärung mit wichtigen Auswirkungen auf deine Rechte oder Wahlmöglichkeiten geben, wirst du durch eine auffällige Ankündigung innerhalb unserer Dienste oder per E-Mail an die primäre E-Mail-Adresse, die in deinem Benutzerkonto hinterlegt ist, mindestens 30 Tage vor dem Inkrafttreten solcher Änderungen benachrichtigt. Diese Benachrichtigung wird Hilfe zu den Wahlmöglichkeiten beinhalten, die du möglicherweise im Hinblick auf die Behandlung deiner persönlichen Informationen hast.
    * Für jegliche Änderungen an dieser Datenschutzerklärung, die von geringerer Bedeutung sind und deine Rechte oder Wahlmöglichkeiten nicht in wichtiger Weise betreffen, empfehlen wir allen Nutzern, diese Erklärung regelmäßig hinsichtlich aktualisierter Versionen zu überprüfen.
    * Im Allgemeinen ist die gültige Version dieser Erklärung diejenige, die zum Zeitpunkt deines Zugriffs auf unsere Dienste aktuell ist.
- * **Kontaktdaten**
-   * Solltest du irgendwelche Fragen oder Bedenken bezüglich dieser Erklärung, unserer Datenschutzpraktiken oder bestimmter Aspekte unserer Dienste haben, nimm bitte jederzeit Kontakt mit uns auf. Wir möchten helfen und kümmern uns gerne um dein Anliegen.
+ * **Kontaktdaten des Verantwortlichen**
+   * Solltest du irgendwelche Fragen oder Bedenken bezüglich dieser Erklärung, unserer Datenschutzpraktiken oder bestimmter Aspekte unserer Dienste haben, nimm bitte jederzeit Kontakt mit uns auf. Wir möchten helfen und kümmern uns gerne um dein Anliegen. Wir sind verantwortlich für die Verarbeitung persönlicher Daten gemäß dieser Erklärung.
    * Du erreichst uns per E-Mail unter:
    * [privacy@example.com](mailto:privacy@example.com)
    * Unsere vollständigen Kontaktdaten sind zu finden unter:
