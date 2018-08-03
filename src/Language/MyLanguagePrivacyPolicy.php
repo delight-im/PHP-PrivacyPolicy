@@ -24,13 +24,17 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 
 	protected function translateUnformatted($text) {
 		switch ($text) {
-			case 'Address':
+			case 'Access privileges':
+				throw new TranslationNotFoundError();
+			case 'Access your personal data':
 				throw new TranslationNotFoundError();
 			case 'Address of contact':
 				throw new TranslationNotFoundError();
-			case 'Alias or username':
+			case 'Address':
 				throw new TranslationNotFoundError();
 			case 'Alias or username of contact':
+				throw new TranslationNotFoundError();
+			case 'Alias or username':
 				throw new TranslationNotFoundError();
 			case 'Amount of data transferred for each access':
 				throw new TranslationNotFoundError();
@@ -38,21 +42,27 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Apart from that, please recognize that protecting your personal information is, in other parts, also your own responsibility.':
 				throw new TranslationNotFoundError();
+			case 'archiving or research':
+				throw new TranslationNotFoundError();
 			case 'As a condition for your use of our services as a customer, user or visitor (collectively referred to as a “user” or as your “use”), you consent to the terms of this policy and you agree that your personal information will be handled as outlined below.':
 				throw new TranslationNotFoundError();
 			case 'As such, cookies and the related technologies are essential for the operation of our services.':
 				throw new TranslationNotFoundError();
-			case 'Bank account number':
+			case 'Availability of file uploads':
+				throw new TranslationNotFoundError();
+			case 'Availability of password reset':
 				throw new TranslationNotFoundError();
 			case 'Bank account number of contact':
 				throw new TranslationNotFoundError();
-			case 'Bank identifier':
+			case 'Bank account number':
 				throw new TranslationNotFoundError();
 			case 'Bank identifier of contact':
 				throw new TranslationNotFoundError();
-			case 'Bank name':
+			case 'Bank identifier':
 				throw new TranslationNotFoundError();
 			case 'Bank name of contact':
+				throw new TranslationNotFoundError();
+			case 'Bank name':
 				throw new TranslationNotFoundError();
 			case 'Billing amount of contract':
 				throw new TranslationNotFoundError();
@@ -80,19 +90,29 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Children’s Online Privacy Protection':
 				throw new TranslationNotFoundError();
+			case 'City of contact':
+				throw new TranslationNotFoundError();
 			case 'City':
 				throw new TranslationNotFoundError();
-			case 'City of contact':
+			case 'Classification of letter as first letter':
+				throw new TranslationNotFoundError();
+			case 'Classification of letter as personal or as relating to business':
 				throw new TranslationNotFoundError();
 			case 'Color of vehicle':
 				throw new TranslationNotFoundError();
-			case 'Company name':
-				throw new TranslationNotFoundError();
 			case 'Company name of contact':
 				throw new TranslationNotFoundError();
-			case 'Contact information':
+			case 'Company name':
+				throw new TranslationNotFoundError();
+			case 'Condition for the processing of special categories of personal data:':
+				throw new TranslationNotFoundError();
+			case 'consent':
+				throw new TranslationNotFoundError();
+			case 'Contact information of the controller':
 				throw new TranslationNotFoundError();
 			case 'Contract duration after renewal':
+				throw new TranslationNotFoundError();
+			case 'contract':
 				throw new TranslationNotFoundError();
 			case 'Contractual partner':
 				throw new TranslationNotFoundError();
@@ -100,17 +120,19 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Cookies':
 				throw new TranslationNotFoundError();
-			case 'Country':
-				throw new TranslationNotFoundError();
 			case 'Country of contact':
+				throw new TranslationNotFoundError();
+			case 'Country':
 				throw new TranslationNotFoundError();
 			case 'Current occupation':
 				throw new TranslationNotFoundError();
-			case 'Custom notes':
+			case 'Customer number':
 				throw new TranslationNotFoundError();
 			case 'Custom notes on contract':
 				throw new TranslationNotFoundError();
 			case 'Custom notes on vehicle':
+				throw new TranslationNotFoundError();
+			case 'Custom notes':
 				throw new TranslationNotFoundError();
 			case 'Date and time for each access':
 				throw new TranslationNotFoundError();
@@ -124,15 +146,19 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Date for each access':
 				throw new TranslationNotFoundError();
-			case 'Date of birth':
-				throw new TranslationNotFoundError();
 			case 'Date of birth of contact':
 				throw new TranslationNotFoundError();
+			case 'Date of birth':
+				throw new TranslationNotFoundError();
 			case 'Date of email':
+				throw new TranslationNotFoundError();
+			case 'Date of expiration':
 				throw new TranslationNotFoundError();
 			case 'Date of letter':
 				throw new TranslationNotFoundError();
 			case 'Date of login':
+				throw new TranslationNotFoundError();
+			case 'Date of publication':
 				throw new TranslationNotFoundError();
 			case 'Date of registration':
 				throw new TranslationNotFoundError();
@@ -142,7 +168,13 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Digitally drawn signature':
 				throw new TranslationNotFoundError();
-			case 'Email address':
+			case 'Effective date':
+				throw new TranslationNotFoundError();
+			case 'Email addresses in BCC line of email':
+				throw new TranslationNotFoundError();
+			case 'Email addresses in CC line of email':
+				throw new TranslationNotFoundError();
+			case 'Email addresses of recipients of email':
 				throw new TranslationNotFoundError();
 			case 'Email address of contact':
 				throw new TranslationNotFoundError();
@@ -152,29 +184,37 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Email address of sender of email':
 				throw new TranslationNotFoundError();
-			case 'Email addresses in BCC line of email':
-				throw new TranslationNotFoundError();
-			case 'Email addresses in CC line of email':
-				throw new TranslationNotFoundError();
-			case 'Email addresses of recipients of email':
+			case 'Email address':
 				throw new TranslationNotFoundError();
 			case 'Email communication':
 				throw new TranslationNotFoundError();
+			case 'employment and social security':
+				throw new TranslationNotFoundError();
+			case 'End of billing':
+				throw new TranslationNotFoundError();
 			case 'End of contract':
+				throw new TranslationNotFoundError();
+			case 'Entry of company in commercial register':
+				throw new TranslationNotFoundError();
+			case 'Erase your personal data':
 				throw new TranslationNotFoundError();
 			case 'Especially, you are responsible for safeguarding any passwords and other authentication information that you use to access our services, as well as limiting physical access to the devices used.':
 				throw new TranslationNotFoundError();
+			case 'Except as limited under applicable law, you have the following rights with regard to your personal data:':
+				throw new TranslationNotFoundError();
 			case 'Expiration date of credit card':
 				throw new TranslationNotFoundError();
-			case 'Expires':
+			case 'explicit consent':
 				throw new TranslationNotFoundError();
-			case 'Family name':
+			case 'Export your personal data':
 				throw new TranslationNotFoundError();
 			case 'Family name of contact':
 				throw new TranslationNotFoundError();
-			case 'Fax number':
+			case 'Family name':
 				throw new TranslationNotFoundError();
 			case 'Fax number of contact':
+				throw new TranslationNotFoundError();
+			case 'Fax number':
 				throw new TranslationNotFoundError();
 			case 'For any less significant changes to this privacy policy that do not affect your rights or choices in a material way, we encourage all users to check this policy for updated versions periodically.':
 				throw new TranslationNotFoundError();
@@ -184,27 +224,31 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'For our contact information, please see further below.':
 				throw new TranslationNotFoundError();
+			case 'foundation, association or non-profit':
+				throw new TranslationNotFoundError();
 			case 'From time to time, we may share some information we have collected from you, including personal information, with a limited number of third-party vendors, service providers, contractors, resellers, agents or business partners, solely for the purpose of performing certain functions on our behalf.':
 				throw new TranslationNotFoundError();
 			case 'Functions performed by them on our behalf may include payment processing, network data transmission, fraud prevention, customer support management and similar services.':
 				throw new TranslationNotFoundError();
-			case 'Gender':
-				throw new TranslationNotFoundError();
 			case 'Gender of contact':
+				throw new TranslationNotFoundError();
+			case 'Gender':
 				throw new TranslationNotFoundError();
 			case 'General':
 				throw new TranslationNotFoundError();
 			case 'Geographical coordinates':
 				throw new TranslationNotFoundError();
-			case 'Given name':
-				throw new TranslationNotFoundError();
 			case 'Given name of contact':
+				throw new TranslationNotFoundError();
+			case 'Given name':
 				throw new TranslationNotFoundError();
 			case 'Handwritten signature':
 				throw new TranslationNotFoundError();
 			case 'Hardware or software failure as well as other factors may compromise the security of user information, as is the case with all other providers of digital services.':
 				throw new TranslationNotFoundError();
 			case 'Headline of letter':
+				throw new TranslationNotFoundError();
+			case 'health and social care':
 				throw new TranslationNotFoundError();
 			case 'Height':
 				throw new TranslationNotFoundError();
@@ -216,6 +260,8 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'HTTP status code for each access':
 				throw new TranslationNotFoundError();
+			case 'Identification number with external payment service provider':
+				throw new TranslationNotFoundError();
 			case 'If any such change of ownership happens, the organization receiving your personal information will have to respect the promises that we have made in any pre-existing privacy policy such as this one.':
 				throw new TranslationNotFoundError();
 			case 'If in doubt, rather do not share sensitive information.':
@@ -226,15 +272,19 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'If you are a child below that age, you may not use any of our services.':
 				throw new TranslationNotFoundError();
+			case 'If you are unsatisfied with our response or with the way we are processing your personal data, you may contact your local data protection authority.':
+				throw new TranslationNotFoundError();
 			case 'If you have any questions or concerns regarding this policy, our privacy practices or certain aspects of our services, please contact us at any time.':
+				throw new TranslationNotFoundError();
+			case 'If you have any questions regarding the protection of your data, your rights, or how to exercise them, please contact us.':
 				throw new TranslationNotFoundError();
 			case 'If you need help, please contact us.':
 				throw new TranslationNotFoundError();
 			case 'If you would like to cancel your use of our services, delete your account, or delete your personal information, you may do so in the respective sections of our services.':
 				throw new TranslationNotFoundError();
-			case 'In addition to that, where applicable, you are entitled to have this data corrected, blocked or deleted.':
-				throw new TranslationNotFoundError();
 			case 'In any case, we will provide data only to the extent necessary to satisfy the request, and, whenever possible and legally permitted, we will make a reasonable effort to notify affected users of any such disclosure.':
+				throw new TranslationNotFoundError();
+			case 'Information we collect and why we collect it':
 				throw new TranslationNotFoundError();
 			case 'In general, the applicable version of this policy is the one that is current at the time of your access of our services.':
 				throw new TranslationNotFoundError();
@@ -242,17 +292,7 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'In particular, all connections to and from our services are encrypted using Secure Sockets Layer (SSL) and Transport Layer Security (TLS) technologies.':
 				throw new TranslationNotFoundError();
-			case 'Information we collect and why we collect it':
-				throw new TranslationNotFoundError();
-			case 'Internet Protocol (IP) address':
-				throw new TranslationNotFoundError();
-			case 'Internet Protocol (IP) address (reduced to 25%% precision)':
-				throw new TranslationNotFoundError();
-			case 'Internet Protocol (IP) address (reduced to 50%% precision)':
-				throw new TranslationNotFoundError();
-			case 'Internet Protocol (IP) address (reduced to 75%% precision)':
-				throw new TranslationNotFoundError();
-			case 'Internet Protocol (IP) address for each access':
+			case 'International data transfers':
 				throw new TranslationNotFoundError();
 			case 'Internet Protocol (IP) address for each access (reduced to 25%% precision)':
 				throw new TranslationNotFoundError();
@@ -260,15 +300,37 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Internet Protocol (IP) address for each access (reduced to 75%% precision)':
 				throw new TranslationNotFoundError();
+			case 'Internet Protocol (IP) address for each access':
+				throw new TranslationNotFoundError();
+			case 'Internet Protocol (IP) address (reduced to 25%% precision)':
+				throw new TranslationNotFoundError();
+			case 'Internet Protocol (IP) address (reduced to 50%% precision)':
+				throw new TranslationNotFoundError();
+			case 'Internet Protocol (IP) address (reduced to 75%% precision)':
+				throw new TranslationNotFoundError();
+			case 'Internet Protocol (IP) address':
+				throw new TranslationNotFoundError();
+			case 'Invoice number':
+				throw new TranslationNotFoundError();
 			case 'iOS app (available from the “App Store”, a digital distribution platform operated by Apple Inc.)':
+				throw new TranslationNotFoundError();
+			case 'Label for logo of company':
+				throw new TranslationNotFoundError();
+			case 'Label for signature':
 				throw new TranslationNotFoundError();
 			case 'Language of device':
 				throw new TranslationNotFoundError();
-			case 'Last updated':
-				throw new TranslationNotFoundError();
 			case 'Latest version':
 				throw new TranslationNotFoundError();
+			case 'Lawful basis:':
+				throw new TranslationNotFoundError();
 			case 'Laws in the jurisdictions that we operate in may obligate us to disclose certain personal information or other information that we collect about our users to local law enforcement authorities.':
+				throw new TranslationNotFoundError();
+			case 'legal claims or judicial capacity':
+				throw new TranslationNotFoundError();
+			case 'legal obligation':
+				throw new TranslationNotFoundError();
+			case 'legitimate interests':
 				throw new TranslationNotFoundError();
 			case 'Links to external websites, applications and products':
 				throw new TranslationNotFoundError();
@@ -282,13 +344,13 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Manufacturer of device':
 				throw new TranslationNotFoundError();
-			case 'Maximum retention time in days: %d':
+			case 'Maximum retention time: %s':
 				throw new TranslationNotFoundError();
-			case 'Maximum retention time in hours: %d':
+			case 'Members of executive board of company':
 				throw new TranslationNotFoundError();
-			case 'Maximum retention time in months: %d':
+			case 'Members of management of company':
 				throw new TranslationNotFoundError();
-			case 'Maximum retention time in weeks: %d':
+			case 'Members of supervisory board of company':
 				throw new TranslationNotFoundError();
 			case 'Mergers and acquisitions':
 				throw new TranslationNotFoundError();
@@ -296,27 +358,35 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Message text of letter':
 				throw new TranslationNotFoundError();
-			case 'Mobile phone number':
-				throw new TranslationNotFoundError();
 			case 'Mobile phone number of contact':
+				throw new TranslationNotFoundError();
+			case 'Mobile phone number':
 				throw new TranslationNotFoundError();
 			case 'Model name of device':
 				throw new TranslationNotFoundError();
 			case 'Model name of vehicle':
 				throw new TranslationNotFoundError();
-			case 'Month and day of birth':
-				throw new TranslationNotFoundError();
 			case 'Month and day of birth of contact':
+				throw new TranslationNotFoundError();
+			case 'Month and day of birth':
 				throw new TranslationNotFoundError();
 			case 'Most changes will presumably be minor only and will therefore not affect your rights.':
 				throw new TranslationNotFoundError();
-			case 'Name':
-				throw new TranslationNotFoundError();
 			case 'Name of contact':
+				throw new TranslationNotFoundError();
+			case 'Name':
 				throw new TranslationNotFoundError();
 			case 'None of our services are designed for, intended to attract, or directed towards children under the age of %d.':
 				throw new TranslationNotFoundError();
 			case 'Notes on additional recipients of letter':
+				throw new TranslationNotFoundError();
+			case 'no':
+				throw new TranslationNotFoundError();
+			case 'Object to automated decision-making':
+				throw new TranslationNotFoundError();
+			case 'Object to direct marketing':
+				throw new TranslationNotFoundError();
+			case 'Object to the use of your personal data':
 				throw new TranslationNotFoundError();
 			case 'Occupation':
 				throw new TranslationNotFoundError();
@@ -330,11 +400,13 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Password (strong hash)':
 				throw new TranslationNotFoundError();
+			case 'Payments past due':
+				throw new TranslationNotFoundError();
 			case 'Permanent identifier of device':
 				throw new TranslationNotFoundError();
-			case 'Phone number':
-				throw new TranslationNotFoundError();
 			case 'Phone number of contact':
+				throw new TranslationNotFoundError();
+			case 'Phone number':
 				throw new TranslationNotFoundError();
 			case 'Picture':
 				throw new TranslationNotFoundError();
@@ -342,15 +414,57 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Place of construction of vehicle':
 				throw new TranslationNotFoundError();
-			case 'Postal code':
+			case 'Plan or package for billing':
+				throw new TranslationNotFoundError();
+			case 'Please contact us if you want further information on the specific mechanisms used by us when transferring your personal data internationally.':
 				throw new TranslationNotFoundError();
 			case 'Postal code of contact':
+				throw new TranslationNotFoundError();
+			case 'Postal code':
 				throw new TranslationNotFoundError();
 			case 'Postscript of letter':
 				throw new TranslationNotFoundError();
 			case 'Preferred occupation':
 				throw new TranslationNotFoundError();
+			case 'Processing is carried out by a foundation, association or any other not-for-profit body with a political, philosophical, religious or trade union aim and on condition that the processing relates solely to the members or to former members of the body or to persons who have regular contact with it (EU, General Data Protection Regulation (GDPR), Article 9(2)(d)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(j)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for compliance with a legal obligation to which we are subject (EU, General Data Protection Regulation (GDPR), Article 6(1)(c)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for reasons of public interest in the area of public health, such as protecting against serious cross-border threats to health or ensuring high standards of quality and safety of health care and of medicinal products or medical devices (EU, General Data Protection Regulation (GDPR), Article 9(2)(i)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for reasons of substantial public interest (EU, General Data Protection Regulation (GDPR), Article 9(2)(g)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for the establishment, exercise or defence of legal claims or for a court acting in its judicial capacity (EU, General Data Protection Regulation (GDPR), Article 9(2)(f)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract (EU, General Data Protection Regulation (GDPR), Article 6(1)(b)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in us (EU, General Data Protection Regulation (GDPR), Article 6(1)(e)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for the purposes of carrying out obligations and exercising specific rights in the field of employment and social security and social protection law (EU, General Data Protection Regulation (GDPR), Article 9(2)(b)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for the purposes of legitimate interests pursued by us or by a third party (EU, General Data Protection Regulation (GDPR), Article 6(1)(f)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary for the purposes of preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services (EU, General Data Protection Regulation (GDPR), Article 9(2)(h)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary in order to protect your vital interests or those of another natural person (EU, General Data Protection Regulation (GDPR), Article 6(1)(d)).':
+				throw new TranslationNotFoundError();
+			case 'Processing is necessary to protect your vital interests or those of another natural person where you are physically or legally incapable of giving consent (EU, General Data Protection Regulation (GDPR), Article 9(2)(c)).':
+				throw new TranslationNotFoundError();
+			case 'Processing relates to personal data that you manifestly make public (EU, General Data Protection Regulation (GDPR), Article 9(2)(e)).':
+				throw new TranslationNotFoundError();
 			case 'Protecting your privacy and keeping your personal information safe is our highest priority.':
+				throw new TranslationNotFoundError();
+			case 'public data':
+				throw new TranslationNotFoundError();
+			case 'public health':
+				throw new TranslationNotFoundError();
+			case 'public interest':
+				throw new TranslationNotFoundError();
+			case 'Reference of contact':
+				throw new TranslationNotFoundError();
+			case 'Reference':
 				throw new TranslationNotFoundError();
 			case 'Referring site (URL) for each access':
 				throw new TranslationNotFoundError();
@@ -358,15 +472,33 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Requested page (URL) for each access':
 				throw new TranslationNotFoundError();
-			case 'Resettable identifier of device':
+			case 'Required:':
 				throw new TranslationNotFoundError();
-			case 'Residential phone number':
+			case 'Resettable identifier of device':
 				throw new TranslationNotFoundError();
 			case 'Residential phone number of contact':
 				throw new TranslationNotFoundError();
+			case 'Residential phone number':
+				throw new TranslationNotFoundError();
+			case 'Restrict the use of your personal data':
+				throw new TranslationNotFoundError();
 			case 'Retention and deletion of data':
 				throw new TranslationNotFoundError();
-			case 'Right to information':
+			case 'Right of access (EU, General Data Protection Regulation (GDPR), Article 15)':
+				throw new TranslationNotFoundError();
+			case 'Rights related to automated individual decision-making, including profiling (EU, General Data Protection Regulation (GDPR), Article 22)':
+				throw new TranslationNotFoundError();
+			case 'Right to data portability (EU, General Data Protection Regulation (GDPR), Article 20)':
+				throw new TranslationNotFoundError();
+			case 'Right to erasure (EU, General Data Protection Regulation (GDPR), Article 17)':
+				throw new TranslationNotFoundError();
+			case 'Right to object (EU, General Data Protection Regulation (GDPR), Article 21)':
+				throw new TranslationNotFoundError();
+			case 'Right to rectification (EU, General Data Protection Regulation (GDPR), Article 16)':
+				throw new TranslationNotFoundError();
+			case 'Right to restriction of processing (EU, General Data Protection Regulation (GDPR), Article 18)':
+				throw new TranslationNotFoundError();
+			case 'Salutation of letter':
 				throw new TranslationNotFoundError();
 			case 'See further below for our contact information.':
 				throw new TranslationNotFoundError();
@@ -382,29 +514,45 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'Some contents of our services are provided by third parties that are not directly affiliated with us.':
 				throw new TranslationNotFoundError();
+			case 'Some of our external service providers and recipients of personal data are based outside your country and outside our country.':
+				throw new TranslationNotFoundError();
 			case 'Some parts and sections of our services may contain external links to websites, applications or products owned by and operated by third parties.':
+				throw new TranslationNotFoundError();
+			case 'Standard Contractual Clauses, as adopted by or approved by the European Commission, are in place.':
+				throw new TranslationNotFoundError();
+			case 'Start of billing':
 				throw new TranslationNotFoundError();
 			case 'Start of contract':
 				throw new TranslationNotFoundError();
-			case 'State':
-				throw new TranslationNotFoundError();
 			case 'State of contact':
+				throw new TranslationNotFoundError();
+			case 'State':
 				throw new TranslationNotFoundError();
 			case 'Steuerliche Identifikationsnummer (Steuer-IdNr.) (Germany)':
 				throw new TranslationNotFoundError();
 			case 'Steuernummer (St.-Nr) (Germany)':
 				throw new TranslationNotFoundError();
-			case 'Street name and house number':
-				throw new TranslationNotFoundError();
 			case 'Street name and house number of contact':
+				throw new TranslationNotFoundError();
+			case 'Street name and house number':
 				throw new TranslationNotFoundError();
 			case 'Subject of email':
 				throw new TranslationNotFoundError();
 			case 'Subject of letter':
 				throw new TranslationNotFoundError();
+			case 'substantial public interest':
+				throw new TranslationNotFoundError();
+			case 'Such third countries may have data protection rules that are different from those in your or our country.':
+				throw new TranslationNotFoundError();
 			case 'Such third parties help us provide and improve our services.':
 				throw new TranslationNotFoundError();
+			case 'The country of the recipient has been deemed to provide an adequate level of protection for personal data by the European Commission.':
+				throw new TranslationNotFoundError();
 			case 'The policy applies to our websites, mobile apps, software applications, products and services, collectively referred to as “services”.':
+				throw new TranslationNotFoundError();
+			case 'The recipient has Binding Corporate Rules that guarantee the protection of personal data.':
+				throw new TranslationNotFoundError();
+			case 'The recipient is certified as part of the EU-US and Swiss-US Privacy Shield Frameworks.':
 				throw new TranslationNotFoundError();
 			case 'These cookies do not necessarily contain any personal or identifying information.':
 				throw new TranslationNotFoundError();
@@ -436,6 +584,8 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'This means that parts of your personal information may temporarily remain on our servers even after deletion or termination of your use of our services.':
 				throw new TranslationNotFoundError();
+			case 'This means that the processing of your personal data by those third parties involves an international transfer of your data to a third country.':
+				throw new TranslationNotFoundError();
 			case 'This notification will include help on choices you may have regarding the transfer and treatment of your personal information.':
 				throw new TranslationNotFoundError();
 			case 'This notification will include help on choices you may have regarding the treatment of your personal information.':
@@ -444,41 +594,91 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'This privacy statement (“privacy policy” or “policy”) is designed to help you better understand how and to what extent we collect, use, disclose, transfer and store your information.':
 				throw new TranslationNotFoundError();
+			case 'Thus, for any international transfer of data, we ensure that appropriate technical, organizational and contractual measures are in place to guarantee that a similar degree of protection is afforded to your data internationally and that your personal data remains protected to the standards described in this policy.':
+				throw new TranslationNotFoundError();
 			case 'Time for each access':
 				throw new TranslationNotFoundError();
+			case 'Time of cancellation of contract':
+				throw new TranslationNotFoundError();
+			case 'Time of cancellation':
+				throw new TranslationNotFoundError();
+			case 'Time of creation of contact':
+				throw new TranslationNotFoundError();
+			case 'Time of creation of contract':
+				throw new TranslationNotFoundError();
+			case 'Time of creation of letter':
+				throw new TranslationNotFoundError();
+			case 'Time of creation of logo of company':
+				throw new TranslationNotFoundError();
+			case 'Time of creation of signature':
+				throw new TranslationNotFoundError();
 			case 'Time of email':
+				throw new TranslationNotFoundError();
+			case 'Time of first access':
+				throw new TranslationNotFoundError();
+			case 'Time of last modification to billing options':
+				throw new TranslationNotFoundError();
+			case 'Time of last modification to contact':
+				throw new TranslationNotFoundError();
+			case 'Time of last modification to contract':
+				throw new TranslationNotFoundError();
+			case 'Time of last modification to letter':
+				throw new TranslationNotFoundError();
+			case 'Time of last modification to logo of company':
+				throw new TranslationNotFoundError();
+			case 'Time of last modification to signature':
 				throw new TranslationNotFoundError();
 			case 'Time of letter':
 				throw new TranslationNotFoundError();
 			case 'Time of login':
 				throw new TranslationNotFoundError();
+			case 'Time of next payment':
+				throw new TranslationNotFoundError();
+			case 'Time of original message of contact':
+				throw new TranslationNotFoundError();
 			case 'Time of registration':
 				throw new TranslationNotFoundError();
 			case 'Time zone of device':
 				throw new TranslationNotFoundError();
+			case 'Update your personal data':
+				throw new TranslationNotFoundError();
+			case 'Upon verification of your identity, we will respond to your request within a reasonable period of time.':
+				throw new TranslationNotFoundError();
+			case 'Usage of free trial':
+				throw new TranslationNotFoundError();
 			case 'User-agent string for each access':
 				throw new TranslationNotFoundError();
-			case 'VAT ID (European Union)':
+			case 'Valediction of letter':
 				throw new TranslationNotFoundError();
 			case 'VAT ID (European Union) of contact':
 				throw new TranslationNotFoundError();
+			case 'VAT ID (European Union)':
+				throw new TranslationNotFoundError();
 			case 'Verification code (e.g. CVC, CVV, CSC) of credit card':
 				throw new TranslationNotFoundError();
-			case 'Version':
+			case 'Verification status of email address':
+				throw new TranslationNotFoundError();
+			case 'Version of application used for access':
 				throw new TranslationNotFoundError();
 			case 'Version of operating system on device':
 				throw new TranslationNotFoundError();
 			case 'Version of web browser on device':
 				throw new TranslationNotFoundError();
+			case 'Version':
+				throw new TranslationNotFoundError();
+			case 'vital interests':
+				throw new TranslationNotFoundError();
 			case 'We advise you to verify the privacy practices of those third parties individually.':
 				throw new TranslationNotFoundError();
 			case 'We always collect only the minimum amount of personal information necessary to provide our services to you, unless you choose to provide more such information voluntarily.':
 				throw new TranslationNotFoundError();
+			case 'We are responsible for the processing of personal data under this policy.':
+				throw new TranslationNotFoundError();
 			case 'Website':
 				throw new TranslationNotFoundError();
-			case 'Website (URL)':
-				throw new TranslationNotFoundError();
 			case 'Website (URL) of contact':
+				throw new TranslationNotFoundError();
+			case 'Website (URL)':
 				throw new TranslationNotFoundError();
 			case 'We encourage you not to provide any personal information to those third parties before assuring yourself of proper privacy practices on their part.':
 				throw new TranslationNotFoundError();
@@ -520,35 +720,57 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 				throw new TranslationNotFoundError();
 			case 'We use this information to provide meaningful and unobtrusive advertising to you.':
 				throw new TranslationNotFoundError();
+			case 'We verify that at least one of the following safeguards is implemented:':
+				throw new TranslationNotFoundError();
 			case 'We want to help and will be happy to address your concerns.':
 				throw new TranslationNotFoundError();
 			case 'We will retain certain pieces of personal information for as long as you use our services, as long as your account exists, or as long as needed for us to be able to provide our services to you.':
 				throw new TranslationNotFoundError();
 			case 'Without these technologies, use of our services would not be reasonably possible.':
 				throw new TranslationNotFoundError();
-			case 'Year and month of birth':
-				throw new TranslationNotFoundError();
 			case 'Year and month of birth of contact':
 				throw new TranslationNotFoundError();
-			case 'Year of birth':
+			case 'Year and month of birth':
 				throw new TranslationNotFoundError();
 			case 'Year of birth of contact':
 				throw new TranslationNotFoundError();
+			case 'Year of birth':
+				throw new TranslationNotFoundError();
 			case 'Year of construction of vehicle':
+				throw new TranslationNotFoundError();
+			case 'yes':
+				throw new TranslationNotFoundError();
+			case 'You are free to file a complaint with the data protection authority.':
 				throw new TranslationNotFoundError();
 			case 'You are welcome to make use of these settings and features of your web browser or operating system, but that may prevent our services from working correctly for you.':
 				throw new TranslationNotFoundError();
-			case 'You can delete this information through the user interface of our services.':
-				throw new TranslationNotFoundError();
 			case 'You can reach us via email at:':
 				throw new TranslationNotFoundError();
-			case 'You can view and delete this information through the user interface of our services.':
+			case 'You have given consent to the processing of your personal data for one or more specific purposes (EU, General Data Protection Regulation (GDPR), Article 6(1)(a)).':
 				throw new TranslationNotFoundError();
-			case 'You can view this information through the user interface of our services.':
+			case 'You have given explicit consent to the processing of your personal data for one or more specified purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(a)).':
 				throw new TranslationNotFoundError();
-			case 'You have the right to request at any time, free of charge, information about your personal data stored by us.':
+			case 'You have the right not to be subject to a decision based solely on automated decision-making, including profiling, where the decision would have a legal effect on you or produce a similarly significant effect.':
+				throw new TranslationNotFoundError();
+			case 'You have the right to be informed of and request access to the personal data we process about you.':
+				throw new TranslationNotFoundError();
+			case 'You have the right to object to us processing your personal data on grounds relating to your particular situation where we no longer have a legitimate reason or legal need to process it.':
+				throw new TranslationNotFoundError();
+			case 'You have the right to object to your personal data being processed for direct marketing purposes.':
+				throw new TranslationNotFoundError();
+			case 'You have the right to request a copy of your personal data in electronic and machine-readable form, and the right to transmit that personal data to another service provider.':
+				throw new TranslationNotFoundError();
+			case 'You have the right to request that we amend or update your personal data where it is inaccurate or incomplete.':
+				throw new TranslationNotFoundError();
+			case 'You have the right to request that we delete your personal data.':
+				throw new TranslationNotFoundError();
+			case 'You have the right to request that we temporarily or permanently stop processing your personal data.':
+				throw new TranslationNotFoundError();
+			case 'You may also contact the data protection authority that is responsible for us:':
 				throw new TranslationNotFoundError();
 			case 'You may opt out of receiving any newsletters or promotional messages from us at any time.':
+				throw new TranslationNotFoundError();
+			case 'Your rights':
 				throw new TranslationNotFoundError();
 			case 'Your web browser or app then sends these small text files back to us whenever you access our services.':
 				throw new TranslationNotFoundError();
@@ -567,8 +789,28 @@ class MyLanguagePrivacyPolicy extends HumanPrivacyPolicy {
 		}
 	}
 
-	protected function getDateFormat() {
-		return 'Y-m-d';
+	protected function formatDate($unixTimestamp) {
+		throw new TranslationNotFoundError();
+	}
+
+	protected function formatHours($n) {
+		throw new TranslationNotFoundError();
+	}
+
+	protected function formatDays($n) {
+		throw new TranslationNotFoundError();
+	}
+
+	protected function formatWeeks($n) {
+		throw new TranslationNotFoundError();
+	}
+
+	protected function formatMonths($n) {
+		throw new TranslationNotFoundError();
+	}
+
+	protected function formatYears($n) {
+		throw new TranslationNotFoundError();
 	}
 
 }
