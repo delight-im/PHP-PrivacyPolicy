@@ -53,19 +53,25 @@ Migrating from an earlier version of this project? See our [upgrade guide](Migra
 #### Privacy policies for humans in natural language
 
 ```php
-$policy = new \Delight\PrivacyPolicy\Language\EnglishPrivacyPolicy();
+use Delight\PrivacyPolicy\Language\EnglishPrivacyPolicy;
+use Delight\PrivacyPolicy\Language\GermanFormalPrivacyPolicy;
+use Delight\PrivacyPolicy\Language\GermanInformalPrivacyPolicy;
+
+$policy = new EnglishPrivacyPolicy();
 
 // or
 
-$policy = new \Delight\PrivacyPolicy\Language\GermanFormalPrivacyPolicy();
+$policy = new GermanFormalPrivacyPolicy();
 // or
-$policy = new \Delight\PrivacyPolicy\Language\GermanInformalPrivacyPolicy();
+$policy = new GermanInformalPrivacyPolicy();
 ```
 
 #### Privacy policies for machines in formal language
 
 ```php
-$policy = new \Delight\PrivacyPolicy\Language\JsonPrivacyPolicy();
+use Delight\PrivacyPolicy\Language\JsonPrivacyPolicy;
+
+$policy = new JsonPrivacyPolicy();
 ```
 
 ### Displaying or printing an instance
@@ -128,18 +134,25 @@ $policy->setRightsRelatedToAutomatedDecisions(true);
 ### Explaining the amount, type and purpose of the data you collect
 
 ```php
+use Delight\PrivacyPolicy\Data\DataBasis;
+use Delight\PrivacyPolicy\Data\DataGroup;
+use Delight\PrivacyPolicy\Data\DataPurpose;
+use Delight\PrivacyPolicy\Data\DataRequirement;
+use Delight\PrivacyPolicy\Data\DataSpecialCondition;
+use Delight\PrivacyPolicy\Data\DataType;
+
 $policy->addDataGroup(
     'Server logs',
     'Whenever you access our services, ...',
-    [ \Delight\PrivacyPolicy\Data\DataBasis::LEGITIMATE_INTERESTS ],
-    null, // [ \Delight\PrivacyPolicy\Data\DataSpecialCondition::EXPLICIT_CONSENT ]
-    [ \Delight\PrivacyPolicy\Data\DataPurpose::ADMINISTRATION ],
-    \Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
+    [ DataBasis::LEGITIMATE_INTERESTS ],
+    null, // [ DataSpecialCondition::EXPLICIT_CONSENT ]
+    [ DataPurpose::ADMINISTRATION ],
+    DataRequirement::ALWAYS,
 
-    function (\Delight\PrivacyPolicy\Data\DataGroup $group) {
+    function (DataGroup $group) {
         $group->addElement(
-            \Delight\PrivacyPolicy\Data\DataType::ACCESS_IP_ADDRESS,
-            \Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS,
+            DataType::ACCESS_IP_ADDRESS,
+            DataRequirement::ALWAYS,
             24 * 7
         );
     }
@@ -149,47 +162,55 @@ $policy->addDataGroup(
 #### Lawful bases
 
 ```php
-\Delight\PrivacyPolicy\Data\DataBasis::CONSENT;
-\Delight\PrivacyPolicy\Data\DataBasis::CONTRACT;
-\Delight\PrivacyPolicy\Data\DataBasis::LEGAL_OBLIGATION;
-\Delight\PrivacyPolicy\Data\DataBasis::LEGITIMATE_INTERESTS;
-\Delight\PrivacyPolicy\Data\DataBasis::PUBLIC_INTEREST;
-\Delight\PrivacyPolicy\Data\DataBasis::VITAL_INTERESTS;
+use Delight\PrivacyPolicy\Data\DataBasis;
+
+DataBasis::CONSENT;
+DataBasis::CONTRACT;
+DataBasis::LEGAL_OBLIGATION;
+DataBasis::LEGITIMATE_INTERESTS;
+DataBasis::PUBLIC_INTEREST;
+DataBasis::VITAL_INTERESTS;
 ```
 
 #### Special conditions
 
 ```php
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::ARCHIVING_OR_RESEARCH;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::EMPLOYMENT_AND_SOCIAL_SECURITY;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::EXPLICIT_CONSENT;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::FOUNDATION_ASSOCIATION_OR_NON_PROFIT;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::HEALTH_AND_SOCIAL_CARE;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::LEGAL_CLAIMS_OR_JUDICIAL_CAPACITY;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::PUBLIC_DATA;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::PUBLIC_HEALTH;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::SUBSTANTIAL_PUBLIC_INTEREST;
-\Delight\PrivacyPolicy\Data\DataSpecialCondition::VITAL_INTERESTS;
+use Delight\PrivacyPolicy\Data\DataSpecialCondition;
+
+DataSpecialCondition::ARCHIVING_OR_RESEARCH;
+DataSpecialCondition::EMPLOYMENT_AND_SOCIAL_SECURITY;
+DataSpecialCondition::EXPLICIT_CONSENT;
+DataSpecialCondition::FOUNDATION_ASSOCIATION_OR_NON_PROFIT;
+DataSpecialCondition::HEALTH_AND_SOCIAL_CARE;
+DataSpecialCondition::LEGAL_CLAIMS_OR_JUDICIAL_CAPACITY;
+DataSpecialCondition::PUBLIC_DATA;
+DataSpecialCondition::PUBLIC_HEALTH;
+DataSpecialCondition::SUBSTANTIAL_PUBLIC_INTEREST;
+DataSpecialCondition::VITAL_INTERESTS;
 ```
 
 #### Data purposes
 
 ```php
-\Delight\PrivacyPolicy\Data\DataPurpose::ADMINISTRATION;
-\Delight\PrivacyPolicy\Data\DataPurpose::ADVERTISING;
-\Delight\PrivacyPolicy\Data\DataPurpose::CUSTOMER_SUPPORT;
-\Delight\PrivacyPolicy\Data\DataPurpose::FULFILLMENT;
-\Delight\PrivacyPolicy\Data\DataPurpose::MARKETING;
-\Delight\PrivacyPolicy\Data\DataPurpose::PERSONALIZATION;
-\Delight\PrivacyPolicy\Data\DataPurpose::RESEARCH;
+use Delight\PrivacyPolicy\Data\DataPurpose;
+
+DataPurpose::ADMINISTRATION;
+DataPurpose::ADVERTISING;
+DataPurpose::CUSTOMER_SUPPORT;
+DataPurpose::FULFILLMENT;
+DataPurpose::MARKETING;
+DataPurpose::PERSONALIZATION;
+DataPurpose::RESEARCH;
 ```
 
 #### Data requirements
 
 ```php
-\Delight\PrivacyPolicy\Data\DataRequirement::ALWAYS;
-\Delight\PrivacyPolicy\Data\DataRequirement::OPT_IN;
-\Delight\PrivacyPolicy\Data\DataRequirement::OPT_OUT;
+use Delight\PrivacyPolicy\Data\DataRequirement;
+
+DataRequirement::ALWAYS;
+DataRequirement::OPT_IN;
+DataRequirement::OPT_OUT;
 ```
 
 #### Data types
@@ -197,238 +218,248 @@ $policy->addDataGroup(
 ##### Primary
 
 ```php
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_DATETIME;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_DATETIME_DATE;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_DATETIME_TIME;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_HTTP_METHOD;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_HTTP_STATUS;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_IP_ADDRESS;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_IP_ADDRESS_25_PERCENT;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_IP_ADDRESS_50_PERCENT;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_IP_ADDRESS_75_PERCENT;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_REFERER;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_SIZE;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_URL;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_USERAGENT_STRING;
+use Delight\PrivacyPolicy\Data\DataType;
 
-\Delight\PrivacyPolicy\Data\DataType::BILLING_CANCELLATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::BILLING_END_TIME;
-\Delight\PrivacyPolicy\Data\DataType::BILLING_FREE_TRIAL;
-\Delight\PrivacyPolicy\Data\DataType::BILLING_MODIFICATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::BILLING_NEXT_PAYMENT_TIME;
-\Delight\PrivacyPolicy\Data\DataType::BILLING_PAST_DUE;
-\Delight\PrivacyPolicy\Data\DataType::BILLING_PLAN;
-\Delight\PrivacyPolicy\Data\DataType::BILLING_START_TIME;
+DataType::ACCESS_DATETIME;
+DataType::ACCESS_DATETIME_DATE;
+DataType::ACCESS_DATETIME_TIME;
+DataType::ACCESS_HTTP_METHOD;
+DataType::ACCESS_HTTP_STATUS;
+DataType::ACCESS_IP_ADDRESS;
+DataType::ACCESS_IP_ADDRESS_25_PERCENT;
+DataType::ACCESS_IP_ADDRESS_50_PERCENT;
+DataType::ACCESS_IP_ADDRESS_75_PERCENT;
+DataType::ACCESS_REFERER;
+DataType::ACCESS_SIZE;
+DataType::ACCESS_URL;
+DataType::ACCESS_USERAGENT_STRING;
 
-\Delight\PrivacyPolicy\Data\DataType::CUSTOMER_NUMBER;
+DataType::BILLING_CANCELLATION_TIME;
+DataType::BILLING_END_TIME;
+DataType::BILLING_FREE_TRIAL;
+DataType::BILLING_MODIFICATION_TIME;
+DataType::BILLING_NEXT_PAYMENT_TIME;
+DataType::BILLING_PAST_DUE;
+DataType::BILLING_PLAN;
+DataType::BILLING_START_TIME;
 
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_BROWSER;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_BROWSER_BRAND;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_BROWSER_VERSION;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_DATETIME_TIME_ZONE;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_ID_PERMANENT;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_ID_RESETTABLE;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_LANGUAGE;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_MANUFACTURER;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_MODEL;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_OS;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_OS_BRAND;
-\Delight\PrivacyPolicy\Data\DataType::DEVICE_OS_VERSION;
+DataType::CUSTOMER_NUMBER;
 
-\Delight\PrivacyPolicy\Data\DataType::USER_ACCESS_PRIVILEGES;
-\Delight\PrivacyPolicy\Data\DataType::USER_ADDRESS;
-\Delight\PrivacyPolicy\Data\DataType::USER_ADDRESS_COUNTRY;
-\Delight\PrivacyPolicy\Data\DataType::USER_ADDRESS_LOCALITY;
-\Delight\PrivacyPolicy\Data\DataType::USER_ADDRESS_PLACE;
-\Delight\PrivacyPolicy\Data\DataType::USER_ADDRESS_POSTAL_CODE;
-\Delight\PrivacyPolicy\Data\DataType::USER_ADDRESS_REGION;
-\Delight\PrivacyPolicy\Data\DataType::USER_BIRTH_DATE;
-\Delight\PrivacyPolicy\Data\DataType::USER_BIRTH_DATE_MONTH_DAY;
-\Delight\PrivacyPolicy\Data\DataType::USER_BIRTH_DATE_YEAR;
-\Delight\PrivacyPolicy\Data\DataType::USER_BIRTH_DATE_YEAR_MONTH;
-\Delight\PrivacyPolicy\Data\DataType::USER_BIRTH_PLACE;
-\Delight\PrivacyPolicy\Data\DataType::USER_BLOOD_GROUP;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_DEPARTMENT;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_NAME;
-\Delight\PrivacyPolicy\Data\DataType::USER_COUNTRY;
-\Delight\PrivacyPolicy\Data\DataType::USER_EMAIL;
-\Delight\PrivacyPolicy\Data\DataType::USER_EMAIL_VERIFIED;
-\Delight\PrivacyPolicy\Data\DataType::USER_FAX;
-\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_BANK_ACCOUNT_ID;
-\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_BANK_ID;
-\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_BANK_NAME;
-\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_CREDIT_CARD_BRAND;
-\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_CREDIT_CARD_CVC;
-\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_CREDIT_CARD_EXPIRATION;
-\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_CREDIT_CARD_NUMBER;
-\Delight\PrivacyPolicy\Data\DataType::USER_GENDER;
-\Delight\PrivacyPolicy\Data\DataType::USER_GEO_COORDINATES;
-\Delight\PrivacyPolicy\Data\DataType::USER_HEIGHT;
-\Delight\PrivacyPolicy\Data\DataType::USER_IDENTIFIERS_DEU_ST_IDNR;
-\Delight\PrivacyPolicy\Data\DataType::USER_IDENTIFIERS_DEU_ST_NR;
-\Delight\PrivacyPolicy\Data\DataType::USER_IDENTIFIERS_EU_VAT_IN;
-\Delight\PrivacyPolicy\Data\DataType::USER_IDENTIFIERS_USA_SSN;
-\Delight\PrivacyPolicy\Data\DataType::USER_IP_ADDRESS;
-\Delight\PrivacyPolicy\Data\DataType::USER_IP_ADDRESS_25_PERCENT;
-\Delight\PrivacyPolicy\Data\DataType::USER_IP_ADDRESS_50_PERCENT;
-\Delight\PrivacyPolicy\Data\DataType::USER_IP_ADDRESS_75_PERCENT;
-\Delight\PrivacyPolicy\Data\DataType::USER_LOGIN_DATETIME;
-\Delight\PrivacyPolicy\Data\DataType::USER_LOGIN_DATETIME_DATE;
-\Delight\PrivacyPolicy\Data\DataType::USER_LOGIN_DATETIME_TIME;
-\Delight\PrivacyPolicy\Data\DataType::USER_NAME;
-\Delight\PrivacyPolicy\Data\DataType::USER_NAME_ALIAS;
-\Delight\PrivacyPolicy\Data\DataType::USER_NAME_FAMILY;
-\Delight\PrivacyPolicy\Data\DataType::USER_NAME_GIVEN;
-\Delight\PrivacyPolicy\Data\DataType::USER_NOTES;
-\Delight\PrivacyPolicy\Data\DataType::USER_OCCUPATION;
-\Delight\PrivacyPolicy\Data\DataType::USER_OCCUPATION_CURRENT;
-\Delight\PrivacyPolicy\Data\DataType::USER_OCCUPATION_PREFERRED;
-\Delight\PrivacyPolicy\Data\DataType::USER_PASSWORD_CLEARTEXT;
-\Delight\PrivacyPolicy\Data\DataType::USER_PASSWORD_HASHED;
-\Delight\PrivacyPolicy\Data\DataType::USER_PASSWORD_HASHED_STRONG;
-\Delight\PrivacyPolicy\Data\DataType::USER_PASSWORD_RESETTABLE;
-\Delight\PrivacyPolicy\Data\DataType::USER_PHONE;
-\Delight\PrivacyPolicy\Data\DataType::USER_PHONE_HOME;
-\Delight\PrivacyPolicy\Data\DataType::USER_PHONE_MOBILE;
-\Delight\PrivacyPolicy\Data\DataType::USER_PICTURE;
-\Delight\PrivacyPolicy\Data\DataType::USER_REGISTRATION_DATETIME;
-\Delight\PrivacyPolicy\Data\DataType::USER_REGISTRATION_DATETIME_DATE;
-\Delight\PrivacyPolicy\Data\DataType::USER_REGISTRATION_DATETIME_TIME;
-\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE;
-\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_DRAWN;
-\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_HANDWRITTEN;
-\Delight\PrivacyPolicy\Data\DataType::USER_WEBSITE_URL;
-\Delight\PrivacyPolicy\Data\DataType::USER_WEIGHT;
+DataType::DEVICE_BROWSER;
+DataType::DEVICE_BROWSER_BRAND;
+DataType::DEVICE_BROWSER_VERSION;
+DataType::DEVICE_DATETIME_TIME_ZONE;
+DataType::DEVICE_ID_PERMANENT;
+DataType::DEVICE_ID_RESETTABLE;
+DataType::DEVICE_LANGUAGE;
+DataType::DEVICE_MANUFACTURER;
+DataType::DEVICE_MODEL;
+DataType::DEVICE_OS;
+DataType::DEVICE_OS_BRAND;
+DataType::DEVICE_OS_VERSION;
+
+DataType::USER_ACCESS_PRIVILEGES;
+DataType::USER_ADDRESS;
+DataType::USER_ADDRESS_COUNTRY;
+DataType::USER_ADDRESS_LOCALITY;
+DataType::USER_ADDRESS_PLACE;
+DataType::USER_ADDRESS_POSTAL_CODE;
+DataType::USER_ADDRESS_REGION;
+DataType::USER_BIRTH_DATE;
+DataType::USER_BIRTH_DATE_MONTH_DAY;
+DataType::USER_BIRTH_DATE_YEAR;
+DataType::USER_BIRTH_DATE_YEAR_MONTH;
+DataType::USER_BIRTH_PLACE;
+DataType::USER_BLOOD_GROUP;
+DataType::USER_COMPANY_DEPARTMENT;
+DataType::USER_COMPANY_LOGO;
+DataType::USER_COMPANY_NAME;
+DataType::USER_COUNTRY;
+DataType::USER_EMAIL;
+DataType::USER_EMAIL_VERIFIED;
+DataType::USER_FAX;
+DataType::USER_FINANCIAL_BANK_ACCOUNT_ID;
+DataType::USER_FINANCIAL_BANK_ID;
+DataType::USER_FINANCIAL_BANK_NAME;
+DataType::USER_FINANCIAL_CREDIT_CARD_BRAND;
+DataType::USER_FINANCIAL_CREDIT_CARD_CVC;
+DataType::USER_FINANCIAL_CREDIT_CARD_EXPIRATION;
+DataType::USER_FINANCIAL_CREDIT_CARD_NUMBER;
+DataType::USER_GENDER;
+DataType::USER_GEO_COORDINATES;
+DataType::USER_HEIGHT;
+DataType::USER_IDENTIFIERS_DEU_ST_IDNR;
+DataType::USER_IDENTIFIERS_DEU_ST_NR;
+DataType::USER_IDENTIFIERS_EU_VAT_IN;
+DataType::USER_IDENTIFIERS_USA_SSN;
+DataType::USER_IP_ADDRESS;
+DataType::USER_IP_ADDRESS_25_PERCENT;
+DataType::USER_IP_ADDRESS_50_PERCENT;
+DataType::USER_IP_ADDRESS_75_PERCENT;
+DataType::USER_LOGIN_DATETIME;
+DataType::USER_LOGIN_DATETIME_DATE;
+DataType::USER_LOGIN_DATETIME_TIME;
+DataType::USER_NAME;
+DataType::USER_NAME_ALIAS;
+DataType::USER_NAME_FAMILY;
+DataType::USER_NAME_GIVEN;
+DataType::USER_NOTES;
+DataType::USER_OCCUPATION;
+DataType::USER_OCCUPATION_CURRENT;
+DataType::USER_OCCUPATION_PREFERRED;
+DataType::USER_PASSWORD_CLEARTEXT;
+DataType::USER_PASSWORD_HASHED;
+DataType::USER_PASSWORD_HASHED_STRONG;
+DataType::USER_PASSWORD_RESETTABLE;
+DataType::USER_PHONE;
+DataType::USER_PHONE_HOME;
+DataType::USER_PHONE_MOBILE;
+DataType::USER_PICTURE;
+DataType::USER_REGISTRATION_DATETIME;
+DataType::USER_REGISTRATION_DATETIME_DATE;
+DataType::USER_REGISTRATION_DATETIME_TIME;
+DataType::USER_SIGNATURE;
+DataType::USER_SIGNATURE_DRAWN;
+DataType::USER_SIGNATURE_HANDWRITTEN;
+DataType::USER_WEBSITE_URL;
+DataType::USER_WEIGHT;
 ```
 
 ##### Secondary
 
 ```php
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_APP_VERSION;
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_FIRST_TIME;
+use Delight\PrivacyPolicy\Data\DataType;
 
-\Delight\PrivacyPolicy\Data\DataType::BILLING_ID_PAYMENT_SERVICE_PROVIDER;
+DataType::ACCESS_APP_VERSION;
+DataType::ACCESS_FIRST_TIME;
 
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS_COUNTRY;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS_LOCALITY;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS_PLACE;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS_POSTAL_CODE;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS_REGION;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_BIRTH_DATE;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_BIRTH_DATE_MONTH_DAY;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_BIRTH_DATE_YEAR;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_BIRTH_DATE_YEAR_MONTH;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_COMPANY_DEPARTMENT;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_COMPANY_NAME;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_CREATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_EMAIL;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_FAX;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_FINANCIAL_BANK_ACCOUNT_ID;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_FINANCIAL_BANK_ID;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_FINANCIAL_BANK_NAME;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_GENDER;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_IDENTIFIERS_EU_VAT_IN;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_MODIFICATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_NAME;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_NAME_ALIAS;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_NAME_FAMILY;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_NAME_GIVEN;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_ORIGINAL_MESSAGE_TIME;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_PHONE;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_PHONE_HOME;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_PHONE_MOBILE;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_REFERENCE;
-\Delight\PrivacyPolicy\Data\DataType::CONTACT_WEBSITE_URL;
+DataType::BILLING_ID_PAYMENT_SERVICE_PROVIDER;
 
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_BCC;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_BODY;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_CC;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_DATETIME;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_DATETIME_DATE;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_DATETIME_TIME;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_FROM;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_REPLY_TO;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_RETURN_PATH;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_SUBJECT;
-\Delight\PrivacyPolicy\Data\DataType::EMAIL_TO;
+DataType::CONTACT_ADDRESS;
+DataType::CONTACT_ADDRESS_COUNTRY;
+DataType::CONTACT_ADDRESS_LOCALITY;
+DataType::CONTACT_ADDRESS_PLACE;
+DataType::CONTACT_ADDRESS_POSTAL_CODE;
+DataType::CONTACT_ADDRESS_REGION;
+DataType::CONTACT_BIRTH_DATE;
+DataType::CONTACT_BIRTH_DATE_MONTH_DAY;
+DataType::CONTACT_BIRTH_DATE_YEAR;
+DataType::CONTACT_BIRTH_DATE_YEAR_MONTH;
+DataType::CONTACT_COMPANY_DEPARTMENT;
+DataType::CONTACT_COMPANY_NAME;
+DataType::CONTACT_CREATION_TIME;
+DataType::CONTACT_EMAIL;
+DataType::CONTACT_FAX;
+DataType::CONTACT_FINANCIAL_BANK_ACCOUNT_ID;
+DataType::CONTACT_FINANCIAL_BANK_ID;
+DataType::CONTACT_FINANCIAL_BANK_NAME;
+DataType::CONTACT_GENDER;
+DataType::CONTACT_IDENTIFIERS_EU_VAT_IN;
+DataType::CONTACT_MODIFICATION_TIME;
+DataType::CONTACT_NAME;
+DataType::CONTACT_NAME_ALIAS;
+DataType::CONTACT_NAME_FAMILY;
+DataType::CONTACT_NAME_GIVEN;
+DataType::CONTACT_ORIGINAL_MESSAGE_TIME;
+DataType::CONTACT_PHONE;
+DataType::CONTACT_PHONE_HOME;
+DataType::CONTACT_PHONE_MOBILE;
+DataType::CONTACT_REFERENCE;
+DataType::CONTACT_WEBSITE_URL;
 
-\Delight\PrivacyPolicy\Data\DataType::INVOICE_NUMBER;
+DataType::EMAIL_BCC;
+DataType::EMAIL_BODY;
+DataType::EMAIL_CC;
+DataType::EMAIL_DATETIME;
+DataType::EMAIL_DATETIME_DATE;
+DataType::EMAIL_DATETIME_TIME;
+DataType::EMAIL_FROM;
+DataType::EMAIL_REPLY_TO;
+DataType::EMAIL_RETURN_PATH;
+DataType::EMAIL_SUBJECT;
+DataType::EMAIL_TO;
 
-\Delight\PrivacyPolicy\Data\DataType::USER_REFERENCE;
+DataType::INVOICE_NUMBER;
+
+DataType::USER_REFERENCE;
 ```
 
 ##### Tertiary
 
 ```php
-\Delight\PrivacyPolicy\Data\DataType::ACCESS_DEVICE_FEATURES_FILE_UPLOAD;
+use Delight\PrivacyPolicy\Data\DataType;
 
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_BILLING_AMOUNT;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_BILLING_CYCLE;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_CANCELLATION_PERIOD;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_CANCELLATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_CREATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_MODIFICATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_NOTES;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_PARTNER;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_PERIOD_END;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_PERIOD_EXTENSION;
-\Delight\PrivacyPolicy\Data\DataType::CONTRACT_PERIOD_START;
+DataType::ACCESS_DEVICE_FEATURES_FILE_UPLOAD;
 
-\Delight\PrivacyPolicy\Data\DataType::LETTER_BODY;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_CC;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_CREATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_DATETIME;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_DATETIME_DATE;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_DATETIME_TIME;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_ENCLOSURES;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_HEADLINE;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_IS_FIRST;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_MATTER_PERSONAL_OR_BUSINESS;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_MODIFICATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_PS;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_SALUTATION;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_SUBJECT;
-\Delight\PrivacyPolicy\Data\DataType::LETTER_VALEDICTION;
+DataType::CONTRACT_BILLING_AMOUNT;
+DataType::CONTRACT_BILLING_CYCLE;
+DataType::CONTRACT_CANCELLATION_PERIOD;
+DataType::CONTRACT_CANCELLATION_TIME;
+DataType::CONTRACT_CREATION_TIME;
+DataType::CONTRACT_MODIFICATION_TIME;
+DataType::CONTRACT_NOTES;
+DataType::CONTRACT_PARTNER;
+DataType::CONTRACT_PERIOD_END;
+DataType::CONTRACT_PERIOD_EXTENSION;
+DataType::CONTRACT_PERIOD_START;
 
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_COMMERCIAL_REGISTER_ENTRY;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_EXECUTIVE_BOARD_MEMBERS;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO_CREATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO_LABEL;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO_MODIFICATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_MANAGEMENT_MEMBERS;
-\Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_SUPERVISORY_BOARD_MEMBERS;
-\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_CREATION_TIME;
-\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_LABEL;
-\Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_MODIFICATION_TIME;
+DataType::LETTER_BODY;
+DataType::LETTER_CC;
+DataType::LETTER_CREATION_TIME;
+DataType::LETTER_DATETIME;
+DataType::LETTER_DATETIME_DATE;
+DataType::LETTER_DATETIME_TIME;
+DataType::LETTER_ENCLOSURES;
+DataType::LETTER_HEADLINE;
+DataType::LETTER_IS_FIRST;
+DataType::LETTER_MATTER_PERSONAL_OR_BUSINESS;
+DataType::LETTER_MODIFICATION_TIME;
+DataType::LETTER_PS;
+DataType::LETTER_SALUTATION;
+DataType::LETTER_SUBJECT;
+DataType::LETTER_VALEDICTION;
 
-\Delight\PrivacyPolicy\Data\DataType::VEHICLE_COLOR;
-\Delight\PrivacyPolicy\Data\DataType::VEHICLE_CONSTRUCTION_PLACE;
-\Delight\PrivacyPolicy\Data\DataType::VEHICLE_CONSTRUCTION_YEAR;
-\Delight\PrivacyPolicy\Data\DataType::VEHICLE_MAKE;
-\Delight\PrivacyPolicy\Data\DataType::VEHICLE_MODEL;
-\Delight\PrivacyPolicy\Data\DataType::VEHICLE_NOTES;
-\Delight\PrivacyPolicy\Data\DataType::VEHICLE_REGISTRATION_PLATE_NUMBER;
+DataType::USER_COMPANY_COMMERCIAL_REGISTER_ENTRY;
+DataType::USER_COMPANY_EXECUTIVE_BOARD_MEMBERS;
+DataType::USER_COMPANY_LOGO_CREATION_TIME;
+DataType::USER_COMPANY_LOGO_LABEL;
+DataType::USER_COMPANY_LOGO_MODIFICATION_TIME;
+DataType::USER_COMPANY_MANAGEMENT_MEMBERS;
+DataType::USER_COMPANY_SUPERVISORY_BOARD_MEMBERS;
+DataType::USER_SIGNATURE_CREATION_TIME;
+DataType::USER_SIGNATURE_LABEL;
+DataType::USER_SIGNATURE_MODIFICATION_TIME;
+
+DataType::VEHICLE_COLOR;
+DataType::VEHICLE_CONSTRUCTION_PLACE;
+DataType::VEHICLE_CONSTRUCTION_YEAR;
+DataType::VEHICLE_MAKE;
+DataType::VEHICLE_MODEL;
+DataType::VEHICLE_NOTES;
+DataType::VEHICLE_REGISTRATION_PLATE_NUMBER;
 ```
 
 ### Specifying the scope of your policy
 
 ```php
+use Delight\PrivacyPolicy\Scope\AppStoreIosAppScope;
+use Delight\PrivacyPolicy\Scope\WebsiteScope;
+use Delight\PrivacyPolicy\Scope\PlayStoreAndroidAppScope;
+
 $policy->addScope(
-    new \Delight\PrivacyPolicy\Scope\WebsiteScope('https://www.example.com/', 'example.com')
+    new WebsiteScope('https://www.example.com/', 'example.com')
 );
 
 // and/or
 
 $policy->addScope(
-    new \Delight\PrivacyPolicy\Scope\PlayStoreAndroidAppScope('com.example.app', 'Example for Android')
+    new PlayStoreAndroidAppScope('com.example.app', 'Example for Android')
 );
 
 // and/or
 
 $policy->addScope(
-    new \Delight\PrivacyPolicy\Scope\AppStoreIosAppScope('54614917093', 'Example for iOS')
+    new AppStoreIosAppScope('54614917093', 'Example for iOS')
 );
 ```
 
