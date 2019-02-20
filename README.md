@@ -464,9 +464,20 @@ If there's no such class yet, simply create a new file for your language:
 The “Bootstrap” front-end framework overwrites some of the default CSS properties for definition/description lists. In order to fix how the policy is displayed, you have to reset those properties to their default values or improve them further. Usually, you may want to restrict these resets to the container element of your policy.
 
 ```css
-dl { margin: 1.12em 0; }
-dl dl { margin: 0; }
-dd { margin-left: 40px; }
+dl {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+dl dl {
+    margin-left: 24px;
+}
+dd {
+    margin-bottom: 8px;
+    margin-left: 0;
+}
+dl dl dl dd {
+    margin-bottom: 0;
+}
 ```
 
 ## Disclaimer
