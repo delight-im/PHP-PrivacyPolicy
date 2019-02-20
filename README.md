@@ -461,7 +461,7 @@ If there's no such class yet, simply create a new file for your language:
 
 ### Why is the HTML output not displayed correctly when using the “Bootstrap” framework?
 
-The “Bootstrap” front-end framework overwrites some of the default CSS properties for definition/description lists. In order to fix how the policy is displayed, you have to reset those properties to their default values. Usually, you may want to restrict these resets to the container element of your policy.
+The “Bootstrap” front-end framework overwrites some of the default CSS properties for definition/description lists. In order to fix how the policy is displayed, you have to reset those properties to their default values or improve them further. Usually, you may want to restrict these resets to the container element of your policy.
 
 ```css
 dl { margin: 1.12em 0; }
