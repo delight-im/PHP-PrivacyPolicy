@@ -21,7 +21,7 @@ abstract class PrivacyPolicy {
 	 *
 	 * @var int
 	 */
-	const CHILDREN_MINIMUM_AGE_DEFAULT = 13;
+	const CHILDREN_MINIMUM_AGE_DEFAULT = 16;
 
 	/**
 	 * The default period (in days) for notifications about major changes

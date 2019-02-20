@@ -104,7 +104,7 @@ $policy->setContactUrl('https://www.example.com/contact.html');
 ```php
 $policy->setUserDataTraded(false);
 $policy->setDataMinimizationGoal(true);
-$policy->setChildrenMinimumAge(13);
+$policy->setChildrenMinimumAge(16);
 $policy->setPromotionalEmailOptOut(true);
 $policy->setFirstPartyCookies(true);
 $policy->setThirdPartyCookies(true);
