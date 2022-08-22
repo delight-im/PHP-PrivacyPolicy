@@ -5,7 +5,7 @@
 ### Single-line blocks
 
 ```bash
-$ cat unsorted.txt | sed 's/^[ \t]*//' | sort -f > sorted.txt
+$ cat unsorted.txt | sed 's/^[ \t]*//' | LC_ALL=C sort -f > sorted.txt
 ```
 
 ## Constants
