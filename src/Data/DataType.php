@@ -63,6 +63,40 @@ final class DataType {
 	const BILLING_PLAN = 'billing.plan';
 	/** @var string the date and/or time when billing has started */
 	const BILLING_START_TIME = 'billing.start.time';
+	/** @var string the date and time of an event in the calendar of the user */
+	const CALENDAR_EVENT_DATETIME = 'calendar.event.datetime';
+	/** @var string the date of an event in the calendar of the user */
+	const CALENDAR_EVENT_DATETIME_DATE = 'calendar.event.datetime.date';
+	/** @var string the time of an event in the calendar of the user */
+	const CALENDAR_EVENT_DATETIME_TIME = 'calendar.event.datetime.time';
+	/** @var string the title of an event in the calendar of the user */
+	const CALENDAR_EVENT_TITLE = 'calendar.event.title';
+	/** @var string the type of an event in the calendar of the user */
+	const CALENDAR_EVENT_TYPE = 'calendar.event.type';
+	/** @var string diagnostics data relating to the client application of the user */
+	const CLIENT_DIAGNOSTICS = 'client.diagnostics';
+	/** @var string the energy usage in the client application of the user */
+	const CLIENT_DIAGNOSTICS_ENERGY_USAGE = 'client.diagnostics.energy_usage';
+	/** @var string data on errors in the client application of the user */
+	const CLIENT_DIAGNOSTICS_ERRORS = 'client.diagnostics.errors';
+	/** @var string error logs from the client application of the user */
+	const CLIENT_DIAGNOSTICS_ERRORS_LOGS = 'client.diagnostics.errors.logs';
+	/** @var string the error rate in the client application of the user */
+	const CLIENT_DIAGNOSTICS_ERRORS_RATE = 'client.diagnostics.errors.rate';
+	/** @var string the frame rate in the client application of the user */
+	const CLIENT_DIAGNOSTICS_FRAME_RATE = 'client.diagnostics.frame_rate';
+	/** @var string timing data from the client application of the user */
+	const CLIENT_DIAGNOSTICS_TIMING = 'client.diagnostics.timing';
+	/** @var string data on the user's activity within the client application */
+	const CLIENT_INTERACTIONS = 'client.interactions';
+	/** @var string data on the user's clicks or taps within the client application */
+	const CLIENT_INTERACTIONS_CLICKS_OR_TAPS = 'client.interactions.clicks_or_taps';
+	/** @var string the number of sessions by the user within the client application */
+	const CLIENT_INTERACTIONS_SESSIONS = 'client.interactions.sessions';
+	/** @var string the number of views by the user within the client application */
+	const CLIENT_INTERACTIONS_VIEWS = 'client.interactions.views';
+	/** @var string the number of visits by the user within the client application */
+	const CLIENT_INTERACTIONS_VISITS = 'client.interactions.visits';
 	/** @var string the physical address of one of the user's contacts */
 	const CONTACT_ADDRESS = 'contact.address';
 	/** @var string the country as part of the physical address of one of the user's contacts */
@@ -157,12 +191,30 @@ final class DataType {
 	const DEVICE_BROWSER_VERSION = 'device.browser.version';
 	/** @var string the primary time zone that one of the user's devices is configured for */
 	const DEVICE_DATETIME_TIME_ZONE = 'device.datetime.time_zone';
+	/** @var string diagnostics data relating to the device of the user */
+	const DEVICE_DIAGNOSTICS = 'device.diagnostics';
+	/** @var string data on energy relating to the device of the user */
+	const DEVICE_DIAGNOSTICS_ENERGY = 'device.diagnostics.energy';
+	/** @var string the energy level of the device of the user */
+	const DEVICE_DIAGNOSTICS_ENERGY_LEVEL = 'device.diagnostics.energy.level';
+	/** @var string the energy source for the device of the user */
+	const DEVICE_DIAGNOSTICS_ENERGY_SOURCE = 'device.diagnostics.energy.source';
+	/** @var string a unique identifier of the user's device */
+	const DEVICE_ID = 'device.id';
+	/** @var string the International Mobile Equipment Identity (IMEI) of the user's device */
+	const DEVICE_ID_IMEI = 'device.id.imei';
+	/** @var string the MAC address of the user's device */
+	const DEVICE_ID_MAC_ADDRESS = 'device.id.mac_address';
 	/** @var string a unique identifier of one of the user's devices that remains constant for the lifetime of the device (e.g. "Android ID") */
 	const DEVICE_ID_PERMANENT = 'device.id.permanent';
 	/** @var string a unique identifier of one of the user's devices that can be reset by the user at any time (e.g. "Android Advertising ID" or "Apple Advertising Identifier") */
 	const DEVICE_ID_RESETTABLE = 'device.id.resettable';
 	/** @var string the preferred language that one of the user's devices is configured for */
 	const DEVICE_LANGUAGE = 'device.language';
+	/** @var string the approximate location of the user's device (e.g. city-level, IP-based) */
+	const DEVICE_LOCATION_APPROXIMATE = 'device.location.approximate';
+	/** @var string the precise location of the user's device (e.g. GPS-based) */
+	const DEVICE_LOCATION_PRECISE = 'device.location.precise';
 	/** @var string the manufacturer of one of the user's devices */
 	const DEVICE_MANUFACTURER = 'device.manufacturer';
 	/** @var string the model name of one of the user's devices */
@@ -195,8 +247,58 @@ final class DataType {
 	const EMAIL_SUBJECT = 'email.subject';
 	/** @var string the email address of the recipient(s) of an email */
 	const EMAIL_TO = 'email.to';
-	/** @var string the number of the invoice */
+	/** @var string the contents of a document or file */
+	const FILE_CONTENTS = 'file.contents';
+	/** @var string the (original) filename of a document or file as found on the user's device */
+	const FILE_NAME = 'file.name';
+	/** @var string the size of a document or file */
+	const FILE_SIZE = 'file.size';
+	/** @var string the (total) gross amount on one of the user's invoices */
+	const INVOICE_AMOUNT_GROSS = 'invoice.amount.gross';
+	/** @var string the (total) net amount on one of the user's invoices */
+	const INVOICE_AMOUNT_NET = 'invoice.amount.net';
+	/** @var string the date and/or time the invoice has been created */
+	const INVOICE_CREATION_TIME = 'invoice.creation.time';
+	/** @var string the customer number for one of the user's invoices */
+	const INVOICE_CUSTOMER_NUMBER = 'invoice.customer.number';
+	/** @var string the written date of one of the user's invoices */
+	const INVOICE_DATETIME_DATE = 'invoice.datetime.date';
+	/** @var string the discount applied on one of the user's invoices */
+	const INVOICE_DISCOUNT = 'invoice.discount';
+	/** @var string the fulfillment period relating to one of the user's invoices */
+	const INVOICE_FULFILLMENT_PERIOD = 'invoice.fulfillment.period';
+	/** @var string the description of an item on one of the user's invoices */
+	const INVOICE_ITEM_DESCRIPTION = 'invoice.item.description';
+	/** @var string the discount applied on an item on one of the user's invoices */
+	const INVOICE_ITEM_DISCOUNT = 'invoice.item.discount';
+	/** @var string the (individual) gross price of an item on one of the user's invoices */
+	const INVOICE_ITEM_PRICE_GROSS = 'invoice.item.price.gross';
+	/** @var string the (individual) net price of an item on one of the user's invoices */
+	const INVOICE_ITEM_PRICE_NET = 'invoice.item.price.net';
+	/** @var string the quantity of an item on one of the user's invoices */
+	const INVOICE_ITEM_QUANTITY = 'invoice.item.quantity';
+	/** @var string the type, rate and amount of taxes on an item on one of the user's invoices */
+	const INVOICE_ITEM_TAXES = 'invoice.item.taxes';
+	/** @var string the message on one of the user's invoices */
+	const INVOICE_MESSAGE = 'invoice.message';
+	/** @var string the date and/or time the invoice has most recently been modified */
+	const INVOICE_MODIFICATION_TIME = 'invoice.modification.time';
+	/** @var string any custom notes pertaining to one of the user's invoices */
+	const INVOICE_NOTES = 'invoice.notes';
+	/** @var string the invoice number of one of the user's invoices */
 	const INVOICE_NUMBER = 'invoice.number';
+	/** @var string the date and time when the invoice has been paid */
+	const INVOICE_PAYMENT_DATETIME = 'invoice.payment.datetime';
+	/** @var string the terms for the payment of one of the user's invoices */
+	const INVOICE_PAYMENT_TERMS = 'invoice.payment.terms';
+	/** @var string the recipient of one of the user's invoices */
+	const INVOICE_RECIPIENT = 'invoice.recipient';
+	/** @var string the date and time when the invoice has been refunded */
+	const INVOICE_REFUND_DATETIME = 'invoice.refund.datetime';
+	/** @var string the date and time when a reminder was sent for the invoice */
+	const INVOICE_REMINDER_DATETIME = 'invoice.reminder.datetime';
+	/** @var string the type, rate and amount of taxes on one of the user's invoices */
+	const INVOICE_TAXES = 'invoice.taxes';
 	/** @var string the message body or actual text of a letter */
 	const LETTER_BODY = 'letter.body';
 	/** @var string the note about additional recipients of a letter */
@@ -295,12 +397,20 @@ final class DataType {
 	const USER_FINANCIAL_CREDIT_CARD_EXPIRATION = 'user.financial.credit_card.expiration';
 	/** @var string the number of a credit card of the user */
 	const USER_FINANCIAL_CREDIT_CARD_NUMBER = 'user.financial.credit_card.number';
+	/** @var string the history of purchases made by the user */
+	const USER_FINANCIAL_PURCHASE_HISTORY = 'user.financial.purchase_history';
 	/** @var string the gender of the user */
 	const USER_GENDER = 'user.gender';
 	/** @var string the geographical coordinates of the user */
 	const USER_GEO_COORDINATES = 'user.geo.coordinates';
 	/** @var string the height of the user */
 	const USER_HEIGHT = 'user.height';
+	/** @var string the ID of one of the user's (online or offline) accounts */
+	const USER_IDENTIFIERS_ACCOUNT_ID = 'user.identifiers.account.id';
+	/** @var string the name of one of the user's (online or offline) accounts */
+	const USER_IDENTIFIERS_ACCOUNT_NAME = 'user.identifiers.account.name';
+	/** @var string the type of one of the user's (online or offline) accounts */
+	const USER_IDENTIFIERS_ACCOUNT_TYPE = 'user.identifiers.account.type';
 	/** @var string the "steuerliche Identifikationsnummer" ("Steuer-IdNr.") of the user in Germany */
 	const USER_IDENTIFIERS_DEU_ST_IDNR = 'user.identifiers.deu.st_idnr';
 	/** @var string the "Steuernummer" or "Steuer-Identnummer" ("St.-Nr.") of the user in Germany */
