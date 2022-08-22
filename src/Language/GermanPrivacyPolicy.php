@@ -120,14 +120,14 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Land';
 			case 'Current occupation':
 				return 'Aktueller Beruf';
-			case 'Customer number':
-				return 'Kundennummer';
 			case 'Custom notes on contract':
 				return 'Benutzerdefinierte Notizen zum Vertrag';
 			case 'Custom notes on vehicle':
 				return 'Benutzerdefinierte Notizen zum Fahrzeug';
 			case 'Custom notes':
 				return 'Benutzerdefinierte Notizen';
+			case 'Customer number':
+				return 'Kundennummer';
 			case 'Date and time for each access':
 				return 'Datum und Uhrzeit für jeden Zugriff';
 			case 'Date and time of email':
@@ -164,12 +164,6 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Digital gezeichnete Unterschrift';
 			case 'Effective date':
 				return 'Datum des Inkrafttretens';
-			case 'Email addresses in BCC line of email':
-				return 'E-Mail-Adressen in BCC-Zeile der E-Mail';
-			case 'Email addresses in CC line of email':
-				return 'E-Mail-Adressen in CC-Zeile der E-Mail';
-			case 'Email addresses of recipients of email':
-				return 'E-Mail-Adressen der Empfänger der E-Mail';
 			case 'Email address of contact':
 				return 'E-Mail-Adresse des Kontakts';
 			case 'Email address of designated receiver of information on undeliverable email':
@@ -180,6 +174,12 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'E-Mail-Adresse des Absenders der E-Mail';
 			case 'Email address':
 				return 'E-Mail-Adresse';
+			case 'Email addresses in BCC line of email':
+				return 'E-Mail-Adressen in BCC-Zeile der E-Mail';
+			case 'Email addresses in CC line of email':
+				return 'E-Mail-Adressen in CC-Zeile der E-Mail';
+			case 'Email addresses of recipients of email':
+				return 'E-Mail-Adressen der Empfänger der E-Mail';
 			case 'Email communication':
 				return 'E-Mail-Kommunikation';
 			case 'employment and social security':
@@ -236,12 +236,18 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Kennnummer bei externem Zahlungsdienstleister';
 			case 'In any case, we will provide data only to the extent necessary to satisfy the request, and, whenever possible and legally permitted, we will make a reasonable effort to notify affected users of any such disclosure.':
 				return 'In jedem Fall werden wir Daten nur in dem Maße zur Verfügung stellen, das nötig ist, um der Aufforderung zu genügen, und, wann immer es möglich und gesetzlich zulässig ist, werden wir uns in angemessener Weise bemühen, betroffene Nutzer über diese Offenlegung zu benachrichtigen.';
-			case 'Information we collect and why we collect it':
-				return 'Informationen, die wir erfassen, und warum wir sie erfassen';
 			case 'In particular, all connections to and from our services are encrypted using Secure Sockets Layer (SSL) and Transport Layer Security (TLS) technologies.':
 				return 'Insbesondere sind alle Verbindungen zu und von unseren Diensten durch die Technologien „Secure Sockets Layer“ (SSL) und „Transport Layer Security“ (TLS) verschlüsselt.';
+			case 'Information we collect and why we collect it':
+				return 'Informationen, die wir erfassen, und warum wir sie erfassen';
 			case 'International data transfers':
 				return 'Internationale Datenübermittlungen';
+			case 'Internet Protocol (IP) address (reduced to 25%% precision)':
+				return 'Internetprotokoll-Adresse (IP-Adresse) (reduziert auf 25%% Genauigkeit)';
+			case 'Internet Protocol (IP) address (reduced to 50%% precision)':
+				return 'Internetprotokoll-Adresse (IP-Adresse) (reduziert auf 50%% Genauigkeit)';
+			case 'Internet Protocol (IP) address (reduced to 75%% precision)':
+				return 'Internetprotokoll-Adresse (IP-Adresse) (reduziert auf 75%% Genauigkeit)';
 			case 'Internet Protocol (IP) address for each access (reduced to 25%% precision)':
 				return 'Internetprotokoll-Adresse (IP-Adresse) für jeden Zugriff (reduziert auf 25%% Genauigkeit)';
 			case 'Internet Protocol (IP) address for each access (reduced to 50%% precision)':
@@ -250,12 +256,6 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Internetprotokoll-Adresse (IP-Adresse) für jeden Zugriff (reduziert auf 75%% Genauigkeit)';
 			case 'Internet Protocol (IP) address for each access':
 				return 'Internetprotokoll-Adresse (IP-Adresse) für jeden Zugriff';
-			case 'Internet Protocol (IP) address (reduced to 25%% precision)':
-				return 'Internetprotokoll-Adresse (IP-Adresse) (reduziert auf 25%% Genauigkeit)';
-			case 'Internet Protocol (IP) address (reduced to 50%% precision)':
-				return 'Internetprotokoll-Adresse (IP-Adresse) (reduziert auf 50%% Genauigkeit)';
-			case 'Internet Protocol (IP) address (reduced to 75%% precision)':
-				return 'Internetprotokoll-Adresse (IP-Adresse) (reduziert auf 75%% Genauigkeit)';
 			case 'Internet Protocol (IP) address':
 				return 'Internetprotokoll-Adresse (IP-Adresse)';
 			case 'Invoice number':
@@ -322,10 +322,10 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Name des Kontakts';
 			case 'Name':
 				return 'Name';
-			case 'None of our services are designed for, intended to attract, or directed towards children under the age of %d.':
-				return 'Keine unserer Dienste sind für Kinder im Alter unter %d konzipiert, beabsichtigen deren Aufmerksamkeit zu gewinnen oder sind auf sie ausgerichtet.';
 			case 'no':
 				return 'nein';
+			case 'None of our services are designed for, intended to attract, or directed towards children under the age of %d.':
+				return 'Keine unserer Dienste sind für Kinder im Alter unter %d konzipiert, beabsichtigen deren Aufmerksamkeit zu gewinnen oder sind auf sie ausgerichtet.';
 			case 'Notes on additional recipients of letter':
 				return 'Hinweise auf zusätzliche Empfänger des Briefes';
 			case 'Occupation':
@@ -412,8 +412,6 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Aufbewahrung und Löschung von Daten';
 			case 'Right of access (EU, General Data Protection Regulation (GDPR), Article 15)':
 				return 'Auskunftsrecht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 15)';
-			case 'Rights related to automated individual decision-making, including profiling (EU, General Data Protection Regulation (GDPR), Article 22)':
-				return 'Rechte bezüglich automatisierter Entscheidungen im Einzelfall, einschließlich Profiling (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 22)';
 			case 'Right to data portability (EU, General Data Protection Regulation (GDPR), Article 20)':
 				return 'Recht auf Datenübertragbarkeit (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 20)';
 			case 'Right to erasure (EU, General Data Protection Regulation (GDPR), Article 17)':
@@ -424,6 +422,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Recht auf Berichtigung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 16)';
 			case 'Right to restriction of processing (EU, General Data Protection Regulation (GDPR), Article 18)':
 				return 'Recht auf Einschränkung der Verarbeitung (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 18)';
+			case 'Rights related to automated individual decision-making, including profiling (EU, General Data Protection Regulation (GDPR), Article 22)':
+				return 'Rechte bezüglich automatisierter Entscheidungen im Einzelfall, einschließlich Profiling (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 22)';
 			case 'Salutation of letter':
 				return 'Anrede des Briefes';
 			case 'Service providers, contractors and agents':
@@ -550,12 +550,6 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'lebenswichtige Interessen';
 			case 'We are responsible for the processing of personal data under this policy.':
 				return 'Wir sind verantwortlich für die Verarbeitung persönlicher Daten gemäß dieser Erklärung.';
-			case 'Website':
-				return 'Webseite';
-			case 'Website (URL) of contact':
-				return 'Webseite (URL) des Kontakts';
-			case 'Website (URL)':
-				return 'Webseite (URL)';
 			case 'We follow generally accepted industry standards to protect the data submitted to us, both during transmission and after we have received it, and continue to expand our protections as becomes necessary with changing technology.':
 				return 'Wir folgen allgemein anerkannten Industriestandards zum Schutz der Daten, die an uns übermittelt werden, sowohl während der Übertragung als auch nach dem Erhalt, und erweitern fortwährend unsere Schutzmaßnahmen, so wie es durch sich ändernde Technologie notwendig wird.';
 			case 'We have therefore implemented all measures reasonably necessary to protect the personal information of our users from unauthorized access, modification, deletion, disclosure or other misuse.':
@@ -578,6 +572,12 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Wir nutzen diese Informationen, um unsere Dienste durch Forschung und Analysen zu verbessern und um besser zu verstehen, wie unsere Dienste genutzt werden.';
 			case 'We verify that at least one of the following safeguards is implemented:':
 				return 'Wir stellen sicher, dass mindestens eine der folgenden Schutzmaßnahmen umgesetzt ist:';
+			case 'Website (URL) of contact':
+				return 'Webseite (URL) des Kontakts';
+			case 'Website (URL)':
+				return 'Webseite (URL)';
+			case 'Website':
+				return 'Webseite';
 			case 'Without these technologies, use of our services would not be reasonably possible.':
 				return 'Ohne diese Technologien wäre die Nutzung unserer Dienste nicht in vernünftiger Weise möglich.';
 			case 'Year and month of birth of contact':

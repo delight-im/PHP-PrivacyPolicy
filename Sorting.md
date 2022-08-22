@@ -21,11 +21,11 @@ $ cat unsorted.txt | sed 's/^[ \t]*//' | awk '{getline x;print x;}1' | paste -d 
 ### Keywords `case` and `return` on two separate single lines
 
 ```bash
-$ cat unsorted.txt | sed 's/^[ \t]*//' | paste -d "\t" - - | sort -f | tr '\t' '\n' > sorted.txt
+$ cat unsorted.txt | sed 's/^[ \t]*//' | paste -d "\t" - - | LC_ALL=C sort -f | tr '\t' '\n' > sorted.txt
 ```
 
 ### Keywords `case` and `return` on same single line
 
 ```bash
-$ cat unsorted.txt | sed 's/^[ \t]*//' | sort -f > sorted.txt
+$ cat unsorted.txt | sed 's/^[ \t]*//' | LC_ALL=C sort -f > sorted.txt
 ```
