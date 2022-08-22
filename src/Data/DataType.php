@@ -29,14 +29,14 @@ final class DataType {
 	const ACCESS_HTTP_METHOD = 'access.http.method';
 	/** @var string the HTTP status code of each individual access by the user (e.g. as stored in the access logs) */
 	const ACCESS_HTTP_STATUS = 'access.http.status';
+	/** @var string the Internet Protocol (IP) address of the user for each individual access (e.g. as stored in the access logs) */
+	const ACCESS_IP_ADDRESS = 'access.ip.address';
 	/** @var string the Internet Protocol (IP) address of the user for each individual access with its precision reduced to 25% (e.g. as stored in the access logs) */
 	const ACCESS_IP_ADDRESS_25_PERCENT = 'access.ip.address.25_percent';
 	/** @var string the Internet Protocol (IP) address of the user for each individual access with its precision reduced to 50% (e.g. as stored in the access logs) */
 	const ACCESS_IP_ADDRESS_50_PERCENT = 'access.ip.address.50_percent';
 	/** @var string the Internet Protocol (IP) address of the user for each individual access with its precision reduced to 75% (e.g. as stored in the access logs) */
 	const ACCESS_IP_ADDRESS_75_PERCENT = 'access.ip.address.75_percent';
-	/** @var string the Internet Protocol (IP) address of the user for each individual access (e.g. as stored in the access logs) */
-	const ACCESS_IP_ADDRESS = 'access.ip.address';
 	/** @var string the referring site (or individual page) of the user for each individual access (e.g. as stored in the access logs) */
 	const ACCESS_REFERER = 'access.referer';
 	/** @var string the amount of data transferred (usually the number of bytes sent or received) for each individual access by the user (e.g. as stored in the access logs) */
@@ -105,10 +105,10 @@ final class DataType {
 	const CONTACT_IDENTIFIERS_EU_VAT_IN = 'contact.identifiers.eu.vat.in';
 	/** @var string the date and/or time the contact has most recently been modified */
 	const CONTACT_MODIFICATION_TIME = 'contact.modification.time';
-	/** @var string the alias, nickname or username of one of the user's contacts */
-	const CONTACT_NAME_ALIAS = 'contact.name.alias';
 	/** @var string the name of one of the user's contacts */
 	const CONTACT_NAME = 'contact.name';
+	/** @var string the alias, nickname or username of one of the user's contacts */
+	const CONTACT_NAME_ALIAS = 'contact.name.alias';
 	/** @var string the family name of one of the user's contacts */
 	const CONTACT_NAME_FAMILY = 'contact.name.family';
 	/** @var string the given name of one of the user's contacts */
@@ -149,10 +149,10 @@ final class DataType {
 	const CONTRACT_PERIOD_START = 'contract.period.start';
 	/** @var string the customer number */
 	const CUSTOMER_NUMBER = 'customer.number';
-	/** @var string the brand of the web browser on one of the user's devices */
-	const DEVICE_BROWSER_BRAND = 'device.browser.brand';
 	/** @var string the brand and version of the web browser on one of the user's devices */
 	const DEVICE_BROWSER = 'device.browser';
+	/** @var string the brand of the web browser on one of the user's devices */
+	const DEVICE_BROWSER_BRAND = 'device.browser.brand';
 	/** @var string the version of the web browser on one of the user's devices */
 	const DEVICE_BROWSER_VERSION = 'device.browser.version';
 	/** @var string the primary time zone that one of the user's devices is configured for */
@@ -167,10 +167,10 @@ final class DataType {
 	const DEVICE_MANUFACTURER = 'device.manufacturer';
 	/** @var string the model name of one of the user's devices */
 	const DEVICE_MODEL = 'device.model';
-	/** @var string the brand of the operating system (OS) on one of the user's devices */
-	const DEVICE_OS_BRAND = 'device.os.brand';
 	/** @var string the brand and version of the operating system (OS) on one of the user's devices */
 	const DEVICE_OS = 'device.os';
+	/** @var string the brand of the operating system (OS) on one of the user's devices */
+	const DEVICE_OS_BRAND = 'device.os.brand';
 	/** @var string the version of the operating system (OS) on one of the user's devices */
 	const DEVICE_OS_VERSION = 'device.os.version';
 	/** @var string the hidden list of additional (concealed) recipients of an email other than the primary recipient(s) */
@@ -179,10 +179,10 @@ final class DataType {
 	const EMAIL_BODY = 'email.body';
 	/** @var string the list of additional recipients of an email other than the primary recipient(s) */
 	const EMAIL_CC = 'email.cc';
-	/** @var string the date (written) of an email */
-	const EMAIL_DATETIME_DATE = 'email.datetime.date';
 	/** @var string the date and time (written) of an email */
 	const EMAIL_DATETIME = 'email.datetime';
+	/** @var string the date (written) of an email */
+	const EMAIL_DATETIME_DATE = 'email.datetime.date';
 	/** @var string the time (written) of an email */
 	const EMAIL_DATETIME_TIME = 'email.datetime.time';
 	/** @var string the email address of the sender of an email */
@@ -203,10 +203,10 @@ final class DataType {
 	const LETTER_CC = 'letter.cc';
 	/** @var string the date and/or time the letter has been created */
 	const LETTER_CREATION_TIME = 'letter.creation.time';
-	/** @var string the date (written) of a letter */
-	const LETTER_DATETIME_DATE = 'letter.datetime.date';
 	/** @var string the date and time (written) of a letter */
 	const LETTER_DATETIME = 'letter.datetime';
+	/** @var string the date (written) of a letter */
+	const LETTER_DATETIME_DATE = 'letter.datetime.date';
 	/** @var string the time (written) of a letter */
 	const LETTER_DATETIME_TIME = 'letter.datetime.time';
 	/** @var string the list of enclosures of a letter */
@@ -229,6 +229,8 @@ final class DataType {
 	const LETTER_VALEDICTION = 'letter.valediction';
 	/** @var string the access privileges granted to the user */
 	const USER_ACCESS_PRIVILEGES = 'user.access.privileges';
+	/** @var string the physical address of the user */
+	const USER_ADDRESS = 'user.address';
 	/** @var string the country as part of the physical address of the user */
 	const USER_ADDRESS_COUNTRY = 'user.address.country';
 	/** @var string the locality (usually the city) as part of the physical address of the user */
@@ -239,16 +241,14 @@ final class DataType {
 	const USER_ADDRESS_POSTAL_CODE = 'user.address.postal_code';
 	/** @var string the region (often the state or province) as part of the physical address of the user */
 	const USER_ADDRESS_REGION = 'user.address.region';
-	/** @var string the physical address of the user */
-	const USER_ADDRESS = 'user.address';
-	/** @var string the month and day of the date of birth of the user */
-	const USER_BIRTH_DATE_MONTH_DAY = 'user.birth.date.md';
 	/** @var string the complete date of birth of the user */
 	const USER_BIRTH_DATE = 'user.birth.date';
-	/** @var string the year and month of the date of birth of the user */
-	const USER_BIRTH_DATE_YEAR_MONTH = 'user.birth.date.ym';
+	/** @var string the month and day of the date of birth of the user */
+	const USER_BIRTH_DATE_MONTH_DAY = 'user.birth.date.md';
 	/** @var string the year of the date of birth of the user */
 	const USER_BIRTH_DATE_YEAR = 'user.birth.date.y';
+	/** @var string the year and month of the date of birth of the user */
+	const USER_BIRTH_DATE_YEAR_MONTH = 'user.birth.date.ym';
 	/** @var string the place of birth of the user */
 	const USER_BIRTH_PLACE = 'user.birth.place';
 	/** @var string the blood group or blood type of the user */
@@ -259,14 +259,14 @@ final class DataType {
 	const USER_COMPANY_DEPARTMENT = 'user.company.department';
 	/** @var string the members of the executive board of the user's company */
 	const USER_COMPANY_EXECUTIVE_BOARD_MEMBERS = 'user.company.executive_board.members';
+	/** @var string the logo of the company of the user */
+	const USER_COMPANY_LOGO = 'user.company.logo';
 	/** @var string the date and/or time the logo of the user's company has been created */
 	const USER_COMPANY_LOGO_CREATION_TIME = 'user.company.logo.creation.time';
 	/** @var string the label for the logo of the user's company */
 	const USER_COMPANY_LOGO_LABEL = 'user.company.logo.label';
 	/** @var string the date and/or time the logo of the user's company has most recently been modified */
 	const USER_COMPANY_LOGO_MODIFICATION_TIME = 'user.company.logo.modification.time';
-	/** @var string the logo of the company of the user */
-	const USER_COMPANY_LOGO = 'user.company.logo';
 	/** @var string the members of the management of the user's company */
 	const USER_COMPANY_MANAGEMENT_MEMBERS = 'user.company.management.members';
 	/** @var string the name of the company of the user */
@@ -309,60 +309,62 @@ final class DataType {
 	const USER_IDENTIFIERS_EU_VAT_IN = 'user.identifiers.eu.vat.in';
 	/** @var string the "Social Security number" (SSN) of the user in the United States of America */
 	const USER_IDENTIFIERS_USA_SSN = 'user.identifiers.usa.ssn';
+	/** @var string the Internet Protocol (IP) address of the user */
+	const USER_IP_ADDRESS = 'user.ip.address';
 	/** @var string the Internet Protocol (IP) address of the user with its precision reduced to 25% */
 	const USER_IP_ADDRESS_25_PERCENT = 'user.ip.address.25_percent';
 	/** @var string the Internet Protocol (IP) address of the user with its precision reduced to 50% */
 	const USER_IP_ADDRESS_50_PERCENT = 'user.ip.address.50_percent';
 	/** @var string the Internet Protocol (IP) address of the user with its precision reduced to 75% */
 	const USER_IP_ADDRESS_75_PERCENT = 'user.ip.address.75_percent';
-	/** @var string the Internet Protocol (IP) address of the user */
-	const USER_IP_ADDRESS = 'user.ip.address';
+	/** @var string the date and time of the (last) login of the user */
+	const USER_LOGIN_DATETIME = 'user.login.datetime';
 	/** @var string the date of the (last) login of the user */
 	const USER_LOGIN_DATETIME_DATE = 'user.login.datetime.date';
 	/** @var string the time of the (last) login of the user */
 	const USER_LOGIN_DATETIME_TIME = 'user.login.datetime.time';
-	/** @var string the date and time of the (last) login of the user */
-	const USER_LOGIN_DATETIME = 'user.login.datetime';
+	/** @var string the name of the user */
+	const USER_NAME = 'user.name';
 	/** @var string the alias, nickname or username of the user */
 	const USER_NAME_ALIAS = 'user.name.alias';
 	/** @var string the family name of the user */
 	const USER_NAME_FAMILY = 'user.name.family';
 	/** @var string the given name of the user */
 	const USER_NAME_GIVEN = 'user.name.given';
-	/** @var string the name of the user */
-	const USER_NAME = 'user.name';
 	/** @var string any custom notes saved by the user */
 	const USER_NOTES = 'user.notes';
+	/** @var string the occupation of the user */
+	const USER_OCCUPATION = 'user.occupation';
 	/** @var string the current occupation of the user */
 	const USER_OCCUPATION_CURRENT = 'user.occupation.current';
 	/** @var string the preferred occupation of the user */
 	const USER_OCCUPATION_PREFERRED = 'user.occupation.preferred';
-	/** @var string the occupation of the user */
-	const USER_OCCUPATION = 'user.occupation';
 	/** @var string the password of the user as cleartext */
 	const USER_PASSWORD_CLEARTEXT = 'user.password.cleartext';
-	/** @var string the password of the user hashed using an algorithm and configuration (cf. number of rounds) currently regarded as strong in the industry (e.g. Argon2, bcrypt, scrypt) */
-	const USER_PASSWORD_HASHED_STRONG = 'user.password.hashed.strong';
 	/** @var string the password of the user hashed using a well-known hashing algorithm that is accepted as such in the industry */
 	const USER_PASSWORD_HASHED = 'user.password.hashed';
+	/** @var string the password of the user hashed using an algorithm and configuration (cf. number of rounds) currently regarded as strong in the industry (e.g. Argon2, bcrypt, scrypt) */
+	const USER_PASSWORD_HASHED_STRONG = 'user.password.hashed.strong';
 	/** @var string whether password resets are permitted for the user */
 	const USER_PASSWORD_RESETTABLE = 'user.password.resettable';
+	/** @var string the phone number of the user */
+	const USER_PHONE = 'user.phone';
 	/** @var string the landline phone number of the user */
 	const USER_PHONE_HOME = 'user.phone.home';
 	/** @var string the mobile phone number of the user */
 	const USER_PHONE_MOBILE = 'user.phone.mobile';
-	/** @var string the phone number of the user */
-	const USER_PHONE = 'user.phone';
 	/** @var string the primary picture of the user (e.g. portrait or profile picture) */
 	const USER_PICTURE = 'user.picture';
 	/** @var string the user's reference as a number or as text */
 	const USER_REFERENCE = 'user.reference';
+	/** @var string the date and time of the registration of the user */
+	const USER_REGISTRATION_DATETIME = 'user.registration.datetime';
 	/** @var string the date of the registration of the user */
 	const USER_REGISTRATION_DATETIME_DATE = 'user.registration.datetime.date';
 	/** @var string the time of the registration of the user */
 	const USER_REGISTRATION_DATETIME_TIME = 'user.registration.datetime.time';
-	/** @var string the date and time of the registration of the user */
-	const USER_REGISTRATION_DATETIME = 'user.registration.datetime';
+	/** @var string the signature of the user */
+	const USER_SIGNATURE = 'user.signature';
 	/** @var string the date and/or time the user's signature has been created */
 	const USER_SIGNATURE_CREATION_TIME = 'user.signature.creation.time';
 	/** @var string the signature of the user digitally drawn on their device */
@@ -373,8 +375,6 @@ final class DataType {
 	const USER_SIGNATURE_LABEL = 'user.signature.label';
 	/** @var string the date and/or time the user's signature has most recently been modified */
 	const USER_SIGNATURE_MODIFICATION_TIME = 'user.signature.modification.time';
-	/** @var string the signature of the user */
-	const USER_SIGNATURE = 'user.signature';
 	/** @var string the URL of the website of the user */
 	const USER_WEBSITE_URL = 'user.website.url';
 	/** @var string the weight of the user */
