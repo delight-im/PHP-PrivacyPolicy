@@ -26,6 +26,12 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 		switch ($text) {
 			case 'Access privileges':
 				return 'Zugriffsrechte';
+			case 'Account ID':
+				return 'Kennung des Benutzer- oder Kundenkontos';
+			case 'Account name':
+				return 'Name des Benutzer- oder Kundenkontos';
+			case 'Account type':
+				return 'Typ des Benutzer- oder Kundenkontos';
 			case 'Address of contact':
 				return 'Adresse des Kontakts';
 			case 'Address':
@@ -38,6 +44,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Übertragene Datenmenge für jeden Zugriff';
 			case 'Android app (available from “Google Play”, a digital distribution platform operated by Google Inc.)':
 				return 'Android-App (verfügbar über „Google Play“, eine digitale Vertriebsplattform, betrieben von Google Inc.)';
+			case 'Approximate location of device':
+				return 'Ungefährer Standort des Geräts';
 			case 'archiving or research':
 				return 'Archivierung oder Forschung';
 			case 'As such, cookies and the related technologies are essential for the operation of our services.':
@@ -92,6 +100,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Einstufung des Briefes als ersten Brief';
 			case 'Classification of letter as personal or as relating to business':
 				return 'Einstufung des Briefes als persönlich oder als geschäftlich';
+			case 'Clicks or taps within application':
+				return 'Klicks und Tippen innerhalb der Anwendung';
 			case 'Color of vehicle':
 				return 'Farbe des Fahrzeugs';
 			case 'Company name of contact':
@@ -124,20 +134,32 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Benutzerdefinierte Notizen zum Vertrag';
 			case 'Custom notes on vehicle':
 				return 'Benutzerdefinierte Notizen zum Fahrzeug';
+			case 'Custom notes relating to invoice':
+				return 'Benutzerdefinierte Notizen zur Rechnung';
 			case 'Custom notes':
 				return 'Benutzerdefinierte Notizen';
+			case 'Customer number on invoice':
+				return 'Kundennummer auf der Rechnung';
 			case 'Customer number':
 				return 'Kundennummer';
 			case 'Date and time for each access':
 				return 'Datum und Uhrzeit für jeden Zugriff';
 			case 'Date and time of email':
 				return 'Datum und Uhrzeit der E-Mail';
+			case 'Date and time of event in calendar':
+				return 'Datum und Uhrzeit des Termins im Kalender';
 			case 'Date and time of letter':
 				return 'Datum und Uhrzeit des Briefes';
 			case 'Date and time of login':
 				return 'Datum und Uhrzeit des Logins';
 			case 'Date and time of registration':
 				return 'Datum und Uhrzeit der Registrierung';
+			case 'Date and time when invoice has been paid':
+				return 'Datum und Uhrzeit, wann Rechnung bezahlt wurde';
+			case 'Date and time when invoice has been refunded':
+				return 'Datum und Uhrzeit, wann Rechnung erstattet wurde';
+			case 'Date and time when reminder has been sent for invoice':
+				return 'Datum und Uhrzeit, wann Erinnerung für Rechnung gesendet wurde';
 			case 'Date for each access':
 				return 'Datum für jeden Zugriff';
 			case 'Date of birth of contact':
@@ -146,6 +168,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Geburtsdatum';
 			case 'Date of email':
 				return 'Datum der E-Mail';
+			case 'Date of event in calendar':
+				return 'Datum des Termins im Kalender';
 			case 'Date of expiration':
 				return 'Datum des Außerkrafttretens';
 			case 'Date of letter':
@@ -160,8 +184,18 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Abteilung des Kontakts innerhalb des Unternehmens';
 			case 'Department within company':
 				return 'Abteilung innerhalb des Unternehmens';
+			case 'Description of item on invoice':
+				return 'Beschreibung des Postens auf der Rechnung';
+			case 'Diagnostics data for application':
+				return 'Diagnosedaten für Anwendung';
+			case 'Diagnostics data for device':
+				return 'Diagnosedaten für Gerät';
 			case 'Digitally drawn signature':
 				return 'Digital gezeichnete Unterschrift';
+			case 'Discount on invoice':
+				return 'Rabatt auf der Rechnung';
+			case 'Discount on item on invoice':
+				return 'Rabatt für Posten auf der Rechnung';
 			case 'Effective date':
 				return 'Datum des Inkrafttretens';
 			case 'Email address of contact':
@@ -188,8 +222,18 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Ende der Abrechnung';
 			case 'End of contract':
 				return 'Vertragsende';
+			case 'Energy level on device':
+				return 'Energiestand des Geräts';
+			case 'Energy source for device':
+				return 'Energiequelle des Geräts';
+			case 'Energy usage of application':
+				return 'Energieverbrauch der Anwendung';
 			case 'Entry of company in commercial register':
 				return 'Eintrag des Unternehmens im Handelsregister';
+			case 'Error logs from application':
+				return 'Fehlerberichte aus der Anwendung';
+			case 'Error rate in application':
+				return 'Fehlerrate in der Anwendung';
 			case 'Expiration date of credit card':
 				return 'Ablaufdatum der Kreditkarte';
 			case 'explicit consent':
@@ -202,8 +246,18 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Fax-Nummer des Kontakts';
 			case 'Fax number':
 				return 'Fax-Nummer';
+			case 'File contents':
+				return 'Datei-Inhalt';
+			case 'File size':
+				return 'Datei-Größe';
+			case 'Filename':
+				return 'Dateiname';
 			case 'foundation, association or non-profit':
 				return 'Stiftung, Vereinigung oder Organisation ohne Gewinnerzielungsabsicht';
+			case 'Frame rate in application':
+				return 'Bildfrequenz in der Anwendung';
+			case 'Fulfillment period on invoice':
+				return 'Abwicklungszeitraum laut Rechnung';
 			case 'Functions performed by them on our behalf may include payment processing, network data transmission, fraud prevention, customer support management and similar services.':
 				return 'Funktionen, die diese Parteien für uns und in unserem Auftrag ausführen, können die Zahlungsabwicklung, Datenübertragung im Netzwerk, Betrugsprävention, Verwaltung der Kundenbetreuung und ähnliche Dienstleistungen umfassen.';
 			case 'Gender of contact':
@@ -234,12 +288,20 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'HTTP-Statuscode für jeden Zugriff';
 			case 'Identification number with external payment service provider':
 				return 'Kennnummer bei externem Zahlungsdienstleister';
+			case 'Identifier of device':
+				return 'Kennung des Geräts';
+			case 'IMEI of device':
+				return 'IMEI des Geräts';
 			case 'In any case, we will provide data only to the extent necessary to satisfy the request, and, whenever possible and legally permitted, we will make a reasonable effort to notify affected users of any such disclosure.':
 				return 'In jedem Fall werden wir Daten nur in dem Maße zur Verfügung stellen, das nötig ist, um der Aufforderung zu genügen, und, wann immer es möglich und gesetzlich zulässig ist, werden wir uns in angemessener Weise bemühen, betroffene Nutzer über diese Offenlegung zu benachrichtigen.';
 			case 'In particular, all connections to and from our services are encrypted using Secure Sockets Layer (SSL) and Transport Layer Security (TLS) technologies.':
 				return 'Insbesondere sind alle Verbindungen zu und von unseren Diensten durch die Technologien „Secure Sockets Layer“ (SSL) und „Transport Layer Security“ (TLS) verschlüsselt.';
+			case 'Information relating to energy of device':
+				return 'Informationen zur Energie des Geräts';
 			case 'Information we collect and why we collect it':
 				return 'Informationen, die wir erfassen, und warum wir sie erfassen';
+			case 'Interactions with application':
+				return 'Interaktionen mit der Anwendung';
 			case 'International data transfers':
 				return 'Internationale Datenübermittlungen';
 			case 'Internet Protocol (IP) address (reduced to 25%% precision)':
@@ -258,6 +320,12 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Internetprotokoll-Adresse (IP-Adresse) für jeden Zugriff';
 			case 'Internet Protocol (IP) address':
 				return 'Internetprotokoll-Adresse (IP-Adresse)';
+			case 'Invoice amount (gross)':
+				return 'Rechnungsbetrag (brutto)';
+			case 'Invoice amount (net)':
+				return 'Rechnungsbetrag (netto)';
+			case 'Invoice date':
+				return 'Rechnungsdatum';
 			case 'Invoice number':
 				return 'Rechnungsnummer';
 			case 'iOS app (available from the “App Store”, a digital distribution platform operated by Apple Inc.)':
@@ -286,6 +354,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Liste der Anlagen zum Brief';
 			case 'Logo of company':
 				return 'Logo des Unternehmens';
+			case 'MAC address of device':
+				return 'MAC-Adresse des Geräts';
 			case 'Make of vehicle':
 				return 'Marke des Fahrzeugs';
 			case 'Mandatory disclosure':
@@ -302,6 +372,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Mitglieder des Aufsichtsrats des Unternehmens';
 			case 'Mergers and acquisitions':
 				return 'Fusionen und Übernahmen';
+			case 'Message on invoice':
+				return 'Nachricht auf der Rechnung';
 			case 'Message text of email':
 				return 'Nachrichtentext der E-Mail';
 			case 'Message text of letter':
@@ -330,6 +402,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Hinweise auf zusätzliche Empfänger des Briefes';
 			case 'Occupation':
 				return 'Beruf';
+			case 'Occurrences of errors in application':
+				return 'Vorkommen von Fehlern in der Anwendung';
 			case 'Our full contact information can be found at:':
 				return 'Unsere vollständigen Kontaktdaten sind zu finden unter:';
 			case 'Our principles':
@@ -340,6 +414,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Passwort (Hash)';
 			case 'Password (strong hash)':
 				return 'Passwort (starker Hash)';
+			case 'Payment terms for invoice':
+				return 'Zahlungsbedingungen für Rechnung';
 			case 'Payments past due':
 				return 'Überfälligkeit von Zahlungen';
 			case 'Permanent identifier of device':
@@ -362,8 +438,14 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Postleitzahl';
 			case 'Postscript of letter':
 				return 'Postskriptum des Briefes';
+			case 'Precise location of device':
+				return 'Genauer Standort des Geräts';
 			case 'Preferred occupation':
 				return 'Bevorzugter Beruf';
+			case 'Price (gross) of item on invoice':
+				return 'Preis (brutto) des Postens auf der Rechnung';
+			case 'Price (net) of item on invoice':
+				return 'Preis (netto) des Postens auf der Rechnung';
 			case 'Processing is carried out by a foundation, association or any other not-for-profit body with a political, philosophical, religious or trade union aim and on condition that the processing relates solely to the members or to former members of the body or to persons who have regular contact with it (EU, General Data Protection Regulation (GDPR), Article 9(2)(d)).':
 				return 'Die Verarbeitung erfolgt durch eine politisch, weltanschaulich, religiös oder gewerkschaftlich ausgerichtete Stiftung, Vereinigung oder sonstige Organisation ohne Gewinnerzielungsabsicht und unter der Voraussetzung, dass sich die Verarbeitung ausschließlich auf die Mitglieder oder ehemalige Mitglieder der Organisation oder auf Personen, die regelmäßige Kontakte mit ihr unterhalten, bezieht (EU, Datenschutz-Grundverordnung (DSGVO), Artikel 9(2)(d)).';
 			case 'Processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes (EU, General Data Protection Regulation (GDPR), Article 9(2)(j)).':
@@ -390,6 +472,12 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'öffentliche Gesundheit';
 			case 'public interest':
 				return 'öffentliches Interesse';
+			case 'Purchase history':
+				return 'Kaufhistorie';
+			case 'Quantity of item on invoice':
+				return 'Menge des Postens auf der Rechnung';
+			case 'Recipient of invoice':
+				return 'Empfänger der Rechnung';
 			case 'Reference of contact':
 				return 'Referenz des Kontakts';
 			case 'Reference':
@@ -428,6 +516,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Anrede des Briefes';
 			case 'Service providers, contractors and agents':
 				return 'Dienstleister, Auftragnehmer und Vertreter';
+			case 'Sessions within application':
+				return 'Sitzungen innerhalb der Anwendung';
 			case 'Signature':
 				return 'Unterschrift';
 			case 'Social Security number (SSN) (United States of America)':
@@ -462,6 +552,10 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'erhebliches öffentliches Interesse';
 			case 'Such third parties help us provide and improve our services.':
 				return 'Solche Drittunternehmen helfen uns, unsere Dienste bereitzustellen und zu verbessern.';
+			case 'Taxes on invoice':
+				return 'Steuern auf der Rechnung';
+			case 'Taxes on item on invoice':
+				return 'Steuern auf den Posten der Rechnung';
 			case 'The country of the recipient has been deemed to provide an adequate level of protection for personal data by the European Commission.':
 				return 'Das Land des Empfängers bietet nach Einschätzung der Europäischen Kommission ein angemessenes Datenschutzniveau.';
 			case 'The policy applies to our websites, mobile apps, software applications, products and services, collectively referred to as “services”.':
@@ -490,6 +584,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Zeitpunkt der Erstellung des Kontakts';
 			case 'Time of creation of contract':
 				return 'Zeitpunkt der Erstellung des Vertrages';
+			case 'Time of creation of invoice':
+				return 'Zeitpunkt der Erstellung der Rechnung';
 			case 'Time of creation of letter':
 				return 'Zeitpunkt der Erstellung des Briefes';
 			case 'Time of creation of logo of company':
@@ -498,6 +594,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Zeitpunkt der Erstellung der Unterschrift';
 			case 'Time of email':
 				return 'Uhrzeit der E-Mail';
+			case 'Time of event in calendar':
+				return 'Uhrzeit des Termins im Kalender';
 			case 'Time of first access':
 				return 'Zeitpunkt des ersten Zugriffs';
 			case 'Time of last modification to billing options':
@@ -506,6 +604,8 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Zeitpunkt der letzten Änderung am Kontakt';
 			case 'Time of last modification to contract':
 				return 'Zeitpunkt der letzten Änderung am Vertrag';
+			case 'Time of last modification to invoice':
+				return 'Zeitpunkt der letzten Änderung an Rechnung';
 			case 'Time of last modification to letter':
 				return 'Zeitpunkt der letzten Änderung am Brief';
 			case 'Time of last modification to logo of company':
@@ -524,6 +624,12 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Uhrzeit der Registrierung';
 			case 'Time zone of device':
 				return 'Zeitzone des Geräts';
+			case 'Timing and performance of application':
+				return 'Zeitablauf und Geschwindigkeit der Anwendung';
+			case 'Title of event in calendar':
+				return 'Titel des Termins im Kalender';
+			case 'Type of event in calendar':
+				return 'Typ des Termins im Kalender';
 			case 'Usage of free trial':
 				return 'Nutzung eines kostenlosen Probezeitraums';
 			case 'User-agent string for each access':
@@ -546,6 +652,10 @@ abstract class GermanPrivacyPolicy extends HumanPrivacyPolicy {
 				return 'Version des Webbrowsers auf dem Gerät';
 			case 'Version':
 				return 'Version';
+			case 'Views within application':
+				return 'Aufrufe innerhalb der Anwendung';
+			case 'Visits within application':
+				return 'Besuche innerhalb der Anwendung';
 			case 'vital interests':
 				return 'lebenswichtige Interessen';
 			case 'We are responsible for the processing of personal data under this policy.':
