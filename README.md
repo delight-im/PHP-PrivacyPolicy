@@ -226,9 +226,14 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_BROWSER_BRAND;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_BROWSER_VERSION;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_DATETIME_TIME_ZONE;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_ID;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_ID_IMEI;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_ID_MAC_ADDRESS;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_ID_PERMANENT;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_ID_RESETTABLE;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_LANGUAGE;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_LOCATION_APPROXIMATE;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_LOCATION_PRECISE;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_MANUFACTURER;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_MODEL;
 \Delight\PrivacyPolicy\Data\DataType::DEVICE_OS;
@@ -310,6 +315,26 @@ $policy->addDataGroup(
 
 \Delight\PrivacyPolicy\Data\DataType::BILLING_ID_PAYMENT_SERVICE_PROVIDER;
 
+\Delight\PrivacyPolicy\Data\DataType::CALENDAR_EVENT_DATETIME;
+\Delight\PrivacyPolicy\Data\DataType::CALENDAR_EVENT_DATETIME_DATE;
+\Delight\PrivacyPolicy\Data\DataType::CALENDAR_EVENT_DATETIME_TIME;
+\Delight\PrivacyPolicy\Data\DataType::CALENDAR_EVENT_TITLE;
+\Delight\PrivacyPolicy\Data\DataType::CALENDAR_EVENT_TYPE;
+
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_DIAGNOSTICS;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_DIAGNOSTICS_ENERGY_USAGE;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_DIAGNOSTICS_ERRORS;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_DIAGNOSTICS_ERRORS_LOGS;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_DIAGNOSTICS_ERRORS_RATE;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_DIAGNOSTICS_FRAME_RATE;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_DIAGNOSTICS_TIMING;
+
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_INTERACTIONS;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_INTERACTIONS_CLICKS_OR_TAPS;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_INTERACTIONS_SESSIONS;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_INTERACTIONS_VIEWS;
+\Delight\PrivacyPolicy\Data\DataType::CLIENT_INTERACTIONS_VISITS;
+
 \Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS;
 \Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS_COUNTRY;
 \Delight\PrivacyPolicy\Data\DataType::CONTACT_ADDRESS_LOCALITY;
@@ -354,7 +379,18 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::EMAIL_SUBJECT;
 \Delight\PrivacyPolicy\Data\DataType::EMAIL_TO;
 
+\Delight\PrivacyPolicy\Data\DataType::FILE_CONTENTS;
+\Delight\PrivacyPolicy\Data\DataType::FILE_NAME;
+\Delight\PrivacyPolicy\Data\DataType::FILE_SIZE;
+
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_AMOUNT_GROSS;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_AMOUNT_NET;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_CUSTOMER_NUMBER;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_DATETIME_DATE;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_FULFILLMENT_PERIOD;
 \Delight\PrivacyPolicy\Data\DataType::INVOICE_NUMBER;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_RECIPIENT;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_TAXES;
 
 \Delight\PrivacyPolicy\Data\DataType::USER_REFERENCE;
 ```
@@ -375,6 +411,27 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::CONTRACT_PERIOD_END;
 \Delight\PrivacyPolicy\Data\DataType::CONTRACT_PERIOD_EXTENSION;
 \Delight\PrivacyPolicy\Data\DataType::CONTRACT_PERIOD_START;
+
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_DIAGNOSTICS;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_DIAGNOSTICS_ENERGY;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_DIAGNOSTICS_ENERGY_LEVEL;
+\Delight\PrivacyPolicy\Data\DataType::DEVICE_DIAGNOSTICS_ENERGY_SOURCE;
+
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_CREATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_DISCOUNT;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_ITEM_DESCRIPTION;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_ITEM_DISCOUNT;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_ITEM_PRICE_GROSS;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_ITEM_PRICE_NET;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_ITEM_QUANTITY;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_ITEM_TAXES;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_MESSAGE;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_MODIFICATION_TIME;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_NOTES;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_PAYMENT_DATETIME;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_PAYMENT_TERMS;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_REFUND_DATETIME;
+\Delight\PrivacyPolicy\Data\DataType::INVOICE_REMINDER_DATETIME;
 
 \Delight\PrivacyPolicy\Data\DataType::LETTER_BODY;
 \Delight\PrivacyPolicy\Data\DataType::LETTER_CC;
@@ -399,6 +456,10 @@ $policy->addDataGroup(
 \Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_LOGO_MODIFICATION_TIME;
 \Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_MANAGEMENT_MEMBERS;
 \Delight\PrivacyPolicy\Data\DataType::USER_COMPANY_SUPERVISORY_BOARD_MEMBERS;
+\Delight\PrivacyPolicy\Data\DataType::USER_FINANCIAL_PURCHASE_HISTORY;
+\Delight\PrivacyPolicy\Data\DataType::USER_IDENTIFIERS_ACCOUNT_ID;
+\Delight\PrivacyPolicy\Data\DataType::USER_IDENTIFIERS_ACCOUNT_NAME;
+\Delight\PrivacyPolicy\Data\DataType::USER_IDENTIFIERS_ACCOUNT_TYPE;
 \Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_CREATION_TIME;
 \Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_LABEL;
 \Delight\PrivacyPolicy\Data\DataType::USER_SIGNATURE_MODIFICATION_TIME;
